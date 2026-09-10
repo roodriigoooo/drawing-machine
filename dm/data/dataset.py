@@ -85,6 +85,49 @@ def collate(batch: list[tuple[int, torch.Tensor]]) -> tuple[torch.Tensor, ...]:
     return index, padded[:, :-1], padded[:, 1:]
 
 
+#: Name of the one bucket-epoch algorithm below.  Serialized by the R4 trainer
+#: so a resumed run states which ordering rule produced its batches.
+BUCKET_EPOCH_ALGORITHM = "historical_bucket_epoch_v1"
+
+
+def bucket_epoch_seed(seed: int, epoch: int) -> int:
+    """The private generator seed of zero-based `epoch` under base `seed`."""
+    return (int(seed) + 1_000_003 * int(epoch)) % (2**63 - 1)
+
+
+def bucket_epoch_plan(lengths: list[int] | tuple[int, ...], batch_size: int, *,
+                      epoch: int, seed: int, shuffle: bool = True,
+                      pool_batches: int = 50) -> tuple[list[list[int]], torch.Tensor]:
+    """One epoch of length-bucketed batches and the final private RNG state.
+
+    This is the single authority for batch order.  `BucketedBatchSampler`
+    calls it for the historical loader and the R4 resumable cursor calls it
+    with the same arguments, so both produce the identical batch list for a
+    given `(seed, epoch)`.  The sampler is a separate random stream: it never
+    touches torch's global generator, so a training-time diagnostic that draws
+    from that stream cannot choose the order of the next epoch.
+
+    The returned generator state is the stream *after* the epoch's draws, so a
+    resumed run can prove its recorded plan came from this rule rather than
+    merely covering the corpus once.
+    """
+    n = len(lengths)
+    generator = torch.Generator().manual_seed(bucket_epoch_seed(seed, epoch))
+    order = (torch.randperm(n, generator=generator).tolist()
+             if shuffle else list(range(n)))
+    pool = batch_size * pool_batches
+    batches = [
+        chunk[i : i + batch_size]
+        for start in range(0, n, pool)
+        for chunk in [sorted(order[start : start + pool], key=lengths.__getitem__)]
+        for i in range(0, len(chunk), batch_size)
+    ]
+    if shuffle:
+        batches = [batches[i] for i in torch.randperm(
+            len(batches), generator=generator).tolist()]
+    return batches, generator.get_state()
+
+
 class BucketedBatchSampler(Sampler[list[int]]):
     """Batches of similar-length sequences, still shuffled.
 
@@ -105,29 +148,14 @@ class BucketedBatchSampler(Sampler[list[int]]):
         return (len(self.lengths) + self.batch_size - 1) // self.batch_size
 
     def __iter__(self):
-        n = len(self.lengths)
-        # The sampler is a separate random stream.  In particular, do not use
-        # torch's global generator here: training-time generation diagnostics
-        # also draw from that stream, and a model output must never choose the
-        # order of the next epoch.  Deriving the seed from the epoch makes every
-        # epoch independently reproducible while retaining fresh shuffles.
+        # Deriving the seed from the epoch makes every epoch independently
+        # reproducible while retaining fresh shuffles; the algorithm itself
+        # lives in `bucket_epoch_plan` so it has exactly one owner.
         epoch = self._epoch
         self._epoch += 1
-        generator = torch.Generator().manual_seed(
-            (self.seed + 1_000_003 * epoch) % (2**63 - 1)
-        )
-        order = (torch.randperm(n, generator=generator).tolist()
-                 if self.shuffle else list(range(n)))
-        pool = self.batch_size * self.pool_batches
-        batches = [
-            chunk[i : i + self.batch_size]
-            for start in range(0, n, pool)
-            for chunk in [sorted(order[start : start + pool], key=self.lengths.__getitem__)]
-            for i in range(0, len(chunk), self.batch_size)
-        ]
-        if self.shuffle:
-            batches = [batches[i] for i in torch.randperm(
-                len(batches), generator=generator).tolist()]
+        batches, _ = bucket_epoch_plan(self.lengths, self.batch_size, epoch=epoch,
+                                       seed=self.seed, shuffle=self.shuffle,
+                                       pool_batches=self.pool_batches)
         return iter(batches)
 
 
@@ -156,4 +184,5 @@ def loader(dataset: ProgramDataset, batch_size: int = 64, shuffle: bool = True,
     )
 
 
-__all__ = ["BOS", "PAD", "BucketedBatchSampler", "ProgramDataset", "collate", "loader"]
+__all__ = ["BOS", "BUCKET_EPOCH_ALGORITHM", "PAD", "BucketedBatchSampler", "ProgramDataset",
+           "bucket_epoch_plan", "bucket_epoch_seed", "collate", "loader"]

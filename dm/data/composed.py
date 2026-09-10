@@ -39,6 +39,7 @@ the result.
 
 from __future__ import annotations
 
+import hashlib
 import random
 from dataclasses import dataclass
 
@@ -66,6 +67,14 @@ GRID = 2
 #: so a full-quadrant step is unrepresentable and the ISA itself bounds the
 #: control's grid. 120 clears a 111 px motif, so copies stay disjoint.
 CONTROL_STEP = 120
+
+# Direction 4 uses the same QuickDraw source for development and scientific
+# composed pools, but source identities must be disjoint before a limit or an
+# island cut is applied.  The bucket assignment is content/provenance keyed and
+# independent of the order and size requested by a caller.
+SOURCE_PARTITION_COUNT = 2
+SOURCE_PARTITIONS: dict[str, int] = {"scientific": 0, "development": 1}
+SOURCE_PARTITION_MARKER = b"drawing-machine-direction4-source-partition-v1"
 
 
 @dataclass(frozen=True)
@@ -103,6 +112,50 @@ class Scene:
     @property
     def foldable(self) -> float:
         return self.saved / max(1, len(self.flat))
+
+
+@dataclass(frozen=True)
+class MotifSource:
+    """One QuickDraw row before Direction 4 limits and island partitioning."""
+
+    source_id: str
+    category: str
+    body: bytes
+
+
+def _source_bucket(source_id: str) -> int:
+    digest = hashlib.blake2b(SOURCE_PARTITION_MARKER + b":" +
+                             source_id.encode(), digest_size=8).digest()
+    return int.from_bytes(digest, "big") % SOURCE_PARTITION_COUNT
+
+
+def source_motif_pool(categories: tuple[str, ...], split: str,
+                      *, provenance: str, limit: int | None = None) -> list[MotifSource]:
+    """Return a stable provenance partition of the complete QuickDraw pool.
+
+    The loader is called without a limit first.  A limit applied before this
+    function would make development and scientific pools two prefixes of the
+    same ordered source, which is not source disjointness.  The identity is the
+    category plus its ordinal among valid rows in that category; placement and
+    scene bytes never enter it.
+    """
+    if provenance not in SOURCE_PARTITIONS:
+        raise ValueError(
+            f"unknown source provenance {provenance!r}; expected one of "
+            f"{list(SOURCE_PARTITIONS)}")
+    programs, labels = quickdraw.load_labelled(
+        categories, split, limit=None, rdp_eps=MOTIF_EPS, margin=MOTIF_MARGIN)
+    ordinals: dict[int, int] = {}
+    out: list[MotifSource] = []
+    want = SOURCE_PARTITIONS[provenance]
+    for body, label in zip(programs, labels):
+        ordinal = ordinals.get(label, 0)
+        ordinals[label] = ordinal + 1
+        category = categories[label]
+        source_id = f"quickdraw:{split}:{category}:{ordinal}"
+        if _source_bucket(source_id) == want:
+            out.append(MotifSource(source_id, category, body))
+    return out if limit is None else out[:limit]
 
 
 def bounds(program: bytes) -> tuple[int, int, int, int] | None:
@@ -314,6 +367,7 @@ def build_with_stats(n: int, split: str = "train", seed: int = 0,
                                                     "car", "tree"),
                      limit: int | None = None,
                      orbit_sizes: tuple[int, ...] | None = None,
+                     pool: list[bytes] | None = None,
                      ) -> tuple[list[Scene], dict]:
     """`n` deduplicated scenes, and what the geometry refused on the way.
 
@@ -327,9 +381,18 @@ def build_with_stats(n: int, split: str = "train", seed: int = 0,
     description of what a composition policy can express: a control that refuses
     two draws in three is telling you its orbits barely fit, and that belongs in
     the corpus's record rather than in a comment.
+
+    `pool` overrides the motifs this call draws from and changes nothing else.
+    It exists for Direction 4, which needs scenes whose motifs come from one
+    *island* of a partitioned pool so that the co-occurrence graph is genuinely
+    disconnected and a clustered estimator has more than one cluster
+    (`docs/copy-relation.md` §12). Passing it bypasses `categories`, `split` and
+    `limit`, which is why the caller has to build the pool with the same loader
+    settings; `None` is the pre-Direction-4 path, unchanged.
     """
-    pool = quickdraw.load(categories, split, limit=limit,
-                          rdp_eps=MOTIF_EPS, margin=MOTIF_MARGIN)
+    if pool is None:
+        pool = quickdraw.load(categories, split, limit=limit,
+                              rdp_eps=MOTIF_EPS, margin=MOTIF_MARGIN)
     if not pool:
         raise ValueError(f"no motifs for {categories} / {split}")
     rng = random.Random(seed)
@@ -352,6 +415,17 @@ def build_with_stats(n: int, split: str = "train", seed: int = 0,
     if len(out) < n:
         raise ValueError(f"asked for {n} scenes, the geometry allowed {len(out)}")
     return out, stats
+
+
+def motif_pool(categories: tuple[str, ...], split: str,
+               limit: int | None = None) -> list[bytes]:
+    """The motif pool `build_with_stats` would build, exposed for partitioning.
+
+    One loader call with one set of settings, so a caller that slices this into
+    islands is slicing exactly the pool the unpartitioned path would have used.
+    """
+    return quickdraw.load(categories, split, limit=limit,
+                          rdp_eps=MOTIF_EPS, margin=MOTIF_MARGIN)
 
 
 def build(n: int, split: str = "train", **kwargs) -> list[Scene]:

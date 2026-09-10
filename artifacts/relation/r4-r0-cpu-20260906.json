@@ -1,0 +1,166 @@
+{
+ "decision": {
+  "determinism_is_policy_not_certificate": true,
+  "fallback_route": "withdrawn in v1: the implemented metric was degenerate (granularity 1/batch = 0.125 against a 0.10 floor, and identically zero across repeats). A replacement must be a paired relation-task measurement and cannot exist before R3.",
+  "forbidden_comparator": "checkpoint_file_sha256",
+  "problems": [],
+  "qualified": true,
+  "route": "exact_state_reproduction",
+  "schema": 2
+ },
+ "decision_value": "platform qualification only",
+ "direction": 4,
+ "protocol": "relation-v0",
+ "provenance": "engineering",
+ "repeatability": {
+  "determinism": {
+   "cudnn_benchmark": false,
+   "cudnn_deterministic": true,
+   "deterministic_algorithms": true,
+   "is_policy_not_certificate": true,
+   "requested": true,
+   "warn_only": true
+  },
+  "device": "cpu",
+  "digests": {
+   "model_state": [
+    "9433a80052162885000671add472930c0d6c0a4e10f51fabd2e2b51f8c2c625f"
+   ],
+   "optimizer_state": [
+    "e6c57ce88ed0f55f50f093f3176470c1644a255ed14dd08828bf73118f2e22bc"
+   ],
+   "rng_state": [
+    "7825313e33d48c00e8a9a1505f5b8c1a7f3e64b88f1ab7feb131305aadab24f9"
+   ]
+  },
+  "distinct_digests": {
+   "model_state": 1,
+   "optimizer_state": 1,
+   "rng_state": 1
+  },
+  "environment": {
+   "device": "cpu",
+   "environment": {
+    "CUBLAS_WORKSPACE_CONFIG": null,
+    "MKL_NUM_THREADS": null,
+    "OMP_NUM_THREADS": null,
+    "PYTHONHASHSEED": null,
+    "PYTORCH_ENABLE_MPS_FALLBACK": null
+   },
+   "machine": "arm64",
+   "numpy": "2.5.1",
+   "platform": "macOS-26.6.2-arm64-arm-64bit",
+   "processor": "arm",
+   "python": "3.12.12 (main, Feb  4 2026, 01:57:59) [Clang 21.1.4 ]",
+   "threads": 10,
+   "torch": "2.13.0"
+  },
+  "exact_state_reproduction": true,
+  "mean_seconds": 0.058337158398353496,
+  "note": "an observed range over repeats is not a variance, a bound or a device noise floor; it is what these repeats did",
+  "observed_loss_range": 0.0,
+  "readings": [
+   {
+    "final_loss": 5.57565450668335,
+    "model_state": "9433a80052162885000671add472930c0d6c0a4e10f51fabd2e2b51f8c2c625f",
+    "optimizer_state": "e6c57ce88ed0f55f50f093f3176470c1644a255ed14dd08828bf73118f2e22bc",
+    "rng_state": "7825313e33d48c00e8a9a1505f5b8c1a7f3e64b88f1ab7feb131305aadab24f9",
+    "seconds": 0.06986320800206158
+   },
+   {
+    "final_loss": 5.57565450668335,
+    "model_state": "9433a80052162885000671add472930c0d6c0a4e10f51fabd2e2b51f8c2c625f",
+    "optimizer_state": "e6c57ce88ed0f55f50f093f3176470c1644a255ed14dd08828bf73118f2e22bc",
+    "rng_state": "7825313e33d48c00e8a9a1505f5b8c1a7f3e64b88f1ab7feb131305aadab24f9",
+    "seconds": 0.05678570899181068
+   },
+   {
+    "final_loss": 5.57565450668335,
+    "model_state": "9433a80052162885000671add472930c0d6c0a4e10f51fabd2e2b51f8c2c625f",
+    "optimizer_state": "e6c57ce88ed0f55f50f093f3176470c1644a255ed14dd08828bf73118f2e22bc",
+    "rng_state": "7825313e33d48c00e8a9a1505f5b8c1a7f3e64b88f1ab7feb131305aadab24f9",
+    "seconds": 0.055763041993486695
+   },
+   {
+    "final_loss": 5.57565450668335,
+    "model_state": "9433a80052162885000671add472930c0d6c0a4e10f51fabd2e2b51f8c2c625f",
+    "optimizer_state": "e6c57ce88ed0f55f50f093f3176470c1644a255ed14dd08828bf73118f2e22bc",
+    "rng_state": "7825313e33d48c00e8a9a1505f5b8c1a7f3e64b88f1ab7feb131305aadab24f9",
+    "seconds": 0.05455170800269116
+   },
+   {
+    "final_loss": 5.57565450668335,
+    "model_state": "9433a80052162885000671add472930c0d6c0a4e10f51fabd2e2b51f8c2c625f",
+    "optimizer_state": "e6c57ce88ed0f55f50f093f3176470c1644a255ed14dd08828bf73118f2e22bc",
+    "rng_state": "7825313e33d48c00e8a9a1505f5b8c1a7f3e64b88f1ab7feb131305aadab24f9",
+    "seconds": 0.05472212500171736
+   }
+  ],
+  "repeats": 5,
+  "schema": 2,
+  "seed": 4214644075,
+  "sentinel": {
+   "batch": 8,
+   "d_model": 64,
+   "length": 48,
+   "lr": 0.001,
+   "max_len": 128,
+   "n_heads": 4,
+   "n_layers": 2,
+   "steps": 12,
+   "vocab_size": 258
+  }
+ },
+ "resume": {
+  "device": "cpu",
+  "differing_digests": [],
+  "environment": {
+   "device": "cpu",
+   "environment": {
+    "CUBLAS_WORKSPACE_CONFIG": null,
+    "MKL_NUM_THREADS": null,
+    "OMP_NUM_THREADS": null,
+    "PYTHONHASHSEED": null,
+    "PYTORCH_ENABLE_MPS_FALLBACK": null
+   },
+   "machine": "arm64",
+   "numpy": "2.5.1",
+   "platform": "macOS-26.6.2-arm64-arm-64bit",
+   "processor": "arm",
+   "python": "3.12.12 (main, Feb  4 2026, 01:57:59) [Clang 21.1.4 ]",
+   "threads": 10,
+   "torch": "2.13.0"
+  },
+  "equivalent": true,
+  "loss_difference": 0.0,
+  "process_boundary": false,
+  "rebuilt_model_and_optimizer": true,
+  "resume_step": 6,
+  "resumed": {
+   "model_state": "9433a80052162885000671add472930c0d6c0a4e10f51fabd2e2b51f8c2c625f",
+   "optimizer_state": "e6c57ce88ed0f55f50f093f3176470c1644a255ed14dd08828bf73118f2e22bc",
+   "rng_state": "7825313e33d48c00e8a9a1505f5b8c1a7f3e64b88f1ab7feb131305aadab24f9"
+  },
+  "schema": 2,
+  "seed": 4214644075,
+  "sentinel": {
+   "batch": 8,
+   "d_model": 64,
+   "length": 48,
+   "lr": 0.001,
+   "max_len": 128,
+   "n_heads": 4,
+   "n_layers": 2,
+   "steps": 12,
+   "vocab_size": 258
+  },
+  "serialised": true,
+  "uninterrupted": {
+   "model_state": "9433a80052162885000671add472930c0d6c0a4e10f51fabd2e2b51f8c2c625f",
+   "optimizer_state": "e6c57ce88ed0f55f50f093f3176470c1644a255ed14dd08828bf73118f2e22bc",
+   "rng_state": "7825313e33d48c00e8a9a1505f5b8c1a7f3e64b88f1ab7feb131305aadab24f9"
+  }
+ },
+ "schema": 2,
+ "stage": "R0"
+}

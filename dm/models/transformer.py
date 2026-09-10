@@ -16,7 +16,7 @@ it is the difference between the bit arm (vocab 4) and a fused-token arm
 from __future__ import annotations
 
 import math
-from collections.abc import Callable
+from collections.abc import Callable, Mapping, Sequence
 from dataclasses import dataclass
 from typing import Protocol
 
@@ -25,7 +25,40 @@ import torch
 import torch.nn.functional as F
 from torch import Tensor, nn
 
+from ..isa.codec import BOS, N_SPECIAL
+from ..isa.spec import Op
+from ..relation import (
+    ORACLE_SUPPORT,
+    CopyActionKey,
+    RowByteQueues,
+    candidate_spans,
+    execute_copy,
+    prefix_index,
+    prefix_progress,
+)
+from ..relation.decoding import (
+    LEGACY_POLICY,
+    STOPPING_POLICY,
+    ActionDecision,
+    DecodeLedger,
+    DecodeObserver,
+    DecodeRequestError,
+    FlatOutputStop,
+    RequestStarted,
+    resolve_policy,
+)
+from .relation import (
+    RELATION_SCHEMAS,
+    PackedCandidates,
+    RelationHead,
+    RelationLayoutError,
+    RelationScores,
+    length_bin,
+    relation_parameter_count,
+)
+
 PAD_TOKEN = 0  # mirrors dm.isa.codec.PAD; kept local so the model has no data dep
+BYTE_VOCAB_SIZE = N_SPECIAL + 256
 
 #: Latent-feedback architectures this file implements. `"none"` is the default
 #: and *is* the pre-Direction-3 model: it builds no extra parameters, reads no
@@ -167,6 +200,10 @@ class Config:
     #: three runtime modes a decode uses is an argument to `generate`, because
     #: standard and soft have to be comparable at identical weights.
     feedback_schema: str = "none"
+    #: Direction 4's optional bounded relation scorer.  Appended and defaulted
+    #: for strict old-checkpoint reconstruction; it never changes ``forward`` or
+    #: ``generate`` and is mutually exclusive with latent feedback in v1.
+    relation_schema: str = "none"
 
     def __post_init__(self) -> None:
         if self.feedback_schema not in SUPPORTED_FEEDBACK_SCHEMAS:
@@ -176,6 +213,14 @@ class Config:
                 "typo that silently disabled feedback would look exactly like a "
                 "null result"
             )
+        if self.relation_schema not in RELATION_SCHEMAS:
+            raise ValueError(
+                f"unknown relation_schema {self.relation_schema!r}; expected one "
+                f"of {list(RELATION_SCHEMAS)}")
+        if self.relation_schema != "none" and self.feedback_schema != "none":
+            raise ValueError(
+                "relation_schema='span_affine_v1' may not coexist with a non-none "
+                "feedback_schema in Direction 4 v1")
 
     @property
     def d_head(self) -> int:
@@ -198,6 +243,8 @@ class Config:
         # equality, not a bound.
         feedback = (0 if self.feedback_schema == "none"
                     else 2 * self.d_model**2 + self.d_model)
+        relation = (0 if self.relation_schema == "none"
+                    else relation_parameter_count(self.d_model))
         return (
             self.vocab_size * self.d_model
             + self.n_layers * per_layer
@@ -205,6 +252,7 @@ class Config:
             + positions
             + self.n_classes * self.d_model
             + feedback
+            + relation
         )
 
 
@@ -256,6 +304,45 @@ class LayerCache:
         self.v[:, :, self.n : end] = v
         self.n = end
         return self.k[:, :, :end], self.v[:, :, :end]
+
+
+class RelationBoundaryCache:
+    """Request-owned top-layer boundary values, independent of attention KV.
+
+    Copy states into fixed storage: retaining a slice of a batched forward also
+    retains that forward's entire backing tensor. An offset map names only real
+    canonical boundaries; unused slots never enter a span distribution.
+    """
+
+    def __init__(self, rows: int, *, capacity: int, d_model: int, device, dtype) -> None:
+        if any(type(value) is not int or value < 1 for value in (rows, capacity, d_model)):
+            raise RelationLayoutError("invalid boundary cache shape")
+        self._states = torch.empty((rows, capacity, d_model), device=device, dtype=dtype)
+        self._slots: list[dict[int, int]] = [{} for _ in range(rows)]
+
+    @property
+    def storage_bytes(self) -> int:
+        return self._states.numel() * self._states.element_size()
+
+    def put(self, row: int, boundary: int, state: Tensor) -> None:
+        if type(row) is not int or not 0 <= row < len(self._slots) or \
+                type(boundary) is not int or boundary < 0:
+            raise RelationLayoutError("invalid boundary cache coordinate")
+        slots = self._slots[row]
+        if boundary in slots:
+            raise RelationLayoutError("boundary state was already retained")
+        if len(slots) == self._states.shape[1] or state.shape != self._states.shape[2:] or \
+                state.device != self._states.device or state.dtype != self._states.dtype:
+            raise RelationLayoutError("boundary cache capacity/state mismatch")
+        slot = len(slots)
+        self._states[row, slot].copy_(state.detach())
+        slots[boundary] = slot
+
+    def get(self, row: int, boundary: int) -> Tensor:
+        if type(row) is not int or not 0 <= row < len(self._slots) or \
+                type(boundary) is not int or boundary not in self._slots[row]:
+            raise RelationLayoutError("candidate endpoint lacks a retained boundary state")
+        return self._states[row, self._slots[row][boundary]]
 
 
 class Attention(nn.Module):
@@ -488,6 +575,7 @@ class DrawingLM(nn.Module):
     #: never reads the fusion weights" structural rather than a convention: there
     #: are no fusion weights to read.
     fuse: Fusion | None
+    relation: RelationHead | None
 
     def __init__(self, cfg: Config) -> None:
         super().__init__()
@@ -534,10 +622,22 @@ class DrawingLM(nn.Module):
                 self.fuse = Fusion(cfg, schema=cfg.feedback_schema)
         else:
             self.fuse = None
+        # Unlike fusion, relation construction follows the shared residual
+        # re-initialisation below.  Those residual draws are deliberately outside
+        # ``self.apply``; registering the head before them would move their RNG
+        # stream and change ordinary logits in a relation-capable checkpoint.
+        self.relation = None
         self.apply(self._init)
         for block in blocks:  # scaled residual init
             nn.init.normal_(block.attn.proj.weight, std=0.02 / math.sqrt(2 * cfg.n_layers))
             nn.init.normal_(block.ff.down.weight, std=0.02 / math.sqrt(2 * cfg.n_layers))
+        if cfg.relation_schema == "span_affine_v1":
+            with torch.random.fork_rng(devices=[]):
+                self.relation = RelationHead(cfg.d_model)
+            # Registered last and initialised only after every shared draw.
+            # ``Linear``/``Embedding`` are the only random modules in the head;
+            # its RMSNorm gain remains its constructor's exact one-vector.
+            self.relation.apply(self._init)
         self._cache: tuple | None = None
 
     @staticmethod
@@ -585,7 +685,7 @@ class DrawingLM(nn.Module):
         scaled = 0.02 / math.sqrt(2 * self.cfg.n_layers)
         with torch.no_grad():
             for name, param in sorted(self.named_parameters()):
-                if name in ("embed.weight", "classes") or name.startswith("fuse."):
+                if name in ("embed.weight", "classes") or name.startswith(("fuse.", "relation.")):
                     # `head.weight` is tied to the embedding and is deduped out of
                     # `named_parameters()`; `classes` must stay at zero; `fuse.*`
                     # is drawn below, after every pre-feedback draw is spent.
@@ -605,10 +705,25 @@ class DrawingLM(nn.Module):
                 # embedding's own RMS so the stack's first fused input is the
                 # size of the input it already knows how to read.
                 self.fuse.norm.weight.fill_(FUSED_NORM_GAIN)
+            if self.relation is not None:
+                for name, param in self.relation.named_parameters():
+                    if name == "norm.weight":
+                        param.fill_(1.0)
+                    else:
+                        param.copy_(torch.normal(0.0, 0.02, size=param.shape,
+                                                 generator=generator))
         return self
 
     def n_params(self, trainable_only: bool = True) -> int:
         return sum(p.numel() for p in self.parameters() if p.requires_grad or not trainable_only)
+
+    def score_relation(self, packed: PackedCandidates) -> RelationScores:
+        """Score already-produced normalized boundary states with the opt-in head."""
+        if self.relation is None:
+            raise ValueError(
+                "score_relation() needs relation_schema='span_affine_v1'; an "
+                "ordinary checkpoint owns no relation parameters")
+        return self.relation(packed)
 
     def _rope(self, start: int, length: int, device, dtype) -> tuple[Tensor, Tensor]:
         need = start + length
@@ -842,6 +957,350 @@ class DrawingLM(nn.Module):
             scored.append(self.head(state)[:, -1:])
             cur = continuation[:, step : step + 1]
         return torch.cat(scored, dim=1)
+
+    @torch.no_grad()
+    def generate_relation(
+        self,
+        prompts: Sequence[bytes],
+        max_new: int,
+        *,
+        mode: str = "standard",
+        literal_policy: str | None = None,
+        observer: DecodeObserver | None = None,
+        observation_level: str = "summary",
+        bos: int = BOS,
+        device: str | torch.device = "cpu",
+        monitor: HaltProtocol | None = None,
+        oracle_actions: Mapping[tuple[int, int], CopyActionKey] | None = None,
+        on_logits: Callable[[int, Tensor], None] | None = None,
+        variates: Tensor | None = None,
+    ) -> Tensor:
+        """Byte-only R4 decode through standard, predicted or oracle COPY paths.
+
+        This is intentionally separate from :meth:`generate`: standard delegates
+        directly to that historical method, while the relation modes retain
+        normalized top-layer boundary states and advance each copied byte through
+        the normal causal cache one position at a time.  No target bytes or
+        corpus object is accepted here; oracle inputs are target-free action keys.
+        """
+        if mode not in ("standard", "predicted_copy", "oracle_copy"):
+            raise ValueError("relation decode mode must be standard, predicted_copy, or oracle_copy")
+        policy = resolve_policy(mode, literal_policy)
+        if observation_level not in ("summary", "actions", "scores"):
+            raise DecodeRequestError("unknown observation level")
+        if observer is not None and (not callable(observer) or policy == LEGACY_POLICY):
+            raise DecodeRequestError("observer requires common policy and a callable")
+        if not prompts:
+            raise ValueError("relation decode needs at least one immutable byte prompt")
+        if type(max_new) is not int or max_new < 0:
+            raise ValueError("max_new must be non-negative")
+        if bos != BOS or self.cfg.vocab_size != BYTE_VOCAB_SIZE:
+            raise ValueError("relation decode is defined only for the standard ByteCodec vocabulary")
+        if not self.cfg.causal:
+            raise ValueError("relation decode needs a causal model")
+        if self.cfg.feedback_schema != "none":
+            raise ValueError("relation decode refuses feedback-enabled models")
+        if any(not isinstance(prompt, bytes) for prompt in prompts):
+            raise ValueError("relation prompts must be immutable bytes")
+        lengths = {len(prompt) for prompt in prompts}
+        if len(lengths) != 1:
+            raise ValueError("relation cache sessions require equal prompt byte lengths")
+        given = lengths.pop()
+        if given + max_new > self.cfg.max_len:
+            raise ValueError("relation prompt plus requested output exceeds model capacity")
+        rows = len(prompts)
+        prompt_tokens = torch.tensor(
+            [[N_SPECIAL + byte for byte in prompt] for prompt in prompts],
+            dtype=torch.long, device=device,
+        )
+        if policy == LEGACY_POLICY:
+            # This direct delegation protects all legacy sampling/callback and
+            # variate arithmetic.  Relation-aware code never runs on this path.
+            return self.generate(rows, max_new, bos=bos, device=device, monitor=monitor,
+                                 prompt=prompt_tokens, variates=variates,
+                                 on_logits=on_logits)
+        if mode == "predicted_copy" and self.relation is None:
+            raise ValueError("predicted_copy needs relation_schema='span_affine_v1'")
+        if mode != "oracle_copy" and oracle_actions is not None:
+            raise ValueError(f"{mode} refuses oracle action data")
+        if variates is not None and tuple(variates.shape) != (rows, given + max_new):
+            raise ValueError("relation variates need one position-keyed uniform per output row")
+        if variates is not None and (not variates.is_floating_point() or
+                                     not bool(torch.isfinite(variates).all()) or
+                                     bool(((variates < 0) | (variates >= 1)).any())):
+            raise ValueError("relation variates must be finite uniforms in [0, 1)")
+        if variates is not None:
+            sampler_dtype = (torch.get_autocast_dtype(torch.device(device).type)
+                             if torch.is_autocast_enabled(torch.device(device).type)
+                             else self.embed.weight.dtype)
+            converted = variates.to(dtype=sampler_dtype)
+            if bool(((converted < 0) | (converted >= 1)).any()):
+                raise ValueError("relation variates leave [0, 1) in sampler dtype")
+        stop = FlatOutputStop(rows, given, max_new, monitor)
+        # Runtime candidate selection must fail loudly on malformed prompt bytes.
+        prompt_indexes = [prefix_index(prompt) for prompt in prompts]
+        if any(Op.HALT in ops and (ops[-1] is not Op.HALT or ops.count(Op.HALT) != 1)
+               for _, _, ops in prompt_indexes):
+            raise ValueError("relation prompt has bytes after HALT; its dead tail is not decodable")
+        ledger = DecodeLedger(rows, given, variates is not None, observer, observation_level)
+        ledger.publish(RequestStarted(mode, policy, STOPPING_POLICY,
+                                      "inverse_cdf" if variates is not None else "multinomial",
+                                      rows, given, max_new, self.cfg.max_len, observation_level))
+        for row, (_, _, ops) in enumerate(prompt_indexes):
+            stop.prompt_terminal[row] = bool(ops) and ops[-1] is Op.HALT
+        if max_new == 0:
+            for row in range(rows):
+                stop.causes[row] = "zero_horizon"
+                ledger.stopped(stop, row)
+            ledger.complete(given)
+            return prompt_tokens
+        for offset in range(given):
+            stop.step(prompt_tokens[:, offset:offset + 1].t().cpu().numpy())
+        for row in range(rows):
+            if stop.done[row]:
+                ledger.stopped(stop, row)
+        if bool(stop.done.all()):
+            ledger.complete(given)
+            return prompt_tokens
+
+        def checked_logits(offset: int, raw: Tensor) -> None:
+            if not bool(torch.isfinite(raw).all()):
+                raise ValueError("relation byte head produced nonfinite raw scores")
+            if on_logits is not None:
+                on_logits(offset, raw)
+                if not bool(torch.isfinite(raw).all()):
+                    raise ValueError("relation byte head produced nonfinite raw scores")
+
+        if mode == "standard":
+            # Prime once above; generate must still initialize its local done
+            # mask. The adapter replays only its status, never the caller monitor.
+            previous_origins = ("literal",) * rows
+
+            def standard_logits(offset: int, raw: Tensor) -> None:
+                ledger.forwarded(offset == given, previous_origins, stop.done)
+                if offset == given:
+                    ledger.kv_bytes = (2 * rows * (given + max_new) * self.cfg.d_model
+                                       * len(self.blocks) * self.embed.weight.element_size())
+                checked_logits(offset, raw)
+
+            class PrimedStop:
+                stride = 1
+
+                def __init__(self):
+                    self.replayed = 0
+
+                def step(self, chunk):
+                    if self.replayed < given:
+                        self.replayed += 1
+                        return stop.done.copy()
+                    nonlocal previous_origins
+                    live = ~stop.done.copy()
+                    ledger.sampled(list(range(rows)), live)
+                    previous_origins = tuple("literal" if active else "pad" for active in live)
+                    for row in range(rows):
+                        ledger.add(row, "generated_bytes", int(live[row]))
+                    status = stop.step(chunk)
+                    for row in range(rows):
+                        if status[row]:
+                            ledger.stopped(stop, row)
+                    return status
+
+            result = self.generate(rows, max_new, bos=bos, device=device, monitor=PrimedStop(),
+                                   prompt=prompt_tokens, variates=variates,
+                                   on_logits=standard_logits, forbid=(PAD_TOKEN, BOS))
+            ledger.complete(result.shape[1])
+            return result
+        self.eval()
+        width = given + max_new
+        caches = [LayerCache(rows, self.cfg.n_heads, width, self.cfg.d_head,
+                             device, self.embed.weight.dtype) for _ in self.blocks]
+        ledger.kv_bytes = sum(t.numel() * t.element_size()
+                              for cache in caches for t in (cache.k, cache.v))
+        out = torch.full((rows, width), PAD_TOKEN, dtype=torch.long, device=device)
+        if given:
+            out[:, :given] = prompt_tokens
+        done = torch.from_numpy(stop.done.copy()).to(device)
+        boundary_state = RelationBoundaryCache(
+            rows, capacity=width + 1, d_model=self.cfg.d_model,
+            device=device, dtype=self.embed.weight.dtype)
+        ledger.boundary_bytes = boundary_state.storage_bytes
+        cur = torch.cat([torch.full((rows, 1), bos, dtype=torch.long, device=device),
+                         prompt_tokens], dim=1)
+        x = self._embed(cur, start=0)
+        cos, sin = self._rope(0, x.shape[1], device, x.dtype)
+        for block, cache in zip(self.blocks, caches):
+            x = block(x, cos, sin, cache)
+        state = self.norm(x)
+        raw = self.head(state)[:, -1]
+        ledger.forwarded(True, ("literal",) * rows, stop.done)
+        for row, (marks, _, _) in enumerate(prompt_indexes):
+            for boundary in marks:
+                boundary_state.put(row, boundary, state[row, boundary])
+                ledger.add(row, "boundary_slots_used")
+        queues = RowByteQueues(rows)
+        generated = [bytearray(prompt) for prompt in prompts]
+        pos = given + 1
+
+        for step in range(given, width):
+            checked_logits(step, raw)
+            eligible: list[int] = []
+            query_states: list[Tensor] = []
+            starts: list[Tensor] = []
+            stops: list[Tensor] = []
+            bins: list[int] = []
+            start_offsets: list[int] = []
+            stop_offsets: list[int] = []
+            splits = [0]
+            prefixes: list[bytes] = []
+            for row, buffer in enumerate(generated):
+                if bool(done[row]) or queues.pending(row):
+                    continue
+                prefix = bytes(buffer)
+                progress = prefix_progress(prefix)
+                if not progress.complete:
+                    # A decoder never stands at an operand boundary. It emits
+                    # normally until the shared parser reaches a full L0
+                    # instruction, then the next iteration may query COPY.
+                    continue
+                # `candidate_spans` shares the executor parser and therefore
+                # proves both canonicality and target-free eligibility here.
+                spans = candidate_spans(prefix, len(prefix))
+                eligible.append(row)
+                prefixes.append(prefix)
+                query_states.append(boundary_state.get(row, len(prefix)))
+                for start, end in spans:
+                    starts.append(boundary_state.get(row, start))
+                    stops.append(boundary_state.get(row, end))
+                    bins.append(length_bin(end - start))
+                    start_offsets.append(start)
+                    stop_offsets.append(end)
+                splits.append(len(starts))
+            if eligible and mode == "predicted_copy":
+                d_model = self.cfg.d_model
+                empty = state.new_empty((0, d_model))
+                packed = PackedCandidates(
+                    query_states=torch.stack(query_states),
+                    start_states=torch.stack(starts) if starts else empty,
+                    stop_states=torch.stack(stops) if stops else empty,
+                    length_bins=torch.tensor(bins, dtype=torch.long, device=device),
+                    source_start=torch.tensor(start_offsets, dtype=torch.long, device=device),
+                    source_stop=torch.tensor(stop_offsets, dtype=torch.long, device=device),
+                    row_splits=torch.tensor(splits, dtype=torch.long, device=device),
+                )
+                scores = self.score_relation(packed)
+                ledger.calls["head_batches"] += 1
+                for row, begin, end in zip(eligible, splits[:-1], splits[1:], strict=True):
+                    ledger.add(row, "head_queries")
+                    ledger.add(row, "candidate_entries", end - begin)
+                for query, (row, prefix) in enumerate(zip(eligible, prefixes, strict=True)):
+                    from .relation import choose_action, score_snapshot
+                    decision = choose_action(scores, query, prefix,
+                                             max_len=min(self.cfg.max_len, width))
+                    ledger.add(row, "executor_attempts", decision.expansions)
+                    ledger.add(row, "predicted_search_attempts", decision.expansions)
+                    if not decision.emit:
+                        if decision.execution is None:  # defensive: R3 owns this invariant.
+                            raise RuntimeError("COPY decision lacks its checked execution")
+                        queues.enqueue(row, decision.execution.appended)
+                        ledger.add(row, "copy_admissions")
+                        ledger.add(row, "copy_admitted_bytes", len(decision.execution.appended))
+                    if observer is not None and observation_level != "summary":
+                        action = decision.action
+                        key = (None if action is None else
+                               (action.boundary, action.source_start, action.source_stop,
+                                action.step.d4.code, action.step.dx, action.step.dy,
+                                action.total_count))
+                        ledger.publish(ActionDecision(
+                            row, step, "predicted", splits[query + 1] - splits[query], key,
+                            decision.score, decision.expansions, decision.faults,
+                            decision.exit_reason, queues.pending(row)))
+                        if observation_level == "scores":
+                            ledger.publish(score_snapshot(scores, query, row, step))
+            elif eligible:  # oracle has no neural-head dependency or scoring path.
+                for row, prefix in zip(eligible, prefixes, strict=True):
+                    action = None if oracle_actions is None else oracle_actions.get((row, len(prefix)))
+                    if action is not None:
+                        ledger.add(row, "executor_attempts")
+                        ledger.add(row, "oracle_executor_calls")
+                        execution = execute_copy(prefix, action, policy=ORACLE_SUPPORT,
+                                                 max_len=min(self.cfg.max_len, width))
+                        queues.enqueue(row, execution.appended)
+                        ledger.add(row, "copy_admissions")
+                        ledger.add(row, "copy_admitted_bytes", len(execution.appended))
+                        if observer is not None and observation_level != "summary":
+                            ledger.publish(ActionDecision(
+                                row, step, "oracle", 0,
+                                (action.boundary, action.source_start, action.source_stop,
+                                 action.step.d4.code, action.step.dx, action.step.dy,
+                                 action.total_count), None, 1, (), "oracle_executed",
+                                len(execution.appended)))
+            queued = queues.pop_position()
+            token = torch.empty((rows, 1), dtype=torch.long, device=device)
+            emit_rows: list[int] = []
+            origins = ["pad"] * rows
+            for row, byte in enumerate(queued if queued is not None else (None,) * rows):
+                if bool(done[row]):
+                    token[row, 0] = PAD_TOKEN
+                elif byte is None:
+                    emit_rows.append(row)
+                    origins[row] = "literal"
+                else:
+                    token[row, 0] = N_SPECIAL + byte
+                    origins[row] = "copy"
+                    ledger.add(row, "copy_delivered_bytes")
+            if emit_rows:
+                emit = torch.tensor(emit_rows, dtype=torch.long, device=device)
+                # R4's byte path cannot place PAD/BOS into an active causal
+                # context.  Mask before the same inverse-CDF arithmetic used by
+                # normal generation, so a supplied position-keyed variate stays
+                # paired over the *legal* byte distribution.
+                logits = raw[emit].clone()
+                logits[:, :N_SPECIAL] = float("-inf")
+                probs = F.softmax(logits, dim=-1)
+                if variates is None:
+                    token[emit, 0] = torch.multinomial(probs, 1).squeeze(1)
+                else:
+                    cumulative = probs.cumsum(dim=-1).contiguous()
+                    positive = probs > 0
+                    last = positive.shape[-1] - 1 - positive.flip(-1).to(torch.int64).argmax(-1)
+                    positions = torch.arange(probs.shape[-1], device=device)[None, :]
+                    cumulative = torch.where(positions >= last[:, None], torch.ones_like(cumulative), cumulative)
+                    draw = variates[emit, step, None].to(device=device, dtype=cumulative.dtype)
+                    token[emit, 0] = torch.searchsorted(cumulative, draw, right=True).squeeze(1)
+            ledger.sampled(emit_rows, ~stop.done)
+            out[:, step:step + 1] = token
+            for row, symbol in enumerate(token[:, 0].tolist()):
+                if not bool(done[row]):
+                    generated[row].append(symbol - N_SPECIAL)
+                    ledger.add(row, "generated_bytes")
+            done = torch.from_numpy(stop.step(token.t().cpu().numpy())).to(device)
+            for row in range(rows):
+                if bool(done[row]):
+                    discarded = queues.discard(row)
+                    ledger.add(row, "copy_discarded_bytes", discarded)
+                    ledger.stopped(stop, row, discarded)
+                ledger.rows[row]["copy_pending_bytes"] = queues.pending(row)
+            if step + 1 == width or bool(done.all()):
+                ledger.complete(step + 1)
+                return out[:, :step + 1]
+            # Feed exactly the preceding byte, including copied bytes, before
+            # the next decision.  No multi-byte fill can enter this loop.
+            x = self._embed(token, start=pos)
+            cos, sin = self._rope(pos, 1, device, x.dtype)
+            for block, cache in zip(self.blocks, caches):
+                x = block(x, cos, sin, cache)
+            pos += 1
+            state = self.norm(x)
+            raw = self.head(state)[:, -1]
+            ledger.forwarded(False, tuple(origins), stop.done)
+            for row, buffer in enumerate(generated):
+                if bool(done[row]):
+                    continue
+                progress = prefix_progress(bytes(buffer))
+                if progress.complete:
+                    boundary_state.put(row, len(buffer), state[row, 0])
+                    ledger.add(row, "boundary_slots_used")
+        return out
 
     @torch.no_grad()
     def generate(

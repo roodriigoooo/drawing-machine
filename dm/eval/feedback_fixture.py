@@ -401,6 +401,9 @@ def _compare(name: str, expected: torch.Tensor, actual: torch.Tensor,
 #: hashed, so moving the default breaks the protocol digest too.
 BASELINE_COMPATIBLE_DEFAULTS: dict[str, object] = {
     CONFIG_FIELD: DEFAULT_FEEDBACK_SCHEMA,
+    # R3 appends an optional architecture field.  A pre-R3 state owns no head,
+    # so only the parameter-free default reconstructs it strictly.
+    "relation_schema": "none",
 }
 
 

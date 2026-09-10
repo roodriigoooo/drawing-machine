@@ -1,0 +1,343 @@
+{
+ "architecture": {
+  "auxiliary_contrast": [
+   "standard",
+   "none"
+  ],
+  "ceiling_contrast": [
+   "oracle_copy",
+   "predicted_copy"
+  ],
+  "d_model": 128,
+  "default_relation_schema": "none",
+  "forbidden_feedback_schema": "none",
+  "kbest_actions": 32,
+  "max_candidate_spans": 768,
+  "primary_contrast": [
+   "predicted_copy",
+   "standard"
+  ],
+  "relation_length_bin_edges": [
+   12,
+   21,
+   33,
+   48,
+   69,
+   99,
+   141,
+   192
+  ],
+  "relation_length_bins": 8,
+  "relation_parameters": [
+   "norm.weight",
+   "query.weight",
+   "key_start.weight",
+   "key_stop.weight",
+   "length.weight",
+   "gate.weight",
+   "d4.weight",
+   "dx.weight",
+   "dy.weight",
+   "count.weight"
+  ],
+  "relation_rank": 32,
+  "relation_schemas": [
+   "none",
+   "span_affine_v1"
+  ],
+  "runtime_modes": [
+   "standard",
+   "predicted_copy",
+   "oracle_copy"
+  ]
+ },
+ "authorized_stages": [
+  "R0",
+  "R1"
+ ],
+ "cells": [
+  "relation_none_model_a",
+  "relation_none_model_b",
+  "relation_span_affine_v1_model_a",
+  "relation_span_affine_v1_model_b"
+ ],
+ "corpus": {
+  "canonical_payload_sha256": "41c7821b39a32f1c1c6a9568fba5d01a30b9374bb9978c0b83e9714fd9463c66",
+  "caps": {
+   "max_source_bytes": 192,
+   "max_source_gap_instructions": 4,
+   "max_source_instructions": 64,
+   "min_source_bytes": 6,
+   "min_source_coords": 1,
+   "min_source_instructions": 2
+  },
+  "confirmatory_strata": [
+   "heldout_affine_tuple",
+   "heldout_nested_composition"
+  ],
+  "data_seed": 412653006,
+  "development_data_seed": 3573882449,
+  "manifest_path": "runs/relation_corpus_v1.json",
+  "manifest_schema": 1,
+  "min_confirmatory_components": 128,
+  "motif_disjoint_strata": [
+   "novel_motif_transfer",
+   "nested_motif_transfer"
+  ],
+  "provenances": [
+   "scientific",
+   "development"
+  ],
+  "schema": 1,
+  "source_partition": {
+   "count": 2,
+   "marker": "drawing-machine-direction4-source-partition-v1",
+   "names": {
+    "development": 1,
+    "scientific": 0
+   }
+  },
+  "strata": [
+   "train",
+   "heldout_affine_tuple",
+   "heldout_nested_composition",
+   "heldout_motif_pair",
+   "affine_pair_interaction",
+   "generic",
+   "destroyed",
+   "novel_motif_transfer",
+   "nested_motif_transfer"
+  ],
+  "supports": {
+   "audit_translation": [
+    -128,
+    127
+   ],
+   "count": [
+    2,
+    3,
+    4
+   ],
+   "d4": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "translation": [
+    -32,
+    0,
+    32
+   ]
+  },
+  "venues": [
+   "synthetic_nested_repeat",
+   "composed_motif_relation"
+  ]
+ },
+ "direction": 4,
+ "floors": {
+  "max_false_copy_rate": 0.01,
+  "max_predicted_valid_halt_loss": 0.01,
+  "max_resource_ratio": 1.5,
+  "max_standard_likelihood_cost": 1.0,
+  "max_standard_valid_halt_loss": 0.05,
+  "min_exact_block_gain": 0.1,
+  "min_oracle_gap_recovery": 0.5,
+  "parameter_cap": 857472,
+  "required_oracle_exact": 1.0
+ },
+ "guards": {
+  "destroyed_relation": "COPY invoked on length- and census-matched negatives",
+  "false_copy": "COPY invoked on programs with no derivable relation",
+  "generic": "standard likelihood cost and valid-halt loss versus paired none",
+  "oracle": "oracle_copy reproduces the frozen target exactly",
+  "parameters": "total trainable parameters versus the frozen cap",
+  "resource": "peak memory and wall time versus the baseline smoke shape",
+  "validity": "predicted_copy valid-halt loss versus the same checkpoint"
+ },
+ "labels": {
+  "order": [
+   "incomplete",
+   "unsafe_copy_channel",
+   "no_explicit_relation_gain",
+   "explicit_relation_gain",
+   "compositional_relation_gain"
+  ],
+  "reasons": {
+   "compositional_relation_gain": "both co-primary strata passed in both seeds and every guard passed",
+   "explicit_relation_gain": "the flat affine stratum passed both seeds and the nested stratum did not",
+   "incomplete": "missing cell, artifact or hash; truncation; failed reload; unqualified device; corpus defect; malformed case",
+   "no_explicit_relation_gain": "the flat affine effect missed its floor in either seed",
+   "unsafe_copy_channel": "a generic, destroyed-relation, resource, parameter or validity guard failed"
+  }
+ },
+ "objective": {
+  "action_nll_enters_bits_per_drawing": false,
+  "action_weight": 0.1,
+  "byte_nll_covers_copied_bytes": true,
+  "components": [
+   "gate",
+   "action_joint"
+  ],
+  "diagnostic_factors": [
+   "span",
+   "d4",
+   "dx",
+   "dy",
+   "count"
+  ],
+  "formula": "L_total = L_byte + 0.1 * (L_gate + L_action_joint), L_action_joint = -log sum_{a in valid(b)} p_span(a) p_d4(a) p_dx(a) p_dy(a) p_count(a)",
+  "gate_positions": "reachable_boundaries",
+  "marginalization": "joint_valid_action_set"
+ },
+ "parameters": {
+  "budget": {
+   "allowance": 32768,
+   "cap": 857472,
+   "headroom": 17664
+  },
+  "none": {
+   "relation": 0,
+   "total": 824704
+  },
+  "span_affine_v1": {
+   "relation": 15104,
+   "total": 839808
+  }
+ },
+ "protocol": "relation-v0",
+ "protocol_sha256": "edc8b753437a67876d5f5c92451e8a7b735cba0f95e20b517041ba92cbcadde5",
+ "r0": {
+  "determinism_is_policy_not_certificate": true,
+  "digests": [
+   "model_state",
+   "optimizer_state",
+   "rng_state"
+  ],
+  "environment_fields": [
+   "python",
+   "torch",
+   "numpy",
+   "platform",
+   "machine",
+   "processor",
+   "device",
+   "threads",
+   "environment"
+  ],
+  "fallback_status": "withdrawn in v1: the implemented metric was degenerate (granularity 1/batch = 0.125 against a 0.10 floor, and identically zero across repeats). A replacement must be a paired relation-task measurement and cannot exist before R3.",
+  "forbidden_digest": "checkpoint_file_sha256",
+  "min_repeats": 5,
+  "reading_fields": [
+   "model_state",
+   "optimizer_state",
+   "rng_state",
+   "final_loss",
+   "seconds"
+  ],
+  "resume": {
+   "digest_fields": [
+    "model_state",
+    "optimizer_state",
+    "rng_state"
+   ],
+   "process_boundary": false,
+   "rebuilt_model_and_optimizer": true,
+   "resume_step": 6,
+   "serialised": true
+  },
+  "resume_fields": [
+   "schema",
+   "device",
+   "seed",
+   "sentinel",
+   "environment",
+   "resume_step",
+   "serialised",
+   "rebuilt_model_and_optimizer",
+   "process_boundary",
+   "uninterrupted",
+   "resumed",
+   "differing_digests",
+   "equivalent",
+   "loss_difference"
+  ],
+  "routes": [
+   "exact_state_reproduction"
+  ],
+  "sentinel_config": {
+   "batch": 8,
+   "d_model": 64,
+   "length": 48,
+   "lr": 0.001,
+   "max_len": 128,
+   "n_heads": 4,
+   "n_layers": 2,
+   "steps": 12,
+   "vocab_size": 258
+  }
+ },
+ "schema": 1,
+ "seeds": {
+  "development": [
+   "development_a",
+   "development_b"
+  ],
+  "namespaces": {
+   "action": "counter-based uniforms for EMIT/COPY promotion",
+   "bootstrap": "connected-component resamples for every paired interval",
+   "corpus": "the scientific traced corpus build, and every split inside it",
+   "development_a": "first development-only initialisation",
+   "development_b": "second development-only initialisation",
+   "development_corpus": "the development traced corpus; disjoint from the above",
+   "model_a": "first scientific model initialisation",
+   "model_b": "second scientific model initialisation",
+   "randomization": "component-level sign flips for the paired permutation test",
+   "sentinel": "the R0 repeatability sentinel's data and initialisation",
+   "token": "counter-based uniforms for ordinary symbol sampling"
+  },
+  "root": "direction4-relation",
+  "scientific": [
+   "model_a",
+   "model_b"
+  ],
+  "values": {
+   "action": 3974789821,
+   "bootstrap": 3063591977,
+   "corpus": 412653006,
+   "development_a": 775159550,
+   "development_b": 728883118,
+   "development_corpus": 3573882449,
+   "model_a": 1130102480,
+   "model_b": 2042574818,
+   "randomization": 430125504,
+   "sentinel": 4214644075,
+   "token": 2571956151
+  }
+ },
+ "stages": {
+  "R0": "qualify model/optimizer/RNG reproducibility on the chosen backend",
+  "R1": "freeze the traced corpus and this executable contract, tests first",
+  "R2": "build the deterministic transducer, independent of any neural head",
+  "R3": "add the bounded span head and prove default checkpoint compatibility",
+  "R4": "add the auxiliary objective and its accounting",
+  "R5": "end-to-end smoke and development qualification",
+  "R6": "freeze protocol v1 and train the four cells",
+  "R7": "freeze protocol v2, score once and apply the label",
+  "R8": "optional pre-authorized promotion only"
+ },
+ "statistics": {
+  "alpha": 0.05,
+  "bootstrap_draws": 2000,
+  "inference_scope": "checkpoint-conditional replication under two named initialisations; not a population-of-models claim",
+  "multiplicity_correction": "holm",
+  "pairing": "frozen case, common random numbers within checkpoint and draw",
+  "resampling_unit": "connected co-occurrence motif component"
+ },
+ "status": "frozen"
+}
