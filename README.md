@@ -32,9 +32,12 @@ microcontroller, not neural inference on the Pico.
 
 The research has been less straightforward than getting drawings onto the
 board. Changing the alphabet from bytes to bits barely mattered on synthetic
-programs, but cost about 12 bits per drawing on QuickDraw. A hierarchical
-planner improved termination while losing on likelihood. Both were useful
-reminders that better prediction and better generation aren't the same thing.
+programs, but cost about 12 bits per drawing on QuickDraw.
+
+[![Bit versus byte alphabets on synthetic programs and QuickDraw sketches](docs/figs/fig1_granularity.svg)](docs/figs/fig1_granularity.svg)
+
+A hierarchical planner improved termination while losing on likelihood. Both
+were useful reminders that better prediction and better generation aren't the same thing.
 The [representation](docs/results.md) and [factorisation](docs/claim3.md)
 write-ups keep the numbers and experimental conditions.
 
@@ -42,9 +45,14 @@ That gap became more interesting with repeated shapes. Models learn to prefer
 a continuation compatible with their prefix, yet rarely finish an exactly
 compatible shape when generating freely: roughly 1% on the tested shape cases.
 The [context experiments](docs/context.md) try to separate that from memorising
-positions or recognising familiar motifs. I also tried
-[gated latent feedback](docs/feedback-stability.md); that implementation failed
-its stability gates before reaching the relation tests.
+positions or recognising familiar motifs.
+
+[![Context changes model preferences much more than it improves exact compatible generation](docs/figs/fig15_context_generation.svg)](docs/figs/fig15_context_generation.svg)
+
+I also tried [gated latent feedback](docs/feedback-stability.md); that
+implementation failed its stability gates before reaching the relation tests.
+The [full figure collection](docs/figs) includes the budget sweeps, device costs
+and other comparisons along the way.
 
 ![Prefix continuations](docs/media/prefix.png)
 
