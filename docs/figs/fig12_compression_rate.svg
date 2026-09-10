@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440.0" viewBox="0 0 760 440.0">
+<defs><clipPath id="clip0"><rect x="0" y="0" width="214" height="214"/></clipPath><clipPath id="clip1"><rect x="0" y="0" width="230" height="214"/></clipPath></defs>
+<rect width="760" height="440.0" fill="#ffffff"/>
+<g transform="translate(190,26)"><line x1="0.00" y1="0" x2="0.00" y2="214" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="48.64" y1="0" x2="48.64" y2="214" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="97.27" y1="0" x2="97.27" y2="214" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="145.91" y1="0" x2="145.91" y2="214" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="194.55" y1="0" x2="194.55" y2="214" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="185.33" y1="0" x2="185.33" y2="214" stroke="#666666" stroke-width="0.9" stroke-dasharray="3 2"/>
+<g clip-path="url(#clip0)">
+<polyline points="0.00,16.05 144.77,16.05" fill="none" stroke="#6b7280" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="144.77" cy="16.05" r="3.8" fill="#6b7280"/>
+<polyline points="0.00,42.80 168.30,42.80" fill="none" stroke="#3d8b83" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="168.30" cy="42.80" r="3.8" fill="#3d8b83"/>
+<polyline points="0.00,69.55 185.33,69.55" fill="none" stroke="#3d8b83" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="185.33" cy="69.55" r="3.8" fill="#3d8b83"/>
+<polyline points="0.00,96.30 122.13,96.30" fill="none" stroke="#8a8f42" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="122.13" cy="96.30" r="3.8" fill="#8a8f42"/>
+<polyline points="0.00,123.05 122.40,123.05" fill="none" stroke="#c8654a" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="122.40" cy="123.05" r="3.8" fill="#c8654a"/>
+<polyline points="0.00,149.80 105.27,149.80" fill="none" stroke="#c8654a" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="105.27" cy="149.80" r="3.8" fill="#c8654a"/>
+<polyline points="0.00,176.55 171.16,176.55" fill="none" stroke="#3b4f9e" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="171.16" cy="176.55" r="3.8" fill="#3b4f9e"/>
+</g>
+<rect x="0" y="0" width="214" height="214" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="0.00" y1="214" x2="0.00" y2="217.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="0.00" y="230" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0</text>
+<line x1="48.64" y1="214" x2="48.64" y2="217.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="48.64" y="230" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">1</text>
+<line x1="97.27" y1="214" x2="97.27" y2="217.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="97.27" y="230" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">2</text>
+<line x1="145.91" y1="214" x2="145.91" y2="217.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="145.91" y="230" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">3</text>
+<line x1="194.55" y1="214" x2="194.55" y2="217.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="194.55" y="230" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">4</text>
+<text x="107.00" y="250" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">bits per bytecode byte</text>
+<text x="107.00" y="-10" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">what one byte costs, by corpus</text>
+<text x="149.14" y="20.05" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#6b7280">2.98</text>
+<text x="-4.86" y="20.05" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#1a1a1a">Tier A — synthetic</text>
+<text x="-4.86" y="29.05" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="8.5" fill="#666666">55 B/drawing · constructed</text>
+<text x="172.68" y="46.80" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#3d8b83">3.46</text>
+<text x="-4.86" y="46.80" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#1a1a1a">QuickDraw — eps 2</text>
+<text x="-4.86" y="55.80" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="8.5" fill="#666666">161 B/drawing · natural</text>
+<text x="189.71" y="73.55" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#3d8b83">3.81</text>
+<text x="-4.86" y="73.55" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#1a1a1a">QuickDraw — eps 4</text>
+<text x="-4.86" y="82.55" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="8.5" fill="#666666">129 B/drawing · natural</text>
+<text x="126.51" y="100.30" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#8a8f42">2.51</text>
+<text x="-4.86" y="100.30" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#1a1a1a">composed — control, n = 2</text>
+<text x="-4.86" y="109.30" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="8.5" fill="#666666">208 B/drawing · flat</text>
+<text x="126.78" y="127.05" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#c8654a">2.52</text>
+<text x="-4.86" y="127.05" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#1a1a1a">composed — D4, n = 2</text>
+<text x="-4.86" y="136.05" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="8.5" fill="#666666">208 B/drawing · flat</text>
+<text x="109.65" y="153.80" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#c8654a">2.16</text>
+<text x="-4.86" y="153.80" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#1a1a1a">composed — D4, n ∈ {2,4}</text>
+<text x="-4.86" y="162.80" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="8.5" fill="#666666">221 B/drawing · flat</text>
+<text x="175.54" y="180.55" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#3b4f9e">3.52</text>
+<text x="-4.86" y="180.55" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#1a1a1a">composed — REPEATX</text>
+<text x="-4.86" y="189.55" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="8.5" fill="#666666">131 B/drawing · structured</text>
+<text x="4.86" y="207.31" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#666666">dashed: the natural corpus's rate</text></g>
+<g transform="translate(500,26)"><rect x="0.00" y="31.97" width="121.60" height="182.03" fill="#3b4f9e" opacity="0.75"/>
+<rect x="121.60" y="208.49" width="94.18" height="5.51" fill="#c8654a" opacity="0.9"/>
+<line x1="0.00" y1="0" x2="0.00" y2="214" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="48.73" y1="0" x2="48.73" y2="214" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="97.46" y1="0" x2="97.46" y2="214" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="146.19" y1="0" x2="146.19" y2="214" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="194.92" y1="0" x2="194.92" y2="214" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="214.00" x2="230" y2="214.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="165.36" x2="230" y2="165.36" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="116.73" x2="230" y2="116.73" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="68.09" x2="230" y2="68.09" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="19.45" x2="230" y2="19.45" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="3.71" y1="0" x2="3.71" y2="214" stroke="#666666" stroke-width="0.9" stroke-dasharray="3 2"/>
+<g clip-path="url(#clip1)">
+<polyline points="121.60,31.97 215.78,31.97" fill="none" stroke="#c8654a" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3 2"/>
+<polyline points="215.78,208.49 215.78,31.97" fill="none" stroke="#c8654a" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3 2"/>
+</g>
+<rect x="0" y="0" width="230" height="214" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="0.00" y1="214" x2="0.00" y2="217.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="0.00" y="230" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0</text>
+<line x1="48.73" y1="214" x2="48.73" y2="217.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="48.73" y="230" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">50</text>
+<line x1="97.46" y1="214" x2="97.46" y2="217.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="97.46" y="230" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">100</text>
+<line x1="146.19" y1="214" x2="146.19" y2="217.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="146.19" y="230" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">150</text>
+<line x1="194.92" y1="214" x2="194.92" y2="217.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="194.92" y="230" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">200</text>
+<line x1="0" y1="214.00" x2="-3.5" y2="214.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="218.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0</text>
+<line x1="0" y1="165.36" x2="-3.5" y2="165.36" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="169.36" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">1</text>
+<line x1="0" y1="116.73" x2="-3.5" y2="116.73" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="120.73" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">2</text>
+<line x1="0" y1="68.09" x2="-3.5" y2="68.09" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="72.09" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">3</text>
+<line x1="0" y1="19.45" x2="-3.5" y2="19.45" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="23.45" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">4</text>
+<text x="115.00" y="250" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">bytes of one drawing</text>
+<text transform="translate(-42,107.00) rotate(-90)" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">bits per byte</text>
+<text x="115.00" y="-10" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">one drawing's price, as area</text>
+<text x="60.80" y="122.99" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#ffffff">125 B at 3.74</text>
+<text x="60.80" y="136.99" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#ffffff">= 467 bits</text>
+<text x="168.69" y="183.85" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#c8654a">97 B at 0.11</text>
+<text x="168.69" y="196.85" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#c8654a">= 11 bits</text>
+<text x="127.45" y="49.00" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#666666">351 bits the model</text>
+<text x="127.45" y="62.00" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#666666">compressed by itself</text></g>
+<foreignObject x="0" y="290" width="760" height="150.0"><div xmlns="http://www.w3.org/1999/xhtml" style="font-family:'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif;font-size:12.5px;line-height:1.45;color:#1a1a1a;"><em>Figure 12.</em> <b>The composed arms settle at a lower bits/drawing because their corpus is more redundant, not because anything trained better</b> — and the totals were never comparable anyway, being different val sets. Normalised, the flat transformed corpus costs 2.16 bits per bytecode byte against QuickDraw's 3.81. Right: area is bits/drawing, so the price of one drawing is its length times its rate. The copies are 97 of 221 bytes at 0.11 bits each; at the rate of the motif they copy they would have cost 829 bits and they cost 11. <b>And the row worth looking for is the non-copy one: 3.74 bits per byte, within 2% of the natural corpus these motifs come from.</b> Outside its planted structure the constructed corpus is exactly as hard as QuickDraw, which is what says it is an instrument and not a toy. A rate compared across corpora is descriptive and not a paired difference: it explains a level, and no claim here rests on it.</div></foreignObject>
+</svg>

@@ -1,0 +1,263 @@
+{
+ "claim_labels": {
+  "anisotropic_relation_use": "the x venue passes and the exact rotation does not",
+  "causal_prefix_sensitivity": "the frozen interval for Delta excludes zero",
+  "incomplete": "a required instrument, venue or freeze is missing",
+  "lower_order_context_use": "raw D clears SESOI but Delta does not survive Holm",
+  "no_controlled_evidence": "the controlled interval includes zero or is below SESOI",
+  "relational_context_use": "causal sensitivity, plus Delta at or above SESOI with the same sign in both model seeds, plus a positive unrelated-block contrast"
+ },
+ "context_c3": {
+  "alpha": 0.05,
+  "axis_diagnostic": {
+   "synthetic_flat_step": [
+    "synthetic_flat_step_d4r1",
+    "synthetic_flat_step_yaxis"
+   ]
+  },
+  "axis_reading_status": "exploratory on the 2026-08-16 data; confirmatory only on a venue this rule has not seen",
+  "axis_support": {
+   "max_prefix_cost_ratio": 1.5,
+   "measured_on": "prefix_bits_per_byte_mean",
+   "provenance": "The 1.5x prefix bound is carried unchanged from v2, where it was declared before the y venue was built. Dropping the target bound is the post-hoc correction described in this protocol's note.",
+   "rationale": "One bound, and it is about the input. A diagnostic venue whose prefixes cost more than half again the primary's has left the regime the primary measured, so its null is about the shift and not about the relation. The cost of the compatible target is deliberately NOT a precondition: that is the estimand's own subject matter."
+  },
+  "bootstrap": {
+   "interval": "percentile 95",
+   "pvalue": "two-sided percentile, floored at 1/replicates",
+   "replicates": 2000,
+   "seed": 20260815,
+   "unit": "connected_source_donor_component"
+  },
+  "builder": {
+   "builder_seed": 20260815,
+   "case_schema": 3,
+   "manifest_schema": 3,
+   "reproduce": [
+    "PYTHONPATH=. .venv/bin/python scripts/context_c3.py runs/synthetic_c2flat24000_byte_square_s0.pt --manifest runs/context_c3_synthetic_flat_v4.json --build-manifest-only",
+    "PYTHONPATH=. .venv/bin/python scripts/context_c3.py runs/composed_x24000n2_byte_square_s0.pt --manifest runs/context_c3_composed_shape_v4.json --build-manifest-only"
+   ]
+  },
+  "c4": {
+   "denominator": "A program that halts before the target or reaches cap stays in the denominator; target reach is published beside target accuracy.",
+   "diagnostic": {
+    "cap_symbols": 512,
+    "draws_note": "v4's promotion rule fired: the 8-draw diagnostic returned half_width 0.0093-0.0147 on every venue, well inside the 0.10 bound, and C3 returned a positive label on both co-primary venues. Expansion is to the co-primary venues only -- 64 draws on a diagnostic whose interval already excludes zero buys nothing, and the column expansion does buy, hit_own_rate, is a co-primary question.",
+    "draws_per_world": {
+     "composed_shape_copy2": 64,
+     "default": 8,
+     "synthetic_flat_step": 64
+    },
+    "prompt_boundary": "complete byte and instruction boundary before the target",
+    "shared_uniform_variates": true,
+    "structural_mask": "off",
+    "structural_mask_note": "Off for the primary result. A masked cell is a named intervention and needs its own protocol entry; otherwise legality differences masquerade as context use."
+   },
+   "estimand": {
+    "controls": {
+     "controlled_endpoint": "Delta_gen = D_gen - D_gen_block_control",
+     "decode_cost": "One extra paired decode, not two: block_prefix_a == prefix_a in both venues, so cb_A is c_A byte for byte and Delta_gen reduces to 1/2 * [f(B) - f_block(B)]. C3 block control has the identical property, which is why D_minus_block_control there sits close to raw D.",
+     "donor_target": "D_gen_target_control = 1/2 * [(d(c_A,ct_B) - d(c_A,ct_A)) + (d(c_B,ct_A) - d(c_B,ct_B))], scored on the same two completions as the primary contrast, so it costs no extra decoding.",
+     "rationale": "A raw D_gen says the completions moved when the prefix moved; it does not say the relation is what moved them. A model that lurches at any prefix edit scores the same D_gen as one that follows the relation, and that is the schema-1 fault one stage later.",
+     "unrelated_block": "D_gen_block_control = 1/2 * [(d(cb_A,y_B) - d(cb_A,y_A)) + (d(cb_B,y_A) - d(cb_B,y_B))], where cb_w is decoded from block_prefix_w. C3 pairing throughout: world A with target_a."
+    },
+    "definition": "For a completion c_w decoded from world w's prompt and d(c, y) the normalised byte distance between the completion's first target-length block and target y: f(w) = d(c_w, y_other) - d(c_w, y_own); D_gen = 1/2 * [f(A) + f(B)].",
+    "draw_is_not_a_unit": "Draws inside a case share a prompt and a checkpoint; they are averaged into one paired preference per case before any resampling.",
+    "resampling_unit": "connected_source_donor_component, as in C3",
+    "unit": "normalised byte distance in [-1, 1]",
+    "unreached_rows": "A completion shorter than the target has both distances defined as 1, so it contributes exactly zero to f and stays in the denominator. reach_rate is reported beside every accuracy number."
+   },
+   "geometry": "Whole-drawing geometry is a secondary matched-size endpoint and is NOT run at the diagnostic stage: it needs a matched-size reference set and a replicate floor this diagnostic does not establish. Recorded as not-run rather than omitted.",
+   "labels": {
+    "controlled_generation_context_use": "Delta_gen's component interval excludes zero above it in both model seeds.",
+    "controlled_generation_reversed": "Delta_gen's interval excludes zero below it in both model seeds.",
+    "exposure_limited_context_use": "C3 returned relational_context_use on the venue and C4's D_gen interval includes zero.",
+    "generation_robust_context_use": "C3 returned relational_context_use and C4's D_gen interval excludes zero with the same sign in both model seeds.",
+    "no_controlled_generation_evidence": "Delta_gen's interval includes zero in at least one seed.",
+    "not_measured": "the report carries no generation control column (any v4-schema report). A missing control is never a passed one."
+   },
+   "primary_endpoint": "D_gen, unchanged from v4. The controls are reported beside it and read by their own label; promoting Delta_gen to the primary after v4 returned a positive D_gen would be choosing an endpoint from a result.",
+   "promotion_metric": "half_width of the component bootstrap interval on D_gen",
+   "promotion_rule": "Expand to 64 draws per world only if half_width <= 0.10 and C3 returned causal_prefix_sensitivity or relational_context_use on that venue.",
+   "promotion_rule_status": "FIRED on the 2026-08-16 v4 diagnostic: half_width 0.0101/0.0093 (synthetic_flat_step s0/s1) and 0.0147/0.0102 (composed_shape_copy2 s0/s1), all <= 0.10, with relational_context_use on both venues under v2.",
+   "required_columns": [
+    "reach_rate",
+    "termination category (halt / fault / cap)",
+    "hit_own_rate",
+    "hit_other_rate",
+    "longest_compatible_prefix_frac",
+    "skeleton_match_rate",
+    "relation_consistent_rate",
+    "relation_recovered_rate",
+    "canonical_rate",
+    "D_gen_target_control_mean",
+    "D_gen_block_control_mean",
+    "D_gen_minus_block_control_mean"
+   ],
+   "sampler": {
+    "forbid": [
+     "PAD",
+     "BOS"
+    ],
+    "rationale": "The project's standing generation sampler (dm/eval/sampling.py's defaults, used by every earlier generation report), so C4 is decoded on the same settings the rest of the record was. Both worlds consume one identical pre-generated uniform block, one variate per row per step, including for rows that have already stopped.",
+    "shared_between_worlds": true,
+    "temperature": 1.0,
+    "top_k": 40,
+    "variate_seed": 20260815
+   },
+   "trigger": "run the diagnostic for every C3 outcome, positive or not",
+   "variate_stream": "One generator per (venue, draws, prompt length) group, seeded from all three parts so two groups can never share a stream. This differs from v4, which keyed on prompt length alone; a v5 run therefore draws different uniforms than v4 did, and the v4 numbers are not expected to reappear draw for draw."
+  },
+  "co_primary_venues": [
+   "synthetic_flat_step",
+   "composed_shape_copy2"
+  ],
+  "diagnostic_venues": [
+   "synthetic_flat_step_d4r1",
+   "synthetic_flat_step_yaxis"
+  ],
+  "equivalence_band_bits_per_target_byte": [
+   -0.02,
+   0.02
+  ],
+  "exclusion_rules": "Cases are excluded only by the builder, only before weights load, and only for the reasons persisted in census.rejected. No case may be dropped after scoring, and low support is not an exclusion reason.",
+  "instrument_notes": {
+   "source_donor_partition": "Evaluated per venue. Venues are scored and resampled separately, so a program that is a primary in one venue and a control donor in another biases neither; the pooled overlap is reported beside it."
+  },
+  "manifests": {
+   "runs/context_c3_composed_shape_v4.json": {
+    "checkpoint_family": "composed_x24000n2",
+    "checkpoints": [
+     "runs/composed_x24000n2_byte_square_s0.pt",
+     "runs/composed_x24000n2_byte_square_s1.pt"
+    ],
+    "codec": "byte",
+    "corpus": {
+     "bytes_train": 41683610,
+     "bytes_val": 207631,
+     "n_train": 200000,
+     "n_val": 1000,
+     "train": "0f7a3d2eebef25d0",
+     "val": "7b8da85e348279ad"
+    },
+    "corpus_stats_digest": "98c4ac0f71a75215",
+    "manifest_sha256": "2679fc2356da178421b31de01c52758a4a0262392d2bc0a56c3a504b340344b5",
+    "policy_digest": "2710dcb33722",
+    "venue_case_counts": {
+     "composed_shape_copy2": 28
+    },
+    "venues": [
+     "composed_shape_copy2"
+    ]
+   },
+   "runs/context_c3_synthetic_flat_v4.json": {
+    "checkpoint_family": "synthetic_c2flat24000",
+    "checkpoints": [
+     "runs/synthetic_c2flat24000_byte_square_s0.pt",
+     "runs/synthetic_c2flat24000_byte_square_s1.pt"
+    ],
+    "codec": "byte",
+    "corpus": {
+     "bytes_train": 5380162,
+     "bytes_val": 55202,
+     "n_train": 100000,
+     "n_val": 1000,
+     "train": "e092df3b0eab292f",
+     "val": "4189b240a89d2405"
+    },
+    "corpus_stats_digest": "48b31e9df223c536",
+    "manifest_sha256": "dcc93caf0003f42ecb5b0ebcb23f29caf5a213942c754f1e7b4480ab0cd79b50",
+    "policy_digest": "6ff30bdac0a0",
+    "venue_case_counts": {
+     "synthetic_flat_step": 64,
+     "synthetic_flat_step_d4r1": 64,
+     "synthetic_flat_step_yaxis": 48
+    },
+    "venues": [
+     "synthetic_flat_step",
+     "synthetic_flat_step_d4r1",
+     "synthetic_flat_step_yaxis"
+    ]
+   }
+  },
+  "min_venue_yield": {
+   "composed_shape_copy2": 24,
+   "synthetic_flat_step": 48,
+   "synthetic_flat_step_d4r1": 48,
+   "synthetic_flat_step_yaxis": 40
+  },
+  "missingness": "A missing control, a missing support column, an unfrozen manifest or a report that is not status=complete yields the label 'incomplete'. Never a negative and never a positive.",
+  "multiplicity": {
+   "family": [
+    "synthetic_flat_step",
+    "composed_shape_copy2"
+   ],
+   "per_venue_pvalue": "max over model seeds",
+   "procedure": "holm",
+   "seeds": "reported separately; never pooled into a population estimate"
+  },
+  "primary_endpoint": "D_minus_control_bits_per_byte_mean",
+  "required_instruments": [
+   "nondegenerate_control_pairs",
+   "nondegenerate_block_controls",
+   "donor_dependence_accounted_for",
+   "held_out_cases",
+   "source_donor_partition",
+   "support_and_frequency_controls",
+   "venue_yield_met",
+   "declared_venues_present"
+  ],
+  "secondary_endpoints": [
+   "D_bits_per_byte_mean",
+   "D_minus_block_control_bits_per_byte_mean",
+   "field_contributions_bits_mean",
+   "prefix_nll_bits_mean",
+   "first_token kl_bits_a_to_b and total_variation"
+  ],
+  "sesoi_bits_per_target_byte": 0.02,
+  "sesoi_rationale": "Carried unchanged from the schema-2 driver's frozen threshold, so it predates every schema-3 number. At the step venue's 15-byte target it is 0.30 bits per drawing."
+ },
+ "direction": 2,
+ "estimand": {
+  "definition": "f(p) = L(y_B|p) - L(y_A|p); D = 0.5*[f(x_A) - f(x_B)]; D_target_control uses unrelated donor targets under the same prefixes; D_block_control uses the same targets under an unrelated prefix block edit; Delta = D - D_target_control; Delta_block = D - D_block_control.",
+  "teacher_forcing": "each target is scored under its own prefix history",
+  "unit": "bits per target byte"
+ },
+ "frozen_utc": "2026-08-17T03:18:48Z",
+ "note": "v5 changes nothing about C3: manifests, endpoints, SESOI, bootstrap, multiplicity and the axis rule are v3's unchanged, and the C3 reports scored under v2 stand. It does two things.\n\n(1) It repairs a broken freeze. `dm/eval/context_c4.py` was edited after the 2026-08-16 C4 run and after v4 froze its digest, so no file matching v4's recorded 7ac8ab3f... existed any more and the run was, on its face, unreproducible. It was re-run on 2026-08-16 under the edited file (632bec1cfcbe...) against v4 unchanged, and every case row, every draw row and every venue summary reproduced bit-identically on both manifests and both seeds. The edit was inert; v4's reports stand, and v5 records the current digests so the tree and the freeze agree again.\n\n(2) It declares two things before the run that carries them: the generation controls (see context_c3.c4.estimand.controls) and the expansion of the co-primary venues to 64 draws per world under v4's own promotion rule. D_gen remains the primary endpoint. C4 also shipped without tests, inverting \u00a74.7's rule that tests precede the run; tests/test_context_c4.py is that debt paid and it precedes the v5 run.",
+ "protocol": "context-v5",
+ "question": "Does changing a relation-bearing fact in a valid prefix move the model's conditional distribution toward the continuation compatible with that change, beyond position, token frequency, perturbation and donor-identity controls?",
+ "reports": {
+  "driver": "scripts/context_c3.py",
+  "gate": "scripts/context_gate.py",
+  "gate_output": "runs/context_gate_v1.json",
+  "report_schema": 3
+ },
+ "schema": 1,
+ "source_sha256": {
+  "dm/data/augment.py": "c54b5a65ee83b2b8ef31cae80423d229547a6fccdcf7787647978a60e74aa755",
+  "dm/data/composed.py": "f90f0bf5b4f12d57a7e200bb88686cc1a4ece2f4a587c449d26e7eebd8c1a07c",
+  "dm/data/fingerprint.py": "05866ee51b9c86f11e507962c5634dc92f3fe5f8a8ea94ad4435780bbdedbdf6",
+  "dm/data/synthetic.py": "190b9a09b55745aa38eff9f7597520e26742f5c1459d3396348f748576ef696c",
+  "dm/eval/context.py": "370a8f643fe2a3aac4ab3944af0fa601565de7a26b21e7c4488b8f1a682c82e2",
+  "dm/eval/context_c4.py": "84a806a9dd3e42a2bb5476b0388730083fef04c7f97b87bf1e0d6b55d3bad0b9",
+  "dm/eval/context_cases.py": "4734cc27c8d9094976cc929582320ef3b3965bca54d5262e28b1de75f18b7617",
+  "dm/eval/provenance.py": "459360a972648e28a078594886d1ddb7ad781b367eef9e211f2e860eb67b5933",
+  "dm/eval/recovery.py": "befe89a421013794831838d44eee0507a906c7831b62275749c849b54a77437f",
+  "dm/eval/state_analysis.py": "17b5f56e26d173f922d235de772e6986f402d8efbf4b31675bb1c783292d4304",
+  "dm/isa/codec.py": "cc90fcead4b4348fbb8975de309cd86977e0ab59f098202cd1a36c20aeae0943",
+  "dm/isa/spec.py": "95b120c783c3b4f516b6913367249f7b151257b33abe7998e94f5bd65559989a",
+  "dm/isa/state.py": "dd9dd241eee2586f176910b49ad0b06fbddc7d36df26bbad2f2a03833167a376",
+  "dm/isa/transform.py": "189d20fa49814f924e8b0a3d9de4da53e59c6cb7a56b348eb6a816a40db3bd0b",
+  "dm/models/transformer.py": "ed7774ffe6a54575ddc26b7c59e011226f87a3010a1bd427f2e307fe1b01d47e",
+  "scripts/context_c3.py": "bed412c3f2916ef5edc09d770a97a8342093daa24973eb31b0a0b9a4adf389f5",
+  "scripts/context_c4.py": "773c0a03e43f6a5089b89d05dfebb5120029bc47988c0b4708c008237d4f7ec4",
+  "scripts/context_gate.py": "e22014568c0824adbae6d57404ea61a49eca4eca8284fd777d676fa403deee72"
+ },
+ "status": "frozen",
+ "superseded_manifests": {
+  "runs/context_c3_composed_shape_v3.json": "2491418fd85fd087fce6db6a6b5601fe5282d87e7322d1e0bf6516e8a1c75fb3",
+  "runs/context_c3_synthetic_flat_v3.json": "a37e9ddb6a0f58a3bce9af9968d86b1ec2fecd822973f99673103302f8615b5c"
+ },
+ "supersedes": "context-v4"
+}

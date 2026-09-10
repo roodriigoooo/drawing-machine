@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="670" height="418.0" viewBox="0 0 670 418.0">
+<defs><clipPath id="clip0"><rect x="0" y="0" width="250" height="190"/></clipPath><clipPath id="clip1"><rect x="0" y="0" width="250" height="190"/></clipPath></defs>
+<rect width="670" height="418.0" fill="#ffffff"/>
+<g transform="translate(66,22)"><line x1="0.00" y1="0" x2="0.00" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="58.82" y1="0" x2="58.82" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="117.65" y1="0" x2="117.65" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="176.47" y1="0" x2="176.47" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="235.29" y1="0" x2="235.29" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="164.09" x2="250" y2="164.09" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="120.91" x2="250" y2="120.91" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="77.73" x2="250" y2="77.73" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="34.55" x2="250" y2="34.55" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="169.27" x2="250" y2="169.27" stroke="#666666" stroke-width="0.9" stroke-dasharray="4 3"/>
+<g clip-path="url(#clip0)">
+<polyline points="14.71,98.45 29.41,91.55 44.12,88.09 58.82,81.18 88.24,70.82 117.65,60.45 176.47,39.73 235.29,19.00" fill="none" stroke="#3d8b83" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="14.71" cy="98.45" r="3.0" fill="#3d8b83"/>
+<circle cx="29.41" cy="91.55" r="3.0" fill="#3d8b83"/>
+<circle cx="44.12" cy="88.09" r="3.0" fill="#3d8b83"/>
+<circle cx="58.82" cy="81.18" r="3.0" fill="#3d8b83"/>
+<circle cx="88.24" cy="70.82" r="3.0" fill="#3d8b83"/>
+<circle cx="117.65" cy="60.45" r="3.0" fill="#3d8b83"/>
+<circle cx="176.47" cy="39.73" r="3.0" fill="#3d8b83"/>
+<circle cx="235.29" cy="19.00" r="3.0" fill="#3d8b83"/>
+<circle cx="58.82" cy="81.18" r="4.4" fill="#c8654a"/>
+<circle cx="58.82" cy="65.64" r="4.4" fill="#6b7280"/>
+<polyline points="58.82,81.18 58.82,65.64" fill="none" stroke="#6b7280" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="2 2"/>
+</g>
+<rect x="0" y="0" width="250" height="190" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="0.00" y1="190" x2="0.00" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="0.00" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0</text>
+<line x1="58.82" y1="190" x2="58.82" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="58.82" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">4</text>
+<line x1="117.65" y1="190" x2="117.65" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="117.65" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">8</text>
+<line x1="176.47" y1="190" x2="176.47" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="176.47" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">12</text>
+<line x1="235.29" y1="190" x2="235.29" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="235.29" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">16</text>
+<line x1="0" y1="164.09" x2="-3.5" y2="164.09" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="168.09" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">300</text>
+<line x1="0" y1="120.91" x2="-3.5" y2="120.91" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="124.91" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">400</text>
+<line x1="0" y1="77.73" x2="-3.5" y2="77.73" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="81.73" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">500</text>
+<line x1="0" y1="34.55" x2="-3.5" y2="34.55" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="38.55" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">600</text>
+<text x="125.00" y="226" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">transform scopes the build allows</text>
+<text transform="translate(-42,95.00) rotate(-90)" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">peak stack (bytes)</text>
+<text x="244.12" y="163.27" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#666666">ISA v1 — no tier</text>
+<text x="67.65" y="61.64" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#6b7280">by value</text>
+<text x="67.65" y="82.41" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#6b7280">= 3 extra scopes</text>
+<text x="67.65" y="93.18" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#c8654a">shipped</text>
+<text x="7.35" y="17.27" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11" fill="#3d8b83">12 bytes per scope</text></g>
+<g transform="translate(386,22)"><rect x="0.00" y="71.04" width="222.06" height="118.96" fill="#c8654a" opacity="0.07"/>
+<line x1="36.76" y1="0" x2="36.76" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="110.29" y1="0" x2="110.29" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="183.82" y1="0" x2="183.82" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="165.22" x2="250" y2="165.22" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="123.91" x2="250" y2="123.91" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="82.61" x2="250" y2="82.61" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="41.30" x2="250" y2="41.30" stroke="#d4d4d4" stroke-width="0.5"/>
+<g clip-path="url(#clip1)">
+<polyline points="191.91,102.43 201.47,95.83 201.47,92.52 201.47,85.91 205.88,76.00 205.88,66.09 205.88,46.26 208.82,26.43" fill="none" stroke="#3d8b83" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="191.91" cy="102.43" r="2.4" fill="#3d8b83"/>
+<circle cx="201.47" cy="95.83" r="2.4" fill="#3d8b83"/>
+<circle cx="201.47" cy="92.52" r="2.4" fill="#3d8b83"/>
+<circle cx="201.47" cy="85.91" r="2.4" fill="#3d8b83"/>
+<circle cx="205.88" cy="76.00" r="2.4" fill="#3d8b83"/>
+<circle cx="205.88" cy="66.09" r="2.4" fill="#3d8b83"/>
+<circle cx="205.88" cy="46.26" r="2.4" fill="#3d8b83"/>
+<circle cx="208.82" cy="26.43" r="2.4" fill="#3d8b83"/>
+<circle cx="19.85" cy="170.17" r="4.4" fill="#666666"/>
+<circle cx="201.47" cy="85.91" r="4.4" fill="#c8654a"/>
+<circle cx="222.06" cy="71.04" r="4.4" fill="#6b7280"/>
+</g>
+<rect x="0" y="0" width="250" height="190" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="36.76" y1="190" x2="36.76" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="36.76" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">1400</text>
+<line x1="110.29" y1="190" x2="110.29" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="110.29" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">1600</text>
+<line x1="183.82" y1="190" x2="183.82" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="183.82" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">1800</text>
+<line x1="0" y1="165.22" x2="-3.5" y2="165.22" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="169.22" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">300</text>
+<line x1="0" y1="123.91" x2="-3.5" y2="123.91" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="127.91" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">400</text>
+<line x1="0" y1="82.61" x2="-3.5" y2="82.61" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="86.61" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">500</text>
+<line x1="0" y1="41.30" x2="-3.5" y2="41.30" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="45.30" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">600</text>
+<text x="125.00" y="226" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">flash, .text (bytes)</text>
+<text x="25.74" y="174.17" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#666666">ISA v1</text>
+<text x="216.18" y="64.04" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#6b7280">by value</text>
+<text x="195.59" y="90.91" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#c8654a">shipped</text>
+<text x="194.85" y="18.59" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#3d8b83">depth sweep</text>
+<text x="5.88" y="47.50" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#c8654a">cheaper than “by value”</text>
+<text x="5.88" y="59.89" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#c8654a">on both axes at once</text></g>
+<foreignObject x="0" y="268" width="670" height="150.0"><div xmlns="http://www.w3.org/1999/xhtml" style="font-family:'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif;font-size:12.5px;line-height:1.45;color:#1a1a1a;"><em>Figure 7.</em> The transform tier's device cost, compiled for Cortex-M0+ at <code>-Os</code> and read off <code>-fstack-usage</code> and <code>size</code>. Left: peak stack is linear in the depth bound at <b>12 bytes per scope</b> — the size of one transform — so the knob <code>docs/direction.md</code> §2.6 reaches for has a price per turn. Right: the same builds in the flash–stack plane. <b>Composing by value costs 56 bytes of flash and 36 of stack against composing through pointers — the same stack as 3 extra scopes would buy</b>, and it is strictly dominated: everything in the shaded rectangle is cheaper on both axes at once. The sweep also shows the two costs are not interchangeable — depth buys stack at almost no flash, so a budget problem on one axis cannot be paid for on the other.</div></foreignObject>
+</svg>

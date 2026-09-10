@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="409.5" viewBox="0 0 650 409.5">
+<defs><clipPath id="clip0"><rect x="0" y="0" width="320" height="175"/></clipPath></defs>
+<rect width="650" height="409.5" fill="#ffffff"/>
+<g transform="translate(205,26)"><rect x="103.20" y="0" width="216.80" height="175" fill="#c8654a" opacity="0.08"/>
+<line x1="0.00" y1="0" x2="0.00" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="44.44" y1="0" x2="44.44" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="88.89" y1="0" x2="88.89" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="133.33" y1="0" x2="133.33" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="177.78" y1="0" x2="177.78" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="222.22" y1="0" x2="222.22" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="266.67" y1="0" x2="266.67" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="311.11" y1="0" x2="311.11" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="103.20" y1="0" x2="103.20" y2="175" stroke="#666666" stroke-width="0.9" stroke-dasharray="3 2"/>
+<g clip-path="url(#clip0)">
+<polyline points="265.65,35.37 302.08,35.37" fill="none" stroke="#c8654a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="265.65,39.10 265.65,31.65" fill="none" stroke="#c8654a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="302.08,39.10 302.08,31.65" fill="none" stroke="#c8654a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="283.86" cy="35.37" r="3.8" fill="#c8654a"/>
+<polyline points="82.06,72.61 117.45,72.61" fill="none" stroke="#c8654a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="82.06,76.33 82.06,68.88" fill="none" stroke="#c8654a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="117.45,76.33 117.45,68.88" fill="none" stroke="#c8654a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="99.75" cy="72.61" r="3.8" fill="#c8654a"/>
+<polyline points="97.42,109.84 102.68,109.84" fill="none" stroke="#3d8b83" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="97.42,113.56 97.42,106.12" fill="none" stroke="#3d8b83" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="102.68,113.56 102.68,106.12" fill="none" stroke="#3d8b83" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="100.05" cy="109.84" r="3.8" fill="#3d8b83"/>
+<polyline points="99.76,147.07 102.90,147.07" fill="none" stroke="#3d8b83" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="99.76,150.80 99.76,143.35" fill="none" stroke="#3d8b83" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="102.90,150.80 102.90,143.35" fill="none" stroke="#3d8b83" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="101.33" cy="147.07" r="3.8" fill="#3d8b83"/>
+</g>
+<rect x="0" y="0" width="320" height="175" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="0.00" y1="175" x2="0.00" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="0.00" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0</text>
+<line x1="44.44" y1="175" x2="44.44" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="44.44" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">1</text>
+<line x1="88.89" y1="175" x2="88.89" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="88.89" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">2</text>
+<line x1="133.33" y1="175" x2="133.33" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="133.33" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">3</text>
+<line x1="177.78" y1="175" x2="177.78" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="177.78" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">4</text>
+<line x1="222.22" y1="175" x2="222.22" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="222.22" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">5</text>
+<line x1="266.67" y1="175" x2="266.67" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="266.67" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">6</text>
+<line x1="311.11" y1="175" x2="311.11" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="311.11" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">7</text>
+<text x="160.00" y="211" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">bits/drawing the class label is worth</text>
+<text x="97.86" y="8.56" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#666666">H(class) = log₂ 5</text>
+<text x="109.86" y="8.56" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#666666">past here is not the label —</text>
+<text x="109.86" y="20.56" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#666666">it is the two runs differing on their own</text>
+<text x="283.86" y="55.37" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#c8654a">+6.39 ±0.41</text>
+<text x="-5.33" y="39.37" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#666666">s0</text>
+<text x="99.75" y="62.61" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#c8654a">+2.24 ±0.40</text>
+<text x="-5.33" y="76.61" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#666666">s1</text>
+<text x="-24.44" y="55.99" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">the paired gap</text>
+<text x="-24.44" y="68.99" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#666666">two runs, differenced</text>
+<text x="100.05" y="99.84" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#3d8b83">+2.25 ±0.06</text>
+<text x="-5.33" y="113.84" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#666666">s0</text>
+<text x="101.33" y="137.07" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#3d8b83">+2.28 ±0.04</text>
+<text x="-5.33" y="151.07" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#666666">s1</text>
+<text x="-24.44" y="130.46" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">the free classifier</text>
+<text x="-24.44" y="143.46" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#666666">one checkpoint, five passes</text></g>
+<foreignObject x="0" y="242" width="650" height="167.5"><div xmlns="http://www.w3.org/1999/xhtml" style="font-family:'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif;font-size:12.5px;line-height:1.45;color:#1a1a1a;"><em>Figure 13.</em> <b>The label's value cannot be measured by differencing two runs, and can be measured inside one — pre-registered, and demonstrated at scale.</b> A five-class label carries at most H(class) = 2.32 bits, under this corpus's ~2.5-bit run-to-run floor. The paired gap — unconditional minus conditional bits/drawing, matched runs at two seeds — reads +6.39 and +2.24: 4.14 bits apart, one of them past the ceiling, which no property of a label can explain. The free classifier — p(c | x) ∝ p(x | c)·p(c), five forward passes of one checkpoint, no cross-model term — reads I(X; C) = +2.25 and +2.28, 0.029 apart, at 97% of the ceiling: a drawing carries nearly all of its own class. Its accuracy (0.991, 0.993) respects the Fano bound its own H(C | X) predicts (0.993, 0.996), and asked to draw each class in turn, the model reads back the class it was asked for in 512 of 512 samples against a chance of 0.2.</div></foreignObject>
+</svg>

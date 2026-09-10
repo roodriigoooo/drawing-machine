@@ -1,0 +1,182 @@
+{
+  "claim_labels": {
+    "anisotropic_relation_use": "the x venue passes and the exact rotation does not",
+    "causal_prefix_sensitivity": "the frozen interval for Delta excludes zero",
+    "incomplete": "a required instrument, venue or freeze is missing",
+    "lower_order_context_use": "raw D clears SESOI but Delta does not survive Holm",
+    "no_controlled_evidence": "the controlled interval includes zero or is below SESOI",
+    "relational_context_use": "causal sensitivity, plus Delta at or above SESOI with the same sign in both model seeds, plus a positive unrelated-block contrast"
+  },
+  "context_c3": {
+    "alpha": 0.05,
+    "axis_diagnostic": {
+      "synthetic_flat_step": "synthetic_flat_step_d4r1"
+    },
+    "bootstrap": {
+      "interval": "percentile 95",
+      "pvalue": "two-sided percentile, floored at 1/replicates",
+      "replicates": 2000,
+      "seed": 20260815,
+      "unit": "connected_source_donor_component"
+    },
+    "builder": {
+      "builder_seed": 20260815,
+      "case_schema": 3,
+      "manifest_schema": 3,
+      "reproduce": [
+        "PYTHONPATH=. .venv/bin/python scripts/context_c3.py runs/synthetic_c2flat24000_byte_square_s0.pt --manifest runs/context_c3_synthetic_flat_v3.json --build-manifest-only",
+        "PYTHONPATH=. .venv/bin/python scripts/context_c3.py runs/composed_x24000n2_byte_square_s0.pt --manifest runs/context_c3_composed_shape_v3.json --build-manifest-only"
+      ]
+    },
+    "c4": {
+      "denominator": "A program that halts before the target or reaches cap stays in the denominator; target reach is published beside target accuracy.",
+      "diagnostic": {
+        "cap_symbols": 512,
+        "draws_per_world": 8,
+        "prompt_boundary": "complete byte and instruction boundary before the target",
+        "shared_uniform_variates": true,
+        "structural_mask": "off for the primary result"
+      },
+      "promotion_rule": "Expand to 64 draws per world only if the diagnostic's paired preference half-width is at most 0.10 and C3 returned causal_prefix_sensitivity or relational_context_use.",
+      "trigger": "run the diagnostic for every C3 outcome, positive or not"
+    },
+    "co_primary_venues": [
+      "synthetic_flat_step",
+      "composed_shape_copy2"
+    ],
+    "diagnostic_venues": [
+      "synthetic_flat_step_d4r1"
+    ],
+    "equivalence_band_bits_per_target_byte": [
+      -0.02,
+      0.02
+    ],
+    "exclusion_rules": "Cases are excluded only by the builder, only before weights load, and only for the reasons persisted in census.rejected. No case may be dropped after scoring, and low support is not an exclusion reason.",
+    "manifests": {
+      "runs/context_c3_composed_shape_v3.json": {
+        "checkpoint_family": "composed_x24000n2",
+        "checkpoints": [
+          "runs/composed_x24000n2_byte_square_s0.pt",
+          "runs/composed_x24000n2_byte_square_s1.pt"
+        ],
+        "codec": "byte",
+        "corpus": {
+          "bytes_train": 41683610,
+          "bytes_val": 207631,
+          "n_train": 200000,
+          "n_val": 1000,
+          "train": "0f7a3d2eebef25d0",
+          "val": "7b8da85e348279ad"
+        },
+        "corpus_stats_digest": "98c4ac0f71a75215",
+        "manifest_sha256": "2491418fd85fd087fce6db6a6b5601fe5282d87e7322d1e0bf6516e8a1c75fb3",
+        "policy_digest": "2710dcb33722",
+        "venue_case_counts": {
+          "composed_shape_copy2": 28
+        },
+        "venues": [
+          "composed_shape_copy2"
+        ]
+      },
+      "runs/context_c3_synthetic_flat_v3.json": {
+        "checkpoint_family": "synthetic_c2flat24000",
+        "checkpoints": [
+          "runs/synthetic_c2flat24000_byte_square_s0.pt",
+          "runs/synthetic_c2flat24000_byte_square_s1.pt"
+        ],
+        "codec": "byte",
+        "corpus": {
+          "bytes_train": 5380162,
+          "bytes_val": 55202,
+          "n_train": 100000,
+          "n_val": 1000,
+          "train": "e092df3b0eab292f",
+          "val": "4189b240a89d2405"
+        },
+        "corpus_stats_digest": "48b31e9df223c536",
+        "manifest_sha256": "a37e9ddb6a0f58a3bce9af9968d86b1ec2fecd822973f99673103302f8615b5c",
+        "policy_digest": "6ff30bdac0a0",
+        "venue_case_counts": {
+          "synthetic_flat_step": 64,
+          "synthetic_flat_step_d4r1": 64
+        },
+        "venues": [
+          "synthetic_flat_step",
+          "synthetic_flat_step_d4r1"
+        ]
+      }
+    },
+    "min_venue_yield": {
+      "composed_shape_copy2": 24,
+      "synthetic_flat_step": 48,
+      "synthetic_flat_step_d4r1": 48
+    },
+    "missingness": "A missing control, a missing support column, an unfrozen manifest or a report that is not status=complete yields the label 'incomplete'. Never a negative and never a positive.",
+    "multiplicity": {
+      "family": [
+        "synthetic_flat_step",
+        "composed_shape_copy2"
+      ],
+      "per_venue_pvalue": "max over model seeds",
+      "procedure": "holm",
+      "seeds": "reported separately; never pooled into a population estimate"
+    },
+    "primary_endpoint": "D_minus_control_bits_per_byte_mean",
+    "required_instruments": [
+      "nondegenerate_control_pairs",
+      "nondegenerate_block_controls",
+      "donor_dependence_accounted_for",
+      "held_out_cases",
+      "source_donor_partition",
+      "support_and_frequency_controls",
+      "venue_yield_met",
+      "declared_venues_present"
+    ],
+    "secondary_endpoints": [
+      "D_bits_per_byte_mean",
+      "D_minus_block_control_bits_per_byte_mean",
+      "field_contributions_bits_mean",
+      "prefix_nll_bits_mean",
+      "first_token kl_bits_a_to_b and total_variation"
+    ],
+    "sesoi_bits_per_target_byte": 0.02,
+    "sesoi_rationale": "Carried unchanged from the schema-2 driver's frozen threshold, so it predates every schema-3 number. At the step venue's 15-byte target it is 0.30 bits per drawing."
+  },
+  "direction": 2,
+  "estimand": {
+    "definition": "f(p) = L(y_B|p) - L(y_A|p); D = 0.5*[f(x_A) - f(x_B)]; D_target_control uses unrelated donor targets under the same prefixes; D_block_control uses the same targets under an unrelated prefix block edit; Delta = D - D_target_control; Delta_block = D - D_block_control.",
+    "teacher_forcing": "each target is scored under its own prefix history",
+    "unit": "bits per target byte"
+  },
+  "frozen_utc": "2026-08-16",
+  "note": "Direction 2's replacement freeze. docs/state-protocol-v2.json is the Direction 1 record and never authorises a context run. The retracted schema-1 C3 report is history: all 64 of its control target pairs were identical, which forced D_control to zero by construction.",
+  "protocol": "context-v1",
+  "question": "Does changing a relation-bearing fact in a valid prefix move the model's conditional distribution toward the continuation compatible with that change, beyond position, token frequency, perturbation and donor-identity controls?",
+  "reports": {
+    "driver": "scripts/context_c3.py",
+    "gate": "scripts/context_gate.py",
+    "gate_output": "runs/context_gate_v1.json",
+    "report_schema": 3
+  },
+  "schema": 1,
+  "source_sha256": {
+    "dm/data/augment.py": "c54b5a65ee83b2b8ef31cae80423d229547a6fccdcf7787647978a60e74aa755",
+    "dm/data/composed.py": "f90f0bf5b4f12d57a7e200bb88686cc1a4ece2f4a587c449d26e7eebd8c1a07c",
+    "dm/data/fingerprint.py": "05866ee51b9c86f11e507962c5634dc92f3fe5f8a8ea94ad4435780bbdedbdf6",
+    "dm/data/synthetic.py": "190b9a09b55745aa38eff9f7597520e26742f5c1459d3396348f748576ef696c",
+    "dm/eval/context.py": "d4c535e2daed3e3cfb0cf81c130e7e6c82c07081741b764ea384904c33ceb10d",
+    "dm/eval/context_cases.py": "30cf2ca977203253d8a0691df873434e8df746879d0e2e989ad4854b1165aea3",
+    "dm/eval/provenance.py": "459360a972648e28a078594886d1ddb7ad781b367eef9e211f2e860eb67b5933",
+    "dm/eval/recovery.py": "befe89a421013794831838d44eee0507a906c7831b62275749c849b54a77437f",
+    "dm/eval/state_analysis.py": "17b5f56e26d173f922d235de772e6986f402d8efbf4b31675bb1c783292d4304",
+    "dm/isa/codec.py": "cc90fcead4b4348fbb8975de309cd86977e0ab59f098202cd1a36c20aeae0943",
+    "dm/isa/spec.py": "95b120c783c3b4f516b6913367249f7b151257b33abe7998e94f5bd65559989a",
+    "dm/isa/state.py": "dd9dd241eee2586f176910b49ad0b06fbddc7d36df26bbad2f2a03833167a376",
+    "dm/isa/transform.py": "189d20fa49814f924e8b0a3d9de4da53e59c6cb7a56b348eb6a816a40db3bd0b",
+    "dm/models/transformer.py": "ed7774ffe6a54575ddc26b7c59e011226f87a3010a1bd427f2e307fe1b01d47e",
+    "scripts/context_c3.py": "a44ac09bc73695768bb9b6165eeb4cdfdd6752bb923ccdf63226428ab00fa34a",
+    "scripts/context_gate.py": "52412b4a26c25f135321ec32187296893c375dbc2e9984ddd1abd4d93217ee8d"
+  },
+  "status": "frozen",
+  "supersedes": null
+}

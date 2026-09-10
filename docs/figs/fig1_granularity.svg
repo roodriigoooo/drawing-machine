@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="262.0" viewBox="0 0 580 262.0">
+<defs><clipPath id="clip0"><rect x="0" y="0" width="310" height="112"/></clipPath></defs>
+<rect width="580" height="262.0" fill="#ffffff"/>
+<g transform="translate(230,22)"><rect x="51.67" y="13.33" width="34.44" height="32.00" fill="#6b7280" opacity="0.16"/>
+<rect x="25.83" y="66.67" width="86.11" height="32.00" fill="#6b7280" opacity="0.16"/>
+<line x1="0.00" y1="0" x2="0.00" y2="112" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="34.44" y1="0" x2="34.44" y2="112" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="68.89" y1="0" x2="68.89" y2="112" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="103.33" y1="0" x2="103.33" y2="112" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="137.78" y1="0" x2="137.78" y2="112" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="172.22" y1="0" x2="172.22" y2="112" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="206.67" y1="0" x2="206.67" y2="112" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="241.11" y1="0" x2="241.11" y2="112" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="275.56" y1="0" x2="275.56" y2="112" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="310.00" y1="0" x2="310.00" y2="112" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="68.89" y1="0" x2="68.89" y2="112" stroke="#666666" stroke-width="0.9" stroke-dasharray="2 2"/>
+<g clip-path="url(#clip0)">
+<polyline points="44.09,29.33 70.61,29.33" fill="none" stroke="#3d8b83" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="57.35" cy="29.33" r="4.0" fill="#3d8b83"/>
+<polyline points="44.09,35.20 44.09,23.47" fill="none" stroke="#3d8b83" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="70.61,35.20 70.61,23.47" fill="none" stroke="#3d8b83" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="257.99,82.67 278.66,82.67" fill="none" stroke="#c8654a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="268.32" cy="82.67" r="4.0" fill="#c8654a"/>
+<polyline points="257.99,88.53 257.99,76.80" fill="none" stroke="#c8654a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="278.66,88.53 278.66,76.80" fill="none" stroke="#c8654a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+</g>
+<rect x="0" y="0" width="310" height="112" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="0.00" y1="112" x2="0.00" y2="115.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="0.00" y="128" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">−4</text>
+<line x1="34.44" y1="112" x2="34.44" y2="115.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="34.44" y="128" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">−2</text>
+<line x1="68.89" y1="112" x2="68.89" y2="115.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="68.89" y="128" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0</text>
+<line x1="103.33" y1="112" x2="103.33" y2="115.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="103.33" y="128" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">2</text>
+<line x1="137.78" y1="112" x2="137.78" y2="115.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="137.78" y="128" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">4</text>
+<line x1="172.22" y1="112" x2="172.22" y2="115.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="172.22" y="128" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">6</text>
+<line x1="206.67" y1="112" x2="206.67" y2="115.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="206.67" y="128" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">8</text>
+<line x1="241.11" y1="112" x2="241.11" y2="115.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="241.11" y="128" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">10</text>
+<line x1="275.56" y1="112" x2="275.56" y2="115.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="275.56" y="128" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">12</text>
+<line x1="310.00" y1="112" x2="310.00" y2="115.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="310.00" y="128" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">14</text>
+<text x="155.00" y="148" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">Δ bits/drawing   (bit alphabet − byte alphabet)</text>
+<text x="-6.89" y="33.33" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12" fill="#1a1a1a">Tier A — synthetic programs</text>
+<text x="-6.89" y="47.47" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#666666">floor ±1.0</text>
+<text x="57.35" y="18.33" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#3d8b83">−0.67 ±0.77</text>
+<text x="57.35" y="46.33" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#666666">unresolvable</text>
+<text x="-6.89" y="86.67" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12" fill="#1a1a1a">Tier B — QuickDraw sketches</text>
+<text x="-6.89" y="100.80" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#666666">floor ±2.5</text>
+<text x="268.32" y="71.67" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#c8654a">+11.58 ±0.60</text>
+<text x="268.32" y="99.67" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#666666">5× the floor</text></g>
+<foreignObject x="0" y="182" width="580" height="80.0"><div xmlns="http://www.w3.org/1999/xhtml" style="font-family:'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif;font-size:12.5px;line-height:1.45;color:#1a1a1a;"><em>Figure 1.</em> A two-symbol alphabet is free on generated programs and costs 11.58 bits on real drawings — same axis, same code, same guards. Bars are 95% intervals carrying the between-seed term; grey blocks are each corpus's own resolution floor. Neither number means anything without it.</div></foreignObject>
+</svg>

@@ -1,0 +1,349 @@
+{
+ "architecture": {
+  "additive_embedding_shortcut": false,
+  "carried_state": "self.norm(x), the normalized top-layer state consumed by the tied head",
+  "config_field": "feedback_schema",
+  "default_feedback_schema": "none",
+  "diagnostic_modes": [
+   "fused"
+  ],
+  "evaluation_modes": [
+   "standard",
+   "soft"
+  ],
+  "feedback_parameters": [
+   "fuse.up.weight",
+   "fuse.gate.weight",
+   "fuse.norm.weight"
+  ],
+  "feedback_schemas": [
+   "none",
+   "glu_v1"
+  ],
+  "fused_norm_gain": 0.02,
+  "fusion": "z_t = RMSNorm(W_U h_(t-1) * sigmoid(W_G e_t))",
+  "interface": {
+   "feedback": "(B, T, D) carried normalized states already aligned to idx, so feedback[:, t] is the state fused into position t",
+   "forward": "forward(idx, classes=None, *, feedback=None, plain=0, return_state=False)",
+   "fuse": "fuse(hidden, embed) -> the fused stack input z_t",
+   "generate": "generate(..., mode='standard'|'soft'|'fused')",
+   "plain": "int, or (B,) per row: how many leading positions keep the raw embedding -- BOS and the sampled prefix. Position 0 is always plain, because BOS has no predecessor state",
+   "return_state": "also return the (B, T, D) normalized top-layer states, which is what the next pass and the next decode step carry"
+  },
+  "latent_scope": "request-local, row-aligned, cleared at completion",
+  "mode_is_runtime_argument": true,
+  "runtime_mode_argument": "mode"
+ },
+ "baseline_fixture": {
+  "path": "tests/fixtures/feedback_baseline_v1.json",
+  "schema": 1,
+  "sha256": "c5d3c821703655034f6148fd0eb76aa4e748fed27b22f2e380202c6e87b3c725"
+ },
+ "decision_rule": [
+  "engineering, provenance, convergence and stability gates pass",
+  "G_relational > 0 with a component interval excluding zero in both seeds",
+  "I_structure >= SESOI and Holm-corrected evidence passes in both seeds for at least one representation",
+  "donor-target and unrelated-block controls pass, and the generic likelihood, validity and truncation guards hold",
+  "promoted free generation clears both the preference and the exact-hit floor in both seeds"
+ ],
+ "direction": 3,
+ "does_not_freeze": [
+  "source digests -- F1 changes the model by design; protocol v1 freezes them after the F5 smoke",
+  "training corpus fingerprints -- the paired corpora do not exist until F4",
+  "checkpoint and record hashes -- no checkpoint exists until F6; protocol v2 freezes them before any outcome score"
+ ],
+ "freezes": [
+  "baseline CPU fixture bytes",
+  "feedback schema names and the default",
+  "fusion equation, carried state and fused-norm gain",
+  "seed namespaces and their derived values",
+  "training objective, pass schedule and jitter support",
+  "design matrix, venue manifest and case count",
+  "estimands, contrast order, SESOI, alpha and multiplicity",
+  "generic guards, stability gate and promotion floors",
+  "claim labels, decision rule and required record/report fields",
+  "expected parameter counts"
+ ],
+ "inference": {
+  "alpha": 0.05,
+  "bootstrap": {
+   "replicates": 2000,
+   "seed": 20260815,
+   "shared_draws_across_cells": true,
+   "unit": "connected_source_donor_component"
+  },
+  "contrast_order": "per case, then component bootstrap",
+  "estimands": {
+   "Delta": "Delta_i(mode) = D_primary_i(mode) - D_target_control_i(mode)",
+   "G": "g_i(r,s,m) = Delta_i(soft) - Delta_i(standard)",
+   "I_representation": "b_i(m) = i_i(bit,m) - i_i(byte,m)",
+   "I_structure": "i_i(r,m) = g_i(r,relational,m) - g_i(r,relation_destroyed,m)"
+  },
+  "generic_guards": {
+   "max_truncation_rate_increase": 0.0,
+   "max_validation_cost_bits_per_drawing": 1.0,
+   "min_valid_halt_delta": -0.05
+  },
+  "multiplicity": "holm",
+  "primary_family": [
+   "I_structure[bit]",
+   "I_structure[byte]"
+  ],
+  "representation_interaction_status": "exploratory",
+  "seeds_pooled": false,
+  "sesoi_bits_per_target_byte": 0.02,
+  "unit": "bits per target byte"
+ },
+ "labels": {
+  "exploratory_representation_interaction": "the preceding label, plus I_representation clearing its exploratory interval and floor in both seeds",
+  "incomplete": "a required artifact, freeze, convergence guard or report is missing or malformed; never a null and never a pass",
+  "no_feedback_gain": "complete and stable, and the primary gain does not pass",
+  "structure_specific_feedback": "H3-feedback and H3-structure pass in both named seeds with the generic guards intact",
+  "teacher_forced_feedback_only": "the teacher-forced gate passes and the free-running promotion gate does not",
+  "unstable_feedback": "any recurrent stability criterion fails, so no outcome score is computed at all"
+ },
+ "matrix": {
+  "cells": [
+   "feedback_bit_relational_s0",
+   "feedback_bit_relational_s1",
+   "feedback_bit_relation_destroyed_s0",
+   "feedback_bit_relation_destroyed_s1",
+   "feedback_byte_relational_s0",
+   "feedback_byte_relational_s1",
+   "feedback_byte_relation_destroyed_s0",
+   "feedback_byte_relation_destroyed_s1"
+  ],
+  "model_seeds": [
+   0,
+   1
+  ],
+  "representations": [
+   "bit",
+   "byte"
+  ],
+  "requests_per_case": 12,
+  "training_structures": [
+   "relational",
+   "relation_destroyed"
+  ],
+  "venue": "synthetic_flat_step",
+  "venue_cases": 64,
+  "venue_manifest_sha256": "dcc93caf0003f42ecb5b0ebcb23f29caf5a213942c754f1e7b4480ab0cd79b50"
+ },
+ "mechanism_limit": "accessibility, not information: the carried state adds nothing the visible history does not already determine, so a gain is never new knowledge, reasoning, a mutable register or greater asymptotic depth",
+ "next_stage": {
+  "command": "PYTHONPATH=. .venv/bin/python -m pytest -q tests/test_feedback.py",
+  "expectation": "every test in that file is a strict xfail until the feedback path exists; F1 is done when they pass with the markers removed",
+  "stage": "F1"
+ },
+ "parameters": {
+  "budget": 1000000,
+  "d_model": 128,
+  "overhead": 32896,
+  "overhead_formula": "2 * d_model**2 + d_model",
+  "shape": "square",
+  "table": {
+   "bit": {
+    "feedback_capable": 825088,
+    "overhead": 32896,
+    "overhead_fraction": 0.04152528679915979,
+    "standard": 792192,
+    "under_budget": true,
+    "vocab_size": 4
+   },
+   "byte": {
+    "feedback_capable": 857600,
+    "overhead": 32896,
+    "overhead_fraction": 0.03988825081483771,
+    "standard": 824704,
+    "under_budget": true,
+    "vocab_size": 258
+   },
+   "token": {
+    "feedback_capable": 859648,
+    "overhead": 32896,
+    "overhead_fraction": 0.03978944108995197,
+    "standard": 826752,
+    "under_budget": true,
+    "vocab_size": 274
+   },
+   "token_typed": {
+    "feedback_capable": 1023488,
+    "overhead": 32896,
+    "overhead_fraction": 0.0332084248610931,
+    "standard": 990592,
+    "under_budget": false,
+    "vocab_size": 1554
+   }
+  },
+  "trunk": {
+   "n_heads": 4,
+   "n_layers": 4
+  }
+ },
+ "promotion": {
+  "both_seeds_required": true,
+  "draws_per_world_expanded": 64,
+  "draws_per_world_initial": 8,
+  "interval_excludes_zero": true,
+  "min_delta_gen_soft_minus_standard": 0.01,
+  "min_hit_own_soft_minus_standard": 0.02,
+  "shared_uniform_variates": true,
+  "structural_mask": "off"
+ },
+ "protocol": "feedback-v0",
+ "protocol_sha256": "e67d8626887b61bc3a65b92f83be89bf8b5d387c7a22dddd074b6f6cb05f6cba",
+ "question": "Does returning the previous normalized top-layer state through gated fusion improve controlled use of separated relational context beyond standard decoding in the same weights, and is the gain specific to relational training rather than to generic recurrence?",
+ "schema": 1,
+ "schemas": {
+  "fixture": 1,
+  "record": 1,
+  "report": 1,
+  "required_generation_fields": [
+   "schema",
+   "status",
+   "protocol",
+   "mode",
+   "reach_rate",
+   "termination",
+   "hit_own_rate",
+   "hit_other_rate",
+   "longest_compatible_prefix_frac",
+   "relation_consistent_rate",
+   "D_gen",
+   "D_gen_target_control",
+   "D_gen_block_control",
+   "Delta_gen",
+   "draws_per_world",
+   "variate_seed"
+  ],
+  "required_record_fields": [
+   "schema",
+   "complete",
+   "steps_done",
+   "programs_seen",
+   "semantic_bytes_seen",
+   "content_symbols_seen",
+   "padded_positions",
+   "content_symbol_forward_passes",
+   "padded_forward_positions",
+   "pass_histogram",
+   "expected_passes_per_batch",
+   "observed_passes_per_batch",
+   "peak_memory_bytes",
+   "wall_clock_s",
+   "device",
+   "feedback_schema",
+   "corpus",
+   "protocol"
+  ],
+  "required_score_fields": [
+   "schema",
+   "status",
+   "protocol",
+   "mode",
+   "representation",
+   "training_structure",
+   "model_seed",
+   "raw_symbol_nll_bits",
+   "nll_bits",
+   "D",
+   "D_target_control",
+   "D_block_control",
+   "Delta",
+   "first_target_symbol_identical",
+   "fields",
+   "prefix_nll_bits",
+   "sequential_standard_matches_full_forward"
+  ]
+ },
+ "scope": "contract",
+ "seeds": {
+  "micro_batch_invariant": true,
+  "namespaces": {
+   "bootstrap": "connected-component resamples for every paired interval",
+   "derangement": "model-blind donor derangement for the relation-destroyed corpus",
+   "jitter": "carried-state jitter, Uniform[-0.02, 0.02]",
+   "pass_plan": "how many passes each training batch gets",
+   "prefix": "plain-prefix length per row per pass",
+   "stability": "the fixed validation subset the recurrent stability gate uses",
+   "variates": "pre-generated uniforms for free-running promotion"
+  },
+  "pinned": {
+   "bootstrap": 20260815
+  },
+  "root": "direction3-feedback",
+  "values": {
+   "bootstrap": 20260815,
+   "derangement": 3650763551,
+   "jitter": 2731420572,
+   "pass_plan": 1472357328,
+   "prefix": 3357239186,
+   "stability": 3588485083,
+   "variates": 1980471574
+  }
+ },
+ "stability": {
+  "all_finite": true,
+  "max_abs_logit": 100.0,
+  "max_pass32_validation_increase_bits_per_drawing": 1.0,
+  "max_update_q95": 0.25,
+  "max_valid_halt_loss": 0.05,
+  "passes": [
+   0,
+   1,
+   2,
+   4,
+   8,
+   16,
+   32
+  ],
+  "rms_p99_band": [
+   0.25,
+   4.0
+  ],
+  "update_q95_monotone_from_pass": 8
+ },
+ "status": "frozen",
+ "superseded_by": {
+  "feedback-v1": "training freeze, after the F5 smoke",
+  "feedback-v2": "checkpoint and record freeze, before any outcome score"
+ },
+ "supersedes": null,
+ "training": {
+  "attention_budget_rule": "rows * T^2 * K <= attn_budget",
+  "detach_carried_state": false,
+  "expected_passes_per_batch": 1.1325,
+  "feedback_weight": 1.0,
+  "final_steps": 24000,
+  "jitter_half_width": 0.02,
+  "max_passes": 3,
+  "objective": "L_K = L_1 + (1/(K-1)) * sum(L_k, k=2..K) for K>1; L_1 when K=1",
+  "schedule": [
+   {
+    "start": 0.0,
+    "stop": 0.5,
+    "weights": [
+     1.0
+    ]
+   },
+   {
+    "start": 0.5,
+    "stop": 0.75,
+    "weights": [
+     0.75,
+     0.25
+    ]
+   },
+   {
+    "start": 0.75,
+    "stop": 1.0,
+    "weights": [
+     0.75,
+     0.22,
+     0.03
+    ]
+   }
+  ]
+ }
+}

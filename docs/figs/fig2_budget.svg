@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="328.0" viewBox="0 0 720 328.0">
+<defs><clipPath id="clip0"><rect x="0" y="0" width="240" height="175"/></clipPath><clipPath id="clip1"><rect x="0" y="0" width="240" height="175"/></clipPath></defs>
+<rect width="720" height="328.0" fill="#ffffff"/>
+<g transform="translate(62,26)"><line x1="0.00" y1="0" x2="0.00" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="60.00" y1="0" x2="60.00" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="120.00" y1="0" x2="120.00" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="180.00" y1="0" x2="180.00" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="240.00" y1="0" x2="240.00" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="175.00" x2="240" y2="175.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="116.67" x2="240" y2="116.67" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="58.33" x2="240" y2="58.33" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="0.00" x2="240" y2="0.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<g clip-path="url(#clip0)">
+<polyline points="5.00,-78.43 10.00,6.54 15.00,29.06 20.00,40.52 25.00,46.93 30.00,54.68 35.00,59.27 40.00,63.59 45.00,68.51 50.00,71.21 55.00,72.96 60.00,76.92 65.00,78.69 70.00,81.84 75.00,82.59 80.00,84.35 85.00,84.41 90.00,87.29 95.00,89.98 100.00,90.04 105.00,91.01 110.00,93.32 115.00,94.47 120.00,94.89 125.00,96.72 130.00,98.07 135.00,98.73 140.00,99.80 145.00,100.81 150.00,102.44 155.00,102.07 160.00,103.87 165.00,104.37 170.00,104.86 175.00,106.23 180.00,107.47 185.00,107.79 190.00,108.82 195.00,109.23 200.00,109.77 205.00,110.21 210.00,110.64 215.00,111.11 220.00,111.24 225.00,111.56 230.00,111.65 235.00,111.71 240.00,111.71" fill="none" stroke="#c8654a" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="5.00,-59.08 10.00,11.70 15.00,45.24 20.00,56.60 25.00,61.14 30.00,69.28 35.00,74.02 40.00,77.01 45.00,81.84 50.00,84.68 55.00,85.99 60.00,89.65 65.00,90.71 70.00,93.32 75.00,93.49 80.00,96.90 85.00,95.75 90.00,98.92 95.00,100.01 100.00,101.68 105.00,101.98 110.00,103.72 115.00,105.15 120.00,105.98 125.00,106.58 130.00,107.88 135.00,108.67 140.00,109.88 145.00,110.80 150.00,111.99 155.00,112.11 160.00,113.26 165.00,114.21 170.00,114.54 175.00,115.66 180.00,116.61 185.00,117.22 190.00,117.64 195.00,118.24 200.00,118.79 205.00,119.27 210.00,119.56 215.00,119.97 220.00,120.14 225.00,120.40 230.00,120.51 235.00,120.54 240.00,120.56" fill="none" stroke="#8a8f42" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 2"/>
+<polyline points="5.00,66.31 10.00,93.68 15.00,108.25 20.00,120.12 25.00,127.40 30.00,128.57 35.00,134.51 40.00,138.40 45.00,141.64 50.00,142.92 55.00,143.72 60.00,146.61 65.00,147.99 70.00,149.24 75.00,150.65 80.00,150.61 85.00,153.24 90.00,153.97 95.00,153.63 100.00,156.18 105.00,157.06 110.00,157.54 115.00,158.87 120.00,158.96 125.00,159.95 130.00,161.10 135.00,161.05 140.00,160.55 145.00,162.16 150.00,162.79 155.00,163.45 160.00,164.03 165.00,163.84 170.00,164.58 175.00,164.81 180.00,165.36 185.00,165.74 190.00,165.83 195.00,166.16 200.00,166.13 205.00,166.41 210.00,166.75 215.00,166.74 220.00,166.85 225.00,166.98 230.00,166.97 235.00,167.03 240.00,167.02" fill="none" stroke="#3d8b83" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="2 2"/>
+</g>
+<rect x="0" y="0" width="240" height="175" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="0.00" y1="175" x2="0.00" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="0.00" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0</text>
+<line x1="60.00" y1="175" x2="60.00" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="60.00" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">6k</text>
+<line x1="120.00" y1="175" x2="120.00" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="120.00" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">12k</text>
+<line x1="180.00" y1="175" x2="180.00" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="180.00" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">18k</text>
+<line x1="240.00" y1="175" x2="240.00" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="240.00" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">24k</text>
+<line x1="0" y1="175.00" x2="-3.5" y2="175.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="179.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">550</text>
+<line x1="0" y1="116.67" x2="-3.5" y2="116.67" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="120.67" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">600</text>
+<line x1="0" y1="58.33" x2="-3.5" y2="58.33" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="62.33" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">650</text>
+<line x1="0" y1="0.00" x2="-3.5" y2="0.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="4.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">700</text>
+<text x="120.00" y="211" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">training steps</text>
+<text transform="translate(-42,87.50) rotate(-90)" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">bits/drawing</text>
+<text x="234.00" y="95.71" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11" fill="#c8654a">diffusion</text>
+<text x="234.00" y="130.56" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11" fill="#8a8f42">AR comp.</text>
+<text x="234.00" y="151.02" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11" fill="#3d8b83">flat AR</text></g>
+<g transform="translate(400,26)"><line x1="40.00" y1="0" x2="40.00" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="200.00" y1="0" x2="200.00" y2="175" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="175.00" x2="240" y2="175.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="116.67" x2="240" y2="116.67" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="58.33" x2="240" y2="58.33" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="0.00" x2="240" y2="0.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<g clip-path="url(#clip1)">
+<polyline points="40.00,26.02 200.00,73.44" fill="none" stroke="#666666" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="1 3"/>
+<circle cx="40.00" cy="26.02" r="3.0" fill="#666666"/>
+<circle cx="200.00" cy="73.44" r="3.0" fill="#666666"/>
+<polyline points="40.00,64.34 200.00,73.44" fill="none" stroke="#c8654a" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="40.00" cy="64.34" r="3.6" fill="#c8654a"/>
+<circle cx="200.00" cy="73.44" r="3.6" fill="#c8654a"/>
+<polyline points="40.00,123.96 200.00,117.72" fill="none" stroke="#8a8f42" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="40.00" cy="123.96" r="3.6" fill="#8a8f42"/>
+<circle cx="200.00" cy="117.72" r="3.6" fill="#8a8f42"/>
+</g>
+<rect x="0" y="0" width="240" height="175" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="40.00" y1="175" x2="40.00" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="40.00" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">12k</text>
+<line x1="200.00" y1="175" x2="200.00" y2="178.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="200.00" y="191" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">24k</text>
+<line x1="0" y1="175.00" x2="-3.5" y2="175.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="179.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">30</text>
+<line x1="0" y1="116.67" x2="-3.5" y2="116.67" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="120.67" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">40</text>
+<line x1="0" y1="58.33" x2="-3.5" y2="58.33" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="62.33" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">50</text>
+<line x1="0" y1="0.00" x2="-3.5" y2="0.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="4.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">60</text>
+<text x="120.00" y="211" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">training steps</text>
+<text transform="translate(-42,87.50) rotate(-90)" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">gap vs flat AR (bits)</text>
+<text x="40.00" y="10.02" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#666666">differenced against</text>
+<text x="40.00" y="21.02" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#666666">one fixed baseline</text>
+<text x="204.00" y="77.44" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11" fill="#c8654a">diffusion</text>
+<text x="204.00" y="121.72" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11" fill="#8a8f42">AR comp.</text></g>
+<foreignObject x="0" y="248" width="720" height="80.0"><div xmlns="http://www.w3.org/1999/xhtml" style="font-family:'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif;font-size:12.5px;line-height:1.45;color:#1a1a1a;"><em>Figure 2.</em> Left: every arm is still descending at 24,000 steps, so no absolute total is an asymptote. Right: the planner's gap over the flat arm, each rung differenced against the baseline at its own budget (coloured) and against a single 24,000-step baseline (grey). The grey line closes at 8 bits per doubling; the real one does not close at all, and on the AR-composition arm it widens.</div></foreignObject>
+</svg>

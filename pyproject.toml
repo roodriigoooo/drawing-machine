@@ -1,0 +1,42 @@
+[project]
+name = "drawing-machine"
+version = "0.1.0"
+description = "Sub-million-parameter models for a compact executable drawing language"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "pillow>=10.0",
+]
+
+[project.optional-dependencies]
+train = ["torch>=2.4", "tqdm", "wandb"]
+# `dm.eval.scale` matches strokes between two traces with an optimal assignment.
+# Greedy matching would make the metric depend on iteration order, and the whole
+# point of that metric is to decide whether local and global fidelity degrade
+# *differently* -- a matcher that is itself order-dependent biases exactly that
+# comparison. scipy is the dependency that buys a correct one.
+eval = ["scipy>=1.11"]
+dev = ["pytest>=8.0", "ruff"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["dm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# `slow` marks the checks that rebuild a whole corpus to pin a frozen table
+# (`tests/test_state.py`). They run by default -- `docs/state-freeze.md` says its
+# coverage tables are reproducible from the suite, so skipping them by default
+# would make the freeze prose rather than a measurement. `-m "not slow"` while
+# iterating.
+markers = ["slow: rebuilds a corpus to pin a frozen coverage table"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pyright]
+# torch re-exports its C extension symbols in a way the stubs do not model.
+reportPrivateImportUsage = false

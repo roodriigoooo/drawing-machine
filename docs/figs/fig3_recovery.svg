@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="470" height="349.5" viewBox="0 0 470 349.5">
+<defs><clipPath id="clip0"><rect x="0" y="0" width="310" height="185"/></clipPath></defs>
+<rect width="470" height="349.5" fill="#ffffff"/>
+<g transform="translate(62,24)"><rect x="175.22" y="0" width="134.78" height="185" fill="#c8654a" opacity="0.09"/>
+<line x1="17.97" y1="0" x2="17.97" y2="185" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="62.90" y1="0" x2="62.90" y2="185" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="107.83" y1="0" x2="107.83" y2="185" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="152.75" y1="0" x2="152.75" y2="185" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="197.68" y1="0" x2="197.68" y2="185" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="242.61" y1="0" x2="242.61" y2="185" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="185.00" x2="310" y2="185.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="139.88" x2="310" y2="139.88" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="94.76" x2="310" y2="94.76" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="49.63" x2="310" y2="49.63" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="4.51" x2="310" y2="4.51" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="23.75" x2="310" y2="23.75" stroke="#666666" stroke-width="0.9" stroke-dasharray="2 3"/>
+<g clip-path="url(#clip0)">
+<polyline points="17.97,23.00 62.90,138.87 107.83,160.71 152.75,153.17 197.68,51.67 242.61,49.81" fill="none" stroke="#3b4f9e" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="17.97" cy="23.00" r="3.2" fill="#3b4f9e"/>
+<circle cx="62.90" cy="138.87" r="3.2" fill="#3b4f9e"/>
+<circle cx="107.83" cy="160.71" r="3.2" fill="#3b4f9e"/>
+<circle cx="152.75" cy="153.17" r="3.2" fill="#3b4f9e"/>
+<circle cx="197.68" cy="51.67" r="3.2" fill="#3b4f9e"/>
+<circle cx="242.61" cy="49.81" r="3.2" fill="#3b4f9e"/>
+<polyline points="17.97,24.50 62.90,138.85 107.83,157.76 152.75,152.93 197.68,99.57 242.61,134.58" fill="none" stroke="#c9a227" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 2"/>
+<circle cx="17.97" cy="24.50" r="3.2" fill="#c9a227"/>
+<circle cx="62.90" cy="138.85" r="3.2" fill="#c9a227"/>
+<circle cx="107.83" cy="157.76" r="3.2" fill="#c9a227"/>
+<circle cx="152.75" cy="152.93" r="3.2" fill="#c9a227"/>
+<circle cx="197.68" cy="99.57" r="3.2" fill="#c9a227"/>
+<circle cx="242.61" cy="134.58" r="3.2" fill="#c9a227"/>
+</g>
+<rect x="0" y="0" width="310" height="185" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="17.97" y1="185" x2="17.97" y2="188.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="17.97" y="201" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">1</text>
+<line x1="62.90" y1="185" x2="62.90" y2="188.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="62.90" y="201" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">2</text>
+<line x1="107.83" y1="185" x2="107.83" y2="188.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="107.83" y="201" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">3</text>
+<line x1="152.75" y1="185" x2="152.75" y2="188.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="152.75" y="201" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">4</text>
+<line x1="197.68" y1="185" x2="197.68" y2="188.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="197.68" y="201" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">5</text>
+<line x1="242.61" y1="185" x2="242.61" y2="188.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="242.61" y="201" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">6</text>
+<line x1="0" y1="185.00" x2="-3.5" y2="185.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="189.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.0</text>
+<line x1="0" y1="139.88" x2="-3.5" y2="139.88" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="143.88" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.5</text>
+<line x1="0" y1="94.76" x2="-3.5" y2="94.76" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="98.76" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">1.0</text>
+<line x1="0" y1="49.63" x2="-3.5" y2="49.63" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="53.63" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">1.5</text>
+<line x1="0" y1="4.51" x2="-3.5" y2="4.51" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="8.51" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">2.0</text>
+<text x="155.00" y="221" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">copy ordinal within the repeat</text>
+<text transform="translate(-42,92.50) rotate(-90)" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">bits/symbol</text>
+<text x="303.26" y="9.02" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#c8654a">counts never</text>
+<text x="303.26" y="21.02" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#c8654a">trained on</text>
+<text x="248.00" y="53.81" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11" fill="#3b4f9e">seed 0</text>
+<text x="248.00" y="138.58" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11" fill="#c9a227">seed 1</text>
+<text x="6.74" y="19.85" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#666666">cost of an unrepeated body</text></g>
+<foreignObject x="0" y="252" width="470" height="97.5"><div xmlns="http://www.w3.org/1999/xhtml" style="font-family:'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif;font-size:12.5px;line-height:1.45;color:#1a1a1a;"><em>Figure 3.</em> Within the trained counts the two seeds agree to 0.03 bits/symbol; one copy past the bound they differ by 0.53 and then 0.94. The copy mechanism is a property of the model, the count prior is a property of the seed — so the break's location replicates and its depth does not. Neither seed rises above the unrepeated-body rate.</div></foreignObject>
+</svg>

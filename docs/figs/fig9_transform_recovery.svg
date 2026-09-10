@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="402.0" viewBox="0 0 760 402.0">
+<defs><clipPath id="clip0"><rect x="0" y="0" width="232" height="190"/></clipPath><clipPath id="clip1"><rect x="0" y="0" width="176" height="190"/></clipPath></defs>
+<rect width="760" height="402.0" fill="#ffffff"/>
+<g transform="translate(210,22)"><rect x="86.30" y="0" width="43.26" height="190" fill="#3d8b83" opacity="0.2"/>
+<line x1="0.00" y1="0" x2="0.00" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="58.00" y1="0" x2="58.00" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="116.00" y1="0" x2="116.00" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="174.00" y1="0" x2="174.00" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="232.00" y1="0" x2="232.00" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<g clip-path="url(#clip0)">
+<polyline points="0.00,15.32 172.19,15.32" fill="none" stroke="#c8654a" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="172.19" cy="15.32" r="3.8" fill="#c8654a"/>
+<polyline points="0.00,45.97 171.54,45.97" fill="none" stroke="#c8654a" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="171.54" cy="45.97" r="3.8" fill="#c8654a"/>
+<polyline points="0.00,76.61 129.55,76.61" fill="none" stroke="#3d8b83" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="129.55" cy="76.61" r="3.8" fill="#3d8b83"/>
+<polyline points="0.00,107.26 86.30,107.26" fill="none" stroke="#3d8b83" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="86.30" cy="107.26" r="3.8" fill="#3d8b83"/>
+<polyline points="0.00,137.90 131.48,137.90" fill="none" stroke="#3b4f9e" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="131.48" cy="137.90" r="3.8" fill="#3b4f9e"/>
+<polyline points="0.00,168.55 136.09,168.55" fill="none" stroke="#3b4f9e" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="136.09" cy="168.55" r="3.8" fill="#3b4f9e"/>
+</g>
+<rect x="0" y="0" width="232" height="190" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="0.00" y1="190" x2="0.00" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="0.00" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.00</text>
+<line x1="58.00" y1="190" x2="58.00" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="58.00" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.05</text>
+<line x1="116.00" y1="190" x2="116.00" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="116.00" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.10</text>
+<line x1="174.00" y1="190" x2="174.00" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="174.00" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.15</text>
+<line x1="232.00" y1="190" x2="232.00" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="232.00" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.20</text>
+<text x="116.00" y="226" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">bits/symbol on the copies</text>
+<text x="116.00" y="-10" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">recovery, against a ceiling known by construction</text>
+<text x="179.15" y="19.32" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#c8654a">+0.9603</text>
+<text x="-6.96" y="34.65" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11" fill="#1a1a1a">D4 orbits, n = 2</text>
+<text x="-6.96" y="19.32" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#666666">s0</text>
+<text x="178.50" y="49.97" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#c8654a">+0.9601</text>
+<text x="-6.96" y="49.97" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#666666">s1</text>
+<text x="136.51" y="80.61" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#3d8b83">+0.9700</text>
+<text x="-6.96" y="95.94" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11" fill="#1a1a1a">translation only — the control</text>
+<text x="-6.96" y="80.61" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#666666">s0</text>
+<text x="93.26" y="111.26" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#3d8b83">+0.9801</text>
+<text x="-6.96" y="111.26" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#666666">s1</text>
+<text x="138.44" y="141.90" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#3b4f9e">+0.9699</text>
+<text x="-6.96" y="157.23" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11" fill="#1a1a1a">D4 orbits, n ∈ {2,4}</text>
+<text x="-6.96" y="141.90" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#666666">s0</text>
+<text x="143.05" y="172.55" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#3b4f9e">+0.9689</text>
+<text x="-6.96" y="172.55" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#666666">s1</text></g>
+<g transform="translate(546,22)"><line x1="25.14" y1="0" x2="25.14" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="88.00" y1="0" x2="88.00" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="150.86" y1="0" x2="150.86" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="190.00" x2="176" y2="190.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="142.50" x2="176" y2="142.50" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="95.00" x2="176" y2="95.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="47.50" x2="176" y2="47.50" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="0.00" x2="176" y2="0.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<g clip-path="url(#clip1)">
+<polyline points="25.14,46.47 88.00,163.71 150.86,179.23" fill="none" stroke="#3b4f9e" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="25.14" cy="46.47" r="3.2" fill="#3b4f9e"/>
+<circle cx="88.00" cy="163.71" r="3.2" fill="#3b4f9e"/>
+<circle cx="150.86" cy="179.23" r="3.2" fill="#3b4f9e"/>
+<polyline points="25.14,47.57 88.00,133.54 150.86,177.55" fill="none" stroke="#3b4f9e" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 2"/>
+<circle cx="25.14" cy="47.57" r="3.2" fill="#3b4f9e"/>
+<circle cx="88.00" cy="133.54" r="3.2" fill="#3b4f9e"/>
+<circle cx="150.86" cy="177.55" r="3.2" fill="#3b4f9e"/>
+</g>
+<rect x="0" y="0" width="176" height="190" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="25.14" y1="190" x2="25.14" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="25.14" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">2</text>
+<line x1="88.00" y1="190" x2="88.00" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="88.00" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">3</text>
+<line x1="150.86" y1="190" x2="150.86" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="150.86" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">4</text>
+<line x1="0" y1="190.00" x2="-3.5" y2="190.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="194.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.00</text>
+<line x1="0" y1="142.50" x2="-3.5" y2="142.50" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="146.50" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.05</text>
+<line x1="0" y1="95.00" x2="-3.5" y2="95.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="99.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.10</text>
+<line x1="0" y1="47.50" x2="-3.5" y2="47.50" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="51.50" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.15</text>
+<line x1="0" y1="0.00" x2="-3.5" y2="0.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="4.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.20</text>
+<text x="88.00" y="226" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">copy ordinal</text>
+<text transform="translate(-42,95.00) rotate(-90)" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">bits/symbol</text>
+<text x="93.03" y="158.71" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#3b4f9e">s0</text>
+<text x="93.03" y="128.54" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#3b4f9e">s1</text>
+<text x="7.54" y="11.40" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#666666">copy 1 costs 3.77 bits/symbol,</text>
+<text x="7.54" y="23.40" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10" fill="#666666">19× the top of this axis</text></g>
+<foreignObject x="0" y="252" width="760" height="150.0"><div xmlns="http://www.w3.org/1999/xhtml" style="font-family:'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif;font-size:12.5px;line-height:1.45;color:#1a1a1a;"><em>Figure 9.</em> <b>The transform tier's claim is supported and its pre-registered falsifier fired anyway.</b> Later copies of a mirrored or rotated motif cost 0.148 and 0.148 bits/symbol against 3.77 on their own first copy — a recovery of +0.960 at both seeds, on a corpus where the translational matcher finds nothing at all. The falsifier said <em>at or below the control's</em> and it is: the control's copies are cheaper by 0.037 and 0.073 bits/symbol, the same sign twice. But the inference it licensed — that the tier buys nothing — does not follow from it, because the quantity the claim is about is how far <em>either</em> arm is from paying full price, and both are 96–98% of the way. The control's own two seeds differ by 0.037, which is the whole size of the smaller gap. Right: the four-copy arm's curve falls monotonically, so nothing breaks at the trained bound — copy 4 costs a twelfth of copy 2.</div></foreignObject>
+</svg>

@@ -1,0 +1,146 @@
+{
+  "protocol_id": "direction1-state-v2",
+  "status": "immutable",
+  "frozen_on": "2026-08-15",
+  "supersedes": "docs/state-freeze.md",
+  "chronology": "The original S0 document is retrospective: its claimed pre-implementation chronology is not independently auditable from git. This replacement is the operative protocol for the repair rerun.",
+  "checkpoint_manifest": [
+    {
+      "family": "synthetic_c2flat24000",
+      "model_seed": 0,
+      "checkpoint": "runs/synthetic_c2flat24000_byte_square_s0.pt",
+      "checkpoint_sha256": "537968278c47115d118bb534cbd4e7a6da51c83e6ef41aea093db8432326fc9a",
+      "record": "runs/synthetic_c2flat24000_byte_square_s0.json",
+      "record_sha256": "4da06c7687a09f7bf811ea8954e557a161f99e82cd2022a7b38c7b5945342742"
+    },
+    {
+      "family": "synthetic_c2flat24000",
+      "model_seed": 1,
+      "checkpoint": "runs/synthetic_c2flat24000_byte_square_s1.pt",
+      "checkpoint_sha256": "c43ca6ced115a9c9e34e2bfbc6e6393dba7e1b9133df08324673dda7ce8368d8",
+      "record": "runs/synthetic_c2flat24000_byte_square_s1.json",
+      "record_sha256": "d980b4e224ea4ba367ad18943a5af4156642d26c512b9a6764708269942e6aa0"
+    },
+    {
+      "family": "synthetic_converged",
+      "model_seed": 0,
+      "checkpoint": "runs/synthetic_converged_byte_square_s0.pt",
+      "checkpoint_sha256": "87d80ecf4da755ebd196d7dcba6e3dd2b3b7d8884bb36e4e78400bd2c3495873",
+      "record": "runs/synthetic_converged_byte_square_s0.json",
+      "record_sha256": "627e207c20a5f4722ab379983b9ee03404d94452c53d48861c79e8683b2ad19a"
+    },
+    {
+      "family": "synthetic_converged",
+      "model_seed": 1,
+      "checkpoint": "runs/synthetic_converged_byte_square_s1.pt",
+      "checkpoint_sha256": "887155a0d1daacce556d293733d0285ac038ba82294bad5ce07bc615f81cd0c6",
+      "record": "runs/synthetic_converged_byte_square_s1.json",
+      "record_sha256": "fa47f6f2c3d4b138d2739b50e61b5933807cb1cda9f9ce6f4a26774a815bb0e5"
+    },
+    {
+      "family": "composed_sconv24000",
+      "model_seed": 0,
+      "checkpoint": "runs/composed_sconv24000_byte_square_s0.pt",
+      "checkpoint_sha256": "fec28965157bab8e3da3b60a32f4a7484bfb02528c4fb510d5456985113effea",
+      "record": "runs/composed_sconv24000_byte_square_s0.json",
+      "record_sha256": "2bd6fa37d743af1ec55f864b32014771403c89f3150794a7bc2048a2ea7eb568"
+    },
+    {
+      "family": "composed_sconv24000",
+      "model_seed": 1,
+      "checkpoint": "runs/composed_sconv24000_byte_square_s1.pt",
+      "checkpoint_sha256": "bb7085ebc7cfd1893856e4c164d6b39e0d023f6fcd09f410c8f0b3d6af5ee994",
+      "record": "runs/composed_sconv24000_byte_square_s1.json",
+      "record_sha256": "59095434549deb650a8e03584f2e51496370219d85d79befa98d2e2d5da48204"
+    },
+    {
+      "family": "composed_x24000n2",
+      "model_seed": 0,
+      "checkpoint": "runs/composed_x24000n2_byte_square_s0.pt",
+      "checkpoint_sha256": "7c991933756ca5e6a55e65ff3bbe95f32fb777e075a92debdde86439ac768172",
+      "record": "runs/composed_x24000n2_byte_square_s0.json",
+      "record_sha256": "ce5e353b597fc049f45525a6ede04203324b464ebea1199556f97193ed807438"
+    },
+    {
+      "family": "composed_x24000n2",
+      "model_seed": 1,
+      "checkpoint": "runs/composed_x24000n2_byte_square_s1.pt",
+      "checkpoint_sha256": "b9fbde5338d54780c16c69bf8d13c8f229cb5c2071c0f58957d46d8e222f75e6",
+      "record": "runs/composed_x24000n2_byte_square_s1.json",
+      "record_sha256": "230de9a089b33a5ab50d5355a7edd931f6e54fb3c55aac415d6adfb192d5b138"
+    }
+  ],
+  "selection_rules": {
+    "primary_set": "all eight manifest records, exactly as listed",
+    "include": "record complete=true; checkpoint and record hashes match this manifest; verified rebuilt train and validation fingerprints match the record; train and validation opcode sets are equal; absolute byte codec; policy reconstructed from train+validation",
+    "exclude": "planner records, missing or hash-drifted artifacts, partial records, corpus drift, policy drift, non-byte codecs, or any checkpoint not listed above",
+    "aggregation": "never pool families or model seeds in a primary test; report each family/model seed; combine only through the frozen family-level Holm table"
+  },
+  "seed_roles": {
+    "model_seeds": [0, 1],
+    "draw_seeds": [0, 1, 2, 3, 4],
+    "geometry_reference_seed": 1000,
+    "context_builder_seed": 20260815,
+    "data_seed": "read from and verified against each checkpoint record"
+  },
+  "sampler": {
+    "n": 256,
+    "draws": 5,
+    "top_k": 40,
+    "temperature": 1.0,
+    "forbid": [0, 1],
+    "variates": "one pre-generated uniform per row and step, shared across raw, vm_safe and canonical cells",
+    "raw_termination": "legacy dm.isa.codec.HaltMonitor, unchanged; grammar state is observation only",
+    "mask_levels": ["raw", "vm_safe", "canonical"],
+    "geometry": "same reference seed and cloud-point count as the recorded sampler configuration; any unavailable_empty draw makes the report incomplete"
+  },
+  "support_accounting": {
+    "levels": ["vm_safe", "canonical"],
+    "q": "probability outside the level support, from temperature-1 logits before forbid and top_k",
+    "renormalisation": "-log2(legal mass), with mean, sample standard deviation and p50/p90/p95/p99/max",
+    "precedence": ["control", "static_grid", "representation", "opcode_policy", "operand_domain", "scope", "depth", "halt"],
+    "attribution": "persist exclusive first-exclusion causes; dynamic bits are exact stagewise renormalisation costs, not proportional allocation",
+    "reconciliation": "exclusive mass sums to union mass; stage costs telescope to union renormalisation cost"
+  },
+  "inference": {
+    "unit": "paired draw within checkpoint; model seeds remain an outer level",
+    "primary_endpoint": "valid_halt_rate",
+    "interval": "two-sided Student-t 95% interval on the five paired draw deltas",
+    "p_value": "two-sided paired Student-t test on the five deltas with df=4; exact sign-flip p-value is retained as a robustness diagnostic",
+    "multiplicity": "Holm step-down alpha=0.05 across the four named checkpoint families, separately for each model seed; no pooling across seeds",
+    "secondary": "fault, cap, length and geometry columns are diagnostics and are not silently promoted to co-primary tests"
+  },
+  "gate": {
+    "baseline_gap": "raw mean valid_halt_rate <= 0.95 in at least one primary family/model-seed report",
+    "dynamic_mass": "canonical teacher-forced dynamic_bits_per_drawing >= 0.01 in at least one primary report, or canonical-vm_safe dynamic residual >= 0.005",
+    "decoder_effect": "canonical-minus-raw valid_halt paired mean >= 0.05, exact/Holm decision rejects zero, and no primary geometry/length floor fails",
+    "floors": {
+      "coverage_delta_lower": -0.05,
+      "nna_delta_lower": -0.05,
+      "length_emd_delta_upper_bytes": 10.0,
+      "geometry_completion": "all requested geometry draws complete; unavailable_empty is incomplete"
+    },
+    "c3_required": true,
+    "c3_primary": "D_minus_control",
+    "c3_decision": "C3 is positive only if the cluster-bootstrap 95% interval for D_minus_control excludes zero, point estimate is >= 0.02 bits/target-byte, both existing model seeds have the same sign, and the held-out/support/frequency controls do not reverse the compatibility ordering",
+    "pass": "baseline_gap AND (dynamic_mass OR decoder_effect) AND c3_positive AND all required artifacts complete",
+    "authorization": "only a mechanically evaluated pass authorizes S4; otherwise S4 remains closed"
+  },
+  "context_c3": {
+    "venue": "absolute-byte flat synthetic repeats, exact copy-3 natural step twins",
+    "case_count": 64,
+    "manifest": "runs/context_c3_synthetic_flat_step.json",
+    "manifest_sha256": "1e1b99e46de4bd7056846a76734a116573947da8aed19d4ce115c912274c9347",
+    "census": {
+      "source_programs": 1000,
+      "candidate_groups": 346,
+      "included_cases": 64,
+      "rejected_fewer_than_three_copies": 178,
+      "rejected_case_budget": 282
+    },
+    "primary_cases": "fixed case manifest created before model loading; same length and opcode-kind skeleton; canonical and VM acceptance asserted",
+    "estimand": "D=0.5*((L(yB|xA)-L(yA|xA))+(L(yA|xB)-L(yB|xB)))",
+    "control": "same-length/signature unrelated donor and non-copy control, scored with the same four-way contrast",
+    "bootstrap": "scene/case cluster bootstrap, deterministic seed 20260815, 2000 replicates; no token-level independence assumption"
+  }
+}

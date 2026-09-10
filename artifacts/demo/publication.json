@@ -1,0 +1,306 @@
+{
+  "schema": 1,
+  "change": "checkpoint.path normalized to repository-relative runs/ path; all other fields unchanged",
+  "records": [
+    {
+      "file": "rp2040_bicycle_0d8b76834c.json",
+      "original_sha256": "1003c6c61a88af2c09dca02addb61b8dbeea199592edb168bdb36b249f600493",
+      "public_sha256": "4cb9dba3203b023525cc79a5d108262cb79966f29c489ae13bc8afa2e0f545c7"
+    },
+    {
+      "file": "rp2040_bicycle_16b38a1d6f.json",
+      "original_sha256": "211a4b3780649967c5bf180ba08862e331309df275fd1a50cffa8e3a5d1fa6b3",
+      "public_sha256": "f8fcb20e15df4a090789dc493f74ea52a6faf56301524e1aee7d11707143d8fa"
+    },
+    {
+      "file": "rp2040_bicycle_4231db4827.json",
+      "original_sha256": "718a564ed55b3df82e84fee03b86263424f1359f9aaf045973085bb15ec0b807",
+      "public_sha256": "4a720387aaf8eacaf701651070a53ff453944009d943e7bb0fa09080e11138d8"
+    },
+    {
+      "file": "rp2040_bicycle_4fab1ead7a.json",
+      "original_sha256": "e52ff64f06362f306dfd0949a2c76c906808353c50fc4bd230598c36e418bc6d",
+      "public_sha256": "403258fcfec331f967173e6e61e2b435e673fc238d8a8499f7581dc89f8ed6ba"
+    },
+    {
+      "file": "rp2040_bicycle_5f295b79df.json",
+      "original_sha256": "d95dc1ceab2a7892ec2e25e852580bbdb7f987852249b679786dd8058d4d2a36",
+      "public_sha256": "2f7267c3591c391fadd9e2e613277724499ac842bc917b2f0b087c656e7a5b56"
+    },
+    {
+      "file": "rp2040_bicycle_8865d86ecd.json",
+      "original_sha256": "2ed6e65860e721eece2bffc05339e23d17f41f2ef98235f1e2085088b205ca72",
+      "public_sha256": "a3c2fddcacd36ae934023a7432db3dc1111e3adac31a8a9e98c6cd29974a45a4"
+    },
+    {
+      "file": "rp2040_bicycle_991b5c05dc.json",
+      "original_sha256": "d51f0518341e2538afaa34ab5801ecc53f5fe5979ad7da08df504b4b16529538",
+      "public_sha256": "df8353f35abf65b196ba45b30ed4599bc7c32ea9211afca6c96cfa184968524d"
+    },
+    {
+      "file": "rp2040_bicycle_aa2774611f.json",
+      "original_sha256": "4aa1b76c983590bc4e1feb5c8bfa6867d8bd3914cedbd7610e5ac4d081687aaa",
+      "public_sha256": "a7c5fbc657ba11220d1639cad7bda895dc8d8d23a4f2e68c609ddade81eda0c4"
+    },
+    {
+      "file": "rp2040_bicycle_ac177e466a.json",
+      "original_sha256": "1fc5027762c147b4071a5af2e2bb34f80bece780aef2b16ddd2c13e32639eabd",
+      "public_sha256": "71cb19299c6014f3f7d832c45c545decc190f8f4a634e1d23ee270bf7a2b38c5"
+    },
+    {
+      "file": "rp2040_bicycle_cc5fdaa3ef.json",
+      "original_sha256": "8b362306fb282263fc10bd82e66229c26d87164d42a259543121acf62039c23c",
+      "public_sha256": "18c5c69ab7fdadc43fa9f0c50d261c2b685b7e6b6afd8dcd743fb806ed833b87"
+    },
+    {
+      "file": "rp2040_bicycle_d4412dfbdf.json",
+      "original_sha256": "fd2b29c59589dac34f83ba4a32316b70c30a3980fe4bd3887f773629dac65e2d",
+      "public_sha256": "fa7beda6036f3014e25488dd3f91ceb49fb809e413c4c771d9d56973b5f9bf84"
+    },
+    {
+      "file": "rp2040_bicycle_d9cbe7900d.json",
+      "original_sha256": "3cea2fe288d1ec618ff5b823c32470225a90f2925c21379bff2e642ea522ab91",
+      "public_sha256": "d371958d7478373541fb1e9af891f82ced1c37935dac858c8064ec7fd8268075"
+    },
+    {
+      "file": "rp2040_bus_018bb9dd97.json",
+      "original_sha256": "d1f2588eaf5322c08a1f7e65d24086a1f65f520c42516cfd00e82305f9c30c74",
+      "public_sha256": "f07905228969b412b38ca42473e2306617915a2b0a92d7810250e28ebb0d57ec"
+    },
+    {
+      "file": "rp2040_bus_1e744dd9bf.json",
+      "original_sha256": "1397a9346931cd7bb4587dd0a610872964d0c261d0ee3bc1276752f10e1bc8bd",
+      "public_sha256": "b9504b79c29908ba031514138c7363e9abb778c9e23fe53a17cf3ae64e50a674"
+    },
+    {
+      "file": "rp2040_bus_389b5d47d1.json",
+      "original_sha256": "dc5905a90d988bdbc0e3063d3dabbb4ea55cc1a7fcbb433ae9bae16258736fcf",
+      "public_sha256": "0ea93fa9ece43efe398d294dcc009f881bfe74709adddb8c79de2970723fedb9"
+    },
+    {
+      "file": "rp2040_bus_4445e1402e.json",
+      "original_sha256": "d9f406af9144621056fa1ebe92b433b64a1a92ee08c8bae729c15a8c429c8dfa",
+      "public_sha256": "487c0743a56484f2f19e0d5bf58ef18a031080964a567ba0a2d99a21c930442a"
+    },
+    {
+      "file": "rp2040_bus_4e283833b0.json",
+      "original_sha256": "f66f89306db5e6a3f581921ca5d1e695ecca2b4275140c233b61eed860d40cea",
+      "public_sha256": "937f8d6283e6734b932dfcd620228e2b7cc880208bdf075f9cba737424797116"
+    },
+    {
+      "file": "rp2040_bus_5896ff5e20.json",
+      "original_sha256": "f11154b9479b2e4ae50c94c02acbc5512c9609aabc7dfe759f3ba15bd23006e1",
+      "public_sha256": "b7d4872b188f1bc62662dd76ea67343415b25a169d20a5a8159b515d0766b7a9"
+    },
+    {
+      "file": "rp2040_bus_9570c1d372.json",
+      "original_sha256": "87a0393d08a3e75b94f397be4334026c414d5cdacddb0487c7fe3b1cf5913a88",
+      "public_sha256": "c9ecc7f381aca4277e7a896725fc69186fd5a4af872d9f9b4fb6dccaa822427d"
+    },
+    {
+      "file": "rp2040_bus_c8a4f939ed.json",
+      "original_sha256": "7bc402f65601b01e31a02cff4e6026d6586ed4f6199779cbee81fc247d042e7c",
+      "public_sha256": "552908c0ed831c0d7fce51afcb900d4d5989ae1ea1ba319a47ae07adf2994a1b"
+    },
+    {
+      "file": "rp2040_bus_cbb7da30e1.json",
+      "original_sha256": "4eb4652e667cfaa7801df2ffee2ef10d65e31988bfb52c00e201a387f14d1f01",
+      "public_sha256": "23cacc5d6e6989f9eacc6355408f633873ce8eaa2e8dd9e0aec8137a1a174457"
+    },
+    {
+      "file": "rp2040_bus_e121e3e8f8.json",
+      "original_sha256": "d6693203b0b74f77c97b2b89bcace6399e1ccb765327d4e4d1cf3eb9da66cfbb",
+      "public_sha256": "777223587392fd0abb5f7adea3baf2b99670566443d5c5a3113809e4ff0bb944"
+    },
+    {
+      "file": "rp2040_bus_f00e28835b.json",
+      "original_sha256": "ba7009072d058f7826958f80d4a382ba0ca0c36dad2cc9e8d022c927dba7ea90",
+      "public_sha256": "f8054d4ed7238f099cdbba1c49a15e834ae29a6abd6da0e0a2ec18ddb2caf1b3"
+    },
+    {
+      "file": "rp2040_bus_fc87bc7b6b.json",
+      "original_sha256": "a75cfa3396b1bf81afc7cc1fcc570b4578b2cb18240e01226b35341182d6fb04",
+      "public_sha256": "54475e07d7bf6dd24909b2d771cf5d6bb74d220df6f48f6dd9b84dee5da8f08f"
+    },
+    {
+      "file": "rp2040_cat_23127e00a1.json",
+      "original_sha256": "5e9b63ce339b458e7d4fbdd9bf77f051094d55c59a50a8bfdf778750e7cb6fe7",
+      "public_sha256": "3808667efa19416e7bdb923212f97633f4a846f385d30b18f55f776a54598a53"
+    },
+    {
+      "file": "rp2040_cat_259fa2fc52.json",
+      "original_sha256": "cedcd93d52d51e6ce7ffde484534174ce631ef27a8d669b91f3e9f0b0170336d",
+      "public_sha256": "f15fc7c3f8ff9d75ad928c49bf18b89ce85842f50bad07c1def8c44f6e7f3105"
+    },
+    {
+      "file": "rp2040_cat_2cf2ddcdf5.json",
+      "original_sha256": "e1358cd7aff47d42925472f89d3e9acd2b79b462ab24ecf07428f7ca633c8304",
+      "public_sha256": "629f55142a1f44f45258f2a051a0fb89580983f127a52a9d131d8a7df1ee06c1"
+    },
+    {
+      "file": "rp2040_cat_3d5645b390.json",
+      "original_sha256": "c29f59033fcb83834ea075ec3b8b935a747059ba3a12869dd7b163b47815f7b8",
+      "public_sha256": "4dfcd0acb7eaafde1dc03de1766dc71cebc4d8e35e184dc33618cfa73004d384"
+    },
+    {
+      "file": "rp2040_cat_3e20c073fc.json",
+      "original_sha256": "1d9b79a3bc71ee40cd92ab224510fb75968256b3ed56005fd470f658521617b7",
+      "public_sha256": "7c63a57bee37c0524dc4b95bc040aa40f4f12d6e947ce80eb6a7e41ccef9e505"
+    },
+    {
+      "file": "rp2040_cat_5af002a5fe.json",
+      "original_sha256": "2934bbc1ce1e2cc12dfce67c1c437529e71142884d5047d95b8dc44d51112bc8",
+      "public_sha256": "a34def0c3692d4b5fb53e2ebf33ec1b3de5212879fcfd38225ceba1457d9f371"
+    },
+    {
+      "file": "rp2040_cat_988146777b.json",
+      "original_sha256": "8affe4963ad4e751cc32f2a980435c75a2706da2ac651b1c5384986c8e98ec28",
+      "public_sha256": "c8655ed27bc87c6f7da0a2c010a11b2700626302d705891b12cfedb2fb51311e"
+    },
+    {
+      "file": "rp2040_cat_9f484e0b9c.json",
+      "original_sha256": "50414f235890211cf34d3814e8792614d9425b1be6b1a938182b9e728e4e4f05",
+      "public_sha256": "aba5b7a0b6b30946c752d1de67c4e7c01ac9a4ca3eed6411bd2ca0a790de2af7"
+    },
+    {
+      "file": "rp2040_cat_a405805d3b.json",
+      "original_sha256": "63be672f9d1d533ff1e0991d784ce7fc1a93587f08a108540a761fdefcf86d34",
+      "public_sha256": "6c4140a90ad2e8149861459bbe45b4a2a0efcb38c75c22238b44342c585f37cf"
+    },
+    {
+      "file": "rp2040_cat_d6d7c3cc0c.json",
+      "original_sha256": "7e12f48b1202fd7b2a8b759c7c73b72458d411585d517a76b206edf6e0a7f4dc",
+      "public_sha256": "31627326031ca75b5c8e4386e2fa43200b153948209b49d944ede032a5aa4155"
+    },
+    {
+      "file": "rp2040_cat_f94f6e4f5b.json",
+      "original_sha256": "4e6b98b8d71f4566c84d8721bedcd834b477b3e13f80597cdd6f49aa760c494b",
+      "public_sha256": "42fb72056a984b62cc6795a1537711a85d87a7e521f9953f22a1080b7f6aed7f"
+    },
+    {
+      "file": "rp2040_cat_fcaf0ed8c6.json",
+      "original_sha256": "07964eae608597a56f7c8128814a5a4fa1043a53c3ea6535c4aee89996d33d83",
+      "public_sha256": "c29edb00d7c61f50a989eb6a7f9e3756166c602a53c992705bb538329b8f5e21"
+    },
+    {
+      "file": "rp2040_flower_0c75f18fa9.json",
+      "original_sha256": "3861996952b7ef44272bd27a844512addd781d9267400a14b1989c4012a43c7a",
+      "public_sha256": "68490f6a663dd6b107b84d00ca9a800e83540981aa92fd77d66503e636d5700e"
+    },
+    {
+      "file": "rp2040_flower_2136bcaaf7.json",
+      "original_sha256": "9c85fae35cf56c63050d6cd6d7afdca703ae6d122ad36a3ca5cd28d51ef66b33",
+      "public_sha256": "5fc1e3fce325eb3e8303229406c576f5633c5833389e210e43d727fe6433a783"
+    },
+    {
+      "file": "rp2040_flower_257fe221f8.json",
+      "original_sha256": "9848f875d38ea7a6abaabd1653f7cb9d7355e1c2cf6f50d7291ca83542694268",
+      "public_sha256": "efe0fce6fd2b2655d8d59ecf0f900f5c4cf62fc395c9ff22ae14c9b65a989cfd"
+    },
+    {
+      "file": "rp2040_flower_2926da7a48.json",
+      "original_sha256": "2ed8356a102401fff3668a55256cf02b51d44830d1f9d979e175d7e84c9ed97f",
+      "public_sha256": "79bb2c968cadd37b5cd951c273debc61ae15e25234fc4bfdbcc1f6e1ecf8e45f"
+    },
+    {
+      "file": "rp2040_flower_3ec0b10a71.json",
+      "original_sha256": "9c2c57b1ec05347159ea1f4f3c5c258da78aefddabbf1e765570f64f2011d6e7",
+      "public_sha256": "41e537834bfe2865e28c1978810534cdb20fccee181e41c2c603341b511583d9"
+    },
+    {
+      "file": "rp2040_flower_523e538ddd.json",
+      "original_sha256": "b9787bd751fa962a176299f0151fb0ec932fe588cd2bffc92e82b23c245c621a",
+      "public_sha256": "298f5e5a6db79d6038cc414a5f1934f7bcaf2fad469af4559db706aa011eca33"
+    },
+    {
+      "file": "rp2040_flower_64831a4c4f.json",
+      "original_sha256": "1708f464d7b76620b948ac59158102b6b779c78af7ec3ed982bc2f7f8246ee97",
+      "public_sha256": "62bc5f609731948e348886332f0b08c2d9a5d1d7133822017bcdb635c7320a66"
+    },
+    {
+      "file": "rp2040_flower_6b27ca1316.json",
+      "original_sha256": "b3ef80b39400d4a23d3b72d4cca7fe3ecf59106d995c4004dfbf697a5833d42e",
+      "public_sha256": "1f66259af171e0ee8de449a4c00cdcc99d246960a4ec431137e820c63a3b8ee0"
+    },
+    {
+      "file": "rp2040_flower_704c1fc20e.json",
+      "original_sha256": "879c072d846fda42417eeba1797109c73bb99c16eb1c0965e98dffc6effd369e",
+      "public_sha256": "704fef505a816f60e589065bb2d8c074a738403799e0d8c085340a423eec0ce4"
+    },
+    {
+      "file": "rp2040_flower_7b7fac38c3.json",
+      "original_sha256": "50f5fe200e7d6567ff4fac0745d0bc3f25323ab6102a19fffdffd4050013dda4",
+      "public_sha256": "025023281598410a7bb8889e5680a97d5d343feb94e806969dcf3b309877256e"
+    },
+    {
+      "file": "rp2040_flower_7c16838363.json",
+      "original_sha256": "dd17742932107456d29798158c1e7a70707e58b014ce73bc7b92ce1301941e37",
+      "public_sha256": "fc2678910074bbd0223bb60548bcc3256234e09882a9352f565dfd3046ef2b70"
+    },
+    {
+      "file": "rp2040_flower_f817f9fd9d.json",
+      "original_sha256": "d2c1fb588cb532f02a6a7112133a4223c670c296f9c46663981094ad43cf5747",
+      "public_sha256": "ed38a5adf95c482b52b0cc953366b3d23a2cf08e6b3f2b09dadbc3e5bd4db73a"
+    },
+    {
+      "file": "rp2040_sailboat_040709af74.json",
+      "original_sha256": "43a25b406a9b7b643db20c92539503ecb29ef3f0b1884aa0a9cf836de30aafe7",
+      "public_sha256": "845dd1306e4939a284289e756f215ad17a57b19156c965a20a27e0d33be9feae"
+    },
+    {
+      "file": "rp2040_sailboat_084f7d0b6c.json",
+      "original_sha256": "c7a9a75627589f952a809d282b9be65d6923c485e43b4d8a9bec779bd05e04e8",
+      "public_sha256": "417cf70f7ebbd5efb31aeb718b1a9627798c8fb90cab0ca940a9a4ad2b67eafc"
+    },
+    {
+      "file": "rp2040_sailboat_128edab1d5.json",
+      "original_sha256": "457b5ed0f9f0c02e25c6bd7bb51c33a798da9fbaa7af0e982d45d332b382694c",
+      "public_sha256": "da6a26130f2297a1d27425e4ef430af8b1b3bb924f6f10d90d98bdcf1264a2a2"
+    },
+    {
+      "file": "rp2040_sailboat_191b0867f1.json",
+      "original_sha256": "f759dd14475d13a1da824f2b2dcb913dc108b6c4170d809416285ea07b18aff9",
+      "public_sha256": "49cd6c0cd05d1ca93fb1028af56f3de96f9f6a17300abebe27bdc4647e9cf407"
+    },
+    {
+      "file": "rp2040_sailboat_1fb4387af7.json",
+      "original_sha256": "7126da1861ee6c331f6b745d2738783dda9c3f7cd45f50a944eb0720198fcf74",
+      "public_sha256": "19865d4c32442a8e4bf965477976aa78c294e5ae262488f8a5e91ec4dd66b51d"
+    },
+    {
+      "file": "rp2040_sailboat_532dc74065.json",
+      "original_sha256": "a137294a66876e00cce74fac8b32f0e7510d2349cec41a54f789f574a69f9f8c",
+      "public_sha256": "227cf05119c394f2593a92ad918a80da0371b83bdce94a465c44318ebc576a56"
+    },
+    {
+      "file": "rp2040_sailboat_66b19d620b.json",
+      "original_sha256": "d8929e90b8e5f882157eefe5ac4bc6619a6db1b5a8ad699b85ce5aed66434c32",
+      "public_sha256": "8932647363d6bdcf5c3c02b6f1ea3df1b26d9eeeaaf208523c33d1b9b7687712"
+    },
+    {
+      "file": "rp2040_sailboat_7a5ed0f419.json",
+      "original_sha256": "5d16398ed5b5e88cfb80398098876e2a03fada1e7fb3a292838a800a64685d69",
+      "public_sha256": "0d0dc2c3488bb645dbe36841a905639318c8ecea41c324381381c5d6275adefa"
+    },
+    {
+      "file": "rp2040_sailboat_b0fe7da2e2.json",
+      "original_sha256": "b13e7457ba93a70d4d6f903a63ba2f71dfdcb8fa17630d4ba3b1af294eb6400b",
+      "public_sha256": "4bb281103f79586adc6338336b019eeb5f9b059ea86c0d76fcfbe7b3c389a476"
+    },
+    {
+      "file": "rp2040_sailboat_e5947c63dc.json",
+      "original_sha256": "b22c33a3691a3ae33048b3e05ca76380185bac2f34f06daab39f8e7605c3efef",
+      "public_sha256": "803b2b84fae9835f979091221f7e93e2e3c16bdf86bf5a0bc866190a4c4d194b"
+    },
+    {
+      "file": "rp2040_sailboat_f2fe9a77f2.json",
+      "original_sha256": "06d2fe870a00febf0becef4b210c1335a5d44c48762a92a4d923cffdb7d693c7",
+      "public_sha256": "3e98aeed566aef84aff6fcfd0688a745bce6221f01fcab4478b06ae35361eb81"
+    },
+    {
+      "file": "rp2040_sailboat_f821b54f84.json",
+      "original_sha256": "3e27e2b88414db0bb4825eaa7ed0d0f46962443063441eba636edf3f3351f32c",
+      "public_sha256": "9c57fbcace0d9ed94ade7ada196adf551206d9ab2a50138c7c54a678d8f03fd3"
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+ "archive_sha256": "cfe119fba8b24fce5ac95c7d8ebf605988b587d2a37351239d792de8c922ed50",
+ "artifacts": [
+  {
+   "bytes": 2647890,
+   "kind": "audited paired corpus manifest",
+   "path": "runs/feedback_corpus_f5c_audited.json",
+   "sha256": "1fa1320426498406a9f8ac784fcadd77f5fc33459924f79d84eb1643da207b94"
+  },
+  {
+   "bytes": 2627333,
+   "kind": "training record",
+   "path": "runs/feedback_corpus_v1.json",
+   "sha256": "6fac7d7c1581ea110f9f6dc9e5c6413689bc633e334532eeb0b1051d99ef04d0"
+  },
+  {
+   "bytes": 2629868,
+   "kind": "audited paired corpus manifest",
+   "path": "runs/feedback_corpus_v1_audited.json",
+   "sha256": "08a53e3b1519698048030bc22547318338a4d9b55128234be21c6204328b5fc9"
+  },
+  {
+   "bytes": 22857,
+   "kind": "correction-package decision",
+   "path": "runs/feedback_correction.json",
+   "sha256": "757764a47c355b8c489b8fc604cd193d7d8d56a58fa7fbad19f54ba11fcc727b"
+  },
+  {
+   "bytes": 48543,
+   "kind": "training record",
+   "path": "runs/feedback_f5c_project_progressive_v1_s200_r1.json",
+   "sha256": "db3af77d58cf809c5edeee9a0b8cd5482c14a51af85bb02749741c4dcc805e7c"
+  },
+  {
+   "bytes": 3444760,
+   "kind": "checkpoint",
+   "path": "runs/feedback_f5c_project_progressive_v1_s200_r1.pt",
+   "sha256": "c0ada8c547ace251cdb410747cb7e5afa64b8ff1ddf045a02a5107259689a8a9"
+  },
+  {
+   "bytes": 115800,
+   "kind": "qualification cell report",
+   "path": "runs/feedback_f5c_project_progressive_v1_s200_r1_cell.json",
+   "sha256": "0f16fa88d91a09e4eac3cb3b434703ee5a341e2762446d637bb5a94f7b7afa9d"
+  },
+  {
+   "bytes": 48550,
+   "kind": "training record",
+   "path": "runs/feedback_f5c_project_progressive_v1_s200_r2.json",
+   "sha256": "5ec116397f490d8d88c305e0262c4cf810da546e95aed8d420aac31ad598613c"
+  },
+  {
+   "bytes": 3444760,
+   "kind": "checkpoint",
+   "path": "runs/feedback_f5c_project_progressive_v1_s200_r2.pt",
+   "sha256": "b750c0d6395e1f807659352c20aa4a05654e29d7fc53411cf6b81f2c664b6e23"
+  },
+  {
+   "bytes": 116020,
+   "kind": "qualification cell report",
+   "path": "runs/feedback_f5c_project_progressive_v1_s200_r2_cell.json",
+   "sha256": "80271226df922af340c1a68900a4242625e709041a4b8c2d75df757e3130d545"
+  },
+  {
+   "bytes": 48393,
+   "kind": "training record",
+   "path": "runs/feedback_f5c_project_progressive_v1_s201_r1.json",
+   "sha256": "68d4180e9bfbdff19d0388c6057a64ca99436510f434edd278927b23e1141e15"
+  },
+  {
+   "bytes": 3444760,
+   "kind": "checkpoint",
+   "path": "runs/feedback_f5c_project_progressive_v1_s201_r1.pt",
+   "sha256": "3aa7017132e1b73aadea23942ecd5fcbdf0f6f6530eab0e712077ad749fca972"
+  },
+  {
+   "bytes": 115898,
+   "kind": "qualification cell report",
+   "path": "runs/feedback_f5c_project_progressive_v1_s201_r1_cell.json",
+   "sha256": "11999ace7984ea7b005a896a3a5234832b02ce5ffd0d4d02b20d424d722f6277"
+  },
+  {
+   "bytes": 47517,
+   "kind": "training record",
+   "path": "runs/feedback_qual_project_progressive_v1_s100.json",
+   "sha256": "c661a5a8013eb1b1fd903619d316f84df34f400dd91c87e6ddb6fa3f26e4ee0f"
+  },
+  {
+   "bytes": 1193,
+   "kind": "console log",
+   "path": "runs/feedback_qual_project_progressive_v1_s100.log",
+   "sha256": "77ae23a94c042a54e556ec24d2aa8769d9034ad181bf613332614b1c02a9c331"
+  },
+  {
+   "bytes": 3444682,
+   "kind": "checkpoint",
+   "path": "runs/feedback_qual_project_progressive_v1_s100.pt",
+   "sha256": "e35dd7524dc3e83564f90edf86f17d042d00eb629216fbae978cbab10cfe53a3"
+  },
+  {
+   "bytes": 110140,
+   "kind": "qualification cell report",
+   "path": "runs/feedback_qual_project_progressive_v1_s100_cell.json",
+   "sha256": "d4e3fda393b512c32aaa416024cca318323a7bf5c5f11382be922e27f0e855b2"
+  },
+  {
+   "bytes": 47716,
+   "kind": "training record",
+   "path": "runs/feedback_qual_project_progressive_v1_s101.json",
+   "sha256": "cf326fb835cf8e73d1d731732258b0443542b07a83450faaa57d9981f2c07b54"
+  },
+  {
+   "bytes": 1193,
+   "kind": "console log",
+   "path": "runs/feedback_qual_project_progressive_v1_s101.log",
+   "sha256": "fe44c7c902cd4abf06330562dac2653585f0f1d355eb5bf7a90091d969c99b21"
+  },
+  {
+   "bytes": 3444682,
+   "kind": "checkpoint",
+   "path": "runs/feedback_qual_project_progressive_v1_s101.pt",
+   "sha256": "f5a4f3b15aef39426a3043646d2a55b17094cd5f17f6c7a8e044ea48478c64a1"
+  },
+  {
+   "bytes": 110477,
+   "kind": "qualification cell report",
+   "path": "runs/feedback_qual_project_progressive_v1_s101_cell.json",
+   "sha256": "ce9e26eab1baa481e567cf0d05b0407b8214e638a7d2a913e3f4ba8e406a4fc1"
+  },
+  {
+   "bytes": 47736,
+   "kind": "training record",
+   "path": "runs/feedback_qual_terminal_mix_v1_s100.json",
+   "sha256": "675fd630c27cf2889d7554e8221421cca6fd273464c256ee123d9edf1a677024"
+  },
+  {
+   "bytes": 1172,
+   "kind": "console log",
+   "path": "runs/feedback_qual_terminal_mix_v1_s100.log",
+   "sha256": "797ff7fc6438f2b5897edea2c9c3d87f3632f0ac3b7e644a49cc738a49d90b5c"
+  },
+  {
+   "bytes": 3444409,
+   "kind": "checkpoint",
+   "path": "runs/feedback_qual_terminal_mix_v1_s100.pt",
+   "sha256": "9bc988d63427ca3b1675c793f0362d174f4e26fe52e499bd17dd839947aa75b6"
+  },
+  {
+   "bytes": 110480,
+   "kind": "qualification cell report",
+   "path": "runs/feedback_qual_terminal_mix_v1_s100_cell.json",
+   "sha256": "0ca5cab0bd1dc216513375f7f78860aa5b54ae3181e3345ca57ce1d698e7a0b5"
+  },
+  {
+   "bytes": 47735,
+   "kind": "training record",
+   "path": "runs/feedback_qual_terminal_mix_v1_s101.json",
+   "sha256": "b00d82c4c7fbaf94aa6d5dfb1491d9ab7ec44c704caa4a8f316a7fcdfc2fb7c6"
+  },
+  {
+   "bytes": 1172,
+   "kind": "console log",
+   "path": "runs/feedback_qual_terminal_mix_v1_s101.log",
+   "sha256": "34465371780fc658d29acba6499e4b2ba639fc382645ac511405c251c8363e7f"
+  },
+  {
+   "bytes": 3444409,
+   "kind": "checkpoint",
+   "path": "runs/feedback_qual_terminal_mix_v1_s101.pt",
+   "sha256": "2d0ee4bdf77b7ba0069d23e042e4961b31cfde991a768364e46761fb401a9766"
+  },
+  {
+   "bytes": 110424,
+   "kind": "qualification cell report",
+   "path": "runs/feedback_qual_terminal_mix_v1_s101_cell.json",
+   "sha256": "6115ab15c65db0f8ca3128ab76a5b4d180a1cf824bb23d2f98d551720e740cda"
+  },
+  {
+   "bytes": 47703,
+   "kind": "training record",
+   "path": "runs/feedback_qual_two_pass_control_v1_s100.json",
+   "sha256": "3066a4204338d58263ab01f41d3e8be1ed08e4b8639dda56cf5f3efe5e37bd47"
+  },
+  {
+   "bytes": 1184,
+   "kind": "console log",
+   "path": "runs/feedback_qual_two_pass_control_v1_s100.log",
+   "sha256": "8399bac34514be4b1b45045ad31bbfcca797e21594af643f4c068976eb569939"
+  },
+  {
+   "bytes": 3444565,
+   "kind": "checkpoint",
+   "path": "runs/feedback_qual_two_pass_control_v1_s100.pt",
+   "sha256": "2a648c9be7dec3f1a0cbf04b7bcbbfa09e1270b60e3226860b1f3cb8882afe2b"
+  },
+  {
+   "bytes": 110456,
+   "kind": "qualification cell report",
+   "path": "runs/feedback_qual_two_pass_control_v1_s100_cell.json",
+   "sha256": "ce3fae2588b7a0b47a0ded7e2c759152f75d273aedd2111c76e756038a67b90f"
+  },
+  {
+   "bytes": 47531,
+   "kind": "training record",
+   "path": "runs/feedback_qual_two_pass_control_v1_s101.json",
+   "sha256": "9b544bcf9ca4ce6a4c2f4a8691d07681f10c251d2e9c632e1ae21f3086a0b172"
+  },
+  {
+   "bytes": 1184,
+   "kind": "console log",
+   "path": "runs/feedback_qual_two_pass_control_v1_s101.log",
+   "sha256": "716a043122de8645b1c66b260a5dbce2f5f3cf73df0599b1d25b257b37b3dc63"
+  },
+  {
+   "bytes": 3444565,
+   "kind": "checkpoint",
+   "path": "runs/feedback_qual_two_pass_control_v1_s101.pt",
+   "sha256": "956aee7779c560e142c1a394bcc790e96dd2233342d7e64b7ca63453f2c21c08"
+  },
+  {
+   "bytes": 109909,
+   "kind": "qualification cell report",
+   "path": "runs/feedback_qual_two_pass_control_v1_s101_cell.json",
+   "sha256": "cd940af1fa21d0bcec1f97306927cb818a6995aa6012f3b6dc55dfdd9d9f7b01"
+  },
+  {
+   "bytes": 29283,
+   "kind": "qualification decision",
+   "path": "runs/feedback_qualification.json",
+   "sha256": "f0f68681fb980828d4c61a74b0021703bafc9a0f662758da86bbec3140f40f21"
+  },
+  {
+   "bytes": 7524,
+   "kind": "training record",
+   "path": "runs/feedback_smoke.json",
+   "sha256": "c492c65c2fc0ff6eb2cf874934b3500449df20090d0e3ac8a4a0457d9205e035"
+  },
+  {
+   "bytes": 3443437,
+   "kind": "checkpoint",
+   "path": "runs/feedback_smoke.pt",
+   "sha256": "43dcd7b2bf1f9cf8dd31adfd1b060bf56223bacfc101a0343b1e9ba7af9b2771"
+  },
+  {
+   "bytes": 8233,
+   "kind": "training record",
+   "path": "runs/feedback_smoke_b12000.json",
+   "sha256": "ee854bb7f906856734c4e2379c7840d9bc574cde2615ae14de1448af94354cd1"
+  },
+  {
+   "bytes": 3443774,
+   "kind": "checkpoint",
+   "path": "runs/feedback_smoke_b12000.pt",
+   "sha256": "c463135cf9b09dd457543282593c724d5f480db83866c89abea6b1ac20d8a84a"
+  },
+  {
+   "bytes": 7522,
+   "kind": "training record",
+   "path": "runs/feedback_smoke_b2000.json",
+   "sha256": "40a467ca1509a695287862ee179a262fae48b2d3de3d86927fa0940243a403ed"
+  },
+  {
+   "bytes": 3443735,
+   "kind": "checkpoint",
+   "path": "runs/feedback_smoke_b2000.pt",
+   "sha256": "c633bb2a1670a6440e9af4137ca603147a79971a2a055703e2552dc51d99536f"
+  },
+  {
+   "bytes": 7528,
+   "kind": "training record",
+   "path": "runs/feedback_smoke_b400.json",
+   "sha256": "23f5feca9e82a32409e9aeb588e1b05a50d59c9e2873a65eb8b8838abe4b3628"
+  },
+  {
+   "bytes": 3443696,
+   "kind": "checkpoint",
+   "path": "runs/feedback_smoke_b400.pt",
+   "sha256": "665a50189cde43356ac61be58150d8bf6159ca3fcd558ec8ed8a20f5c240455f"
+  },
+  {
+   "bytes": 7829,
+   "kind": "training record",
+   "path": "runs/feedback_smoke_b6000.json",
+   "sha256": "c27c998b3ba1c1b48d538a238c63f58ca63329019ff9361899c50e7096bb7d1c"
+  },
+  {
+   "bytes": 3443735,
+   "kind": "checkpoint",
+   "path": "runs/feedback_smoke_b6000.pt",
+   "sha256": "1fa2d0b6335772c3901ad013a15365853cd9438ac1cafa5de91add8f6d426898"
+  },
+  {
+   "bytes": 22872,
+   "kind": "engineering smoke report",
+   "path": "runs/feedback_smoke_f5c_report.json",
+   "sha256": "03243c2cbd8e3343c9458ac5bcf583ac71b39e52f0d1b37749b95fc77d133850"
+  },
+  {
+   "bytes": 13201,
+   "kind": "training record",
+   "path": "runs/feedback_smoke_f5c_training.json",
+   "sha256": "6d8ae08281d98d8261fd8bfb6d7faa9794f1f9e78341afc884667bce27f33a67"
+  },
+  {
+   "bytes": 3444136,
+   "kind": "checkpoint",
+   "path": "runs/feedback_smoke_f5c_training.pt",
+   "sha256": "a01bb9d2bdf62adc37b89596d7e169846c0e158c4262e8dad6e6455c3564aaf0"
+  }
+ ],
+ "not": "a copy, a re-verification, or a substitute for the reports; a cell report still verifies against its own canonical payload digest and this file says nothing about whether it does",
+ "source_reconciliation": {
+  "files": [
+   {
+    "path": "dm/data/feedback.py",
+    "recorded_sha256": "570e1f701d88f9b6f29c350b3d527088f6f9f6bd4b13283e5c446dbdc378861b",
+    "reproduced": true,
+    "tree_sha256": "570e1f701d88f9b6f29c350b3d527088f6f9f6bd4b13283e5c446dbdc378861b"
+   },
+   {
+    "path": "dm/data/feedback_audit.py",
+    "recorded_sha256": "e533a48bd2a5c67cecde8525800a64059d4bcb95780358234a69ed4ccdd40297",
+    "reproduced": true,
+    "tree_sha256": "e533a48bd2a5c67cecde8525800a64059d4bcb95780358234a69ed4ccdd40297"
+   },
+   {
+    "path": "dm/eval/feedback.py",
+    "recorded_sha256": "6f25cf8e96409016ee484f8784cf039e4e2d1d90c70442bb011bd4af9c7809fa",
+    "reproduced": true,
+    "tree_sha256": "6f25cf8e96409016ee484f8784cf039e4e2d1d90c70442bb011bd4af9c7809fa"
+   },
+   {
+    "path": "dm/eval/feedback_contract.py",
+    "recorded_sha256": "922d6c70064e39d6c683a74e49295f8dddc0948f5f1f98357682ef9e5850a7c3",
+    "reproduced": false,
+    "tree_sha256": "f0141912491895e895962166bae0681f87890009dc0874aebd2d4c9907312834"
+   },
+   {
+    "path": "dm/eval/feedback_qualification.py",
+    "recorded_sha256": "71fad66833f78aa0f67b71c914f49ceccfac01274d7eb4da96e729625f48affc",
+    "reproduced": false,
+    "tree_sha256": "d5413559749f33d28215a3340fd175e764c4794af183b73a57dca8104031de9a"
+   },
+   {
+    "path": "dm/models/transformer.py",
+    "recorded_sha256": "d0028e8c728808482a18707a7ffc10cd9dbcacb35fd7d349e4f228155da055e4",
+    "reproduced": false,
+    "tree_sha256": "5ba21a686f1a7d80afbfd1ebcb5e42d3fb4c03197f32546bd6548b4b3300bcd0"
+   },
+   {
+    "path": "dm/train.py",
+    "recorded_sha256": "77c0c2a50049a14856adb3ee67562f00d78804173bac46ddd588462db5431130",
+    "reproduced": false,
+    "tree_sha256": "8688f27ee3e6eb5a3aa639ecdd3f4fe489560fe29c10d9da689252266f5e5406"
+   },
+   {
+    "path": "dm/train_feedback.py",
+    "recorded_sha256": "f5669f99156bf5a5eb58d75ad771d2b8dbb0e8d6db399ff1936575216e052b7d",
+    "reproduced": false,
+    "tree_sha256": "a6443bf8537a013637b5d51cb7d2a7d77ac91f8f16435f960f15ab731497fdad"
+   }
+  ],
+  "note": "a file marked reproduced:false has changed since that cell ran; its recorded digest names bytes no committed revision holds, because the code was uncommitted when the cell was produced",
+  "report": "runs/feedback_qual_project_progressive_v1_s100_cell.json",
+  "reproduced": 3,
+  "total": 8
+ },
+ "what": "SHA-256 of every Direction 3 artifact under the ignored runs/ directory, recorded in the repository because the artifacts themselves are not"
+}

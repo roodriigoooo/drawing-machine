@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="327.0" viewBox="0 0 920 327.0">
+<defs><clipPath id="clip0"><rect x="0" y="0" width="186" height="130"/></clipPath><clipPath id="clip1"><rect x="0" y="0" width="186" height="130"/></clipPath><clipPath id="clip2"><rect x="0" y="0" width="186" height="130"/></clipPath></defs>
+<rect width="920" height="327.0" fill="#ffffff"/>
+<g transform="translate(196,22)"><rect x="114.69" y="0" width="50.85" height="130" fill="#6b7280" opacity="0.18"/>
+<line x1="39.16" y1="0" x2="39.16" y2="130" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="88.11" y1="0" x2="88.11" y2="130" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="137.05" y1="0" x2="137.05" y2="130" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="140.11" y1="0" x2="140.11" y2="130" stroke="#666666" stroke-width="0.9" stroke-dasharray="2 2"/>
+<g clip-path="url(#clip0)">
+<polyline points="23.71,22.29 57.66,22.29" fill="none" stroke="#3d8b83" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="40.69" cy="22.29" r="3.8" fill="#3d8b83"/>
+<polyline points="88.33,59.43 116.94,59.43" fill="none" stroke="#8a8f42" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="102.64" cy="59.43" r="3.8" fill="#8a8f42"/>
+<polyline points="89.10,96.57 137.59,96.57" fill="none" stroke="#c8654a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="113.34" cy="96.57" r="3.8" fill="#c8654a"/>
+</g>
+<rect x="0" y="0" width="186" height="130" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="39.16" y1="130" x2="39.16" y2="133.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="39.16" y="146" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.4</text>
+<line x1="88.11" y1="130" x2="88.11" y2="133.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="88.11" y="146" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.45</text>
+<line x1="137.05" y1="130" x2="137.05" y2="133.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="137.05" y="146" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.5</text>
+<text x="93.00" y="166" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">coverage  ↑</text>
+<text x="40.69" y="13.29" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#3d8b83">0.402</text>
+<text x="102.64" y="50.43" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#8a8f42">0.465</text>
+<text x="113.34" y="87.57" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#c8654a">0.476</text>
+<text x="-5.87" y="26.29" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#3d8b83">flat AR</text>
+<text x="-5.87" y="63.43" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#8a8f42">planner, AR comp.</text>
+<text x="-5.87" y="100.57" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#c8654a">planner, diffusion</text>
+<text x="-5.87" y="119.60" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#666666">floor — real drawings,</text>
+<text x="-5.87" y="128.51" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#666666">same two set sizes</text></g>
+<g transform="translate(442,22)"><rect x="14.21" y="0" width="17.92" height="130" fill="#6b7280" opacity="0.18"/>
+<line x1="32.35" y1="0" x2="32.35" y2="130" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="97.04" y1="0" x2="97.04" y2="130" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="161.74" y1="0" x2="161.74" y2="130" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="23.17" y1="0" x2="23.17" y2="130" stroke="#666666" stroke-width="0.9" stroke-dasharray="2 2"/>
+<g clip-path="url(#clip1)">
+<polyline points="40.98,22.29 75.68,22.29" fill="none" stroke="#3d8b83" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="58.33" cy="22.29" r="3.8" fill="#3d8b83"/>
+<polyline points="78.22,59.43 100.69,59.43" fill="none" stroke="#8a8f42" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="89.45" cy="59.43" r="3.8" fill="#8a8f42"/>
+<polyline points="127.32,96.57 169.24,96.57" fill="none" stroke="#c8654a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="148.28" cy="96.57" r="3.8" fill="#c8654a"/>
+</g>
+<rect x="0" y="0" width="186" height="130" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="32.35" y1="130" x2="32.35" y2="133.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="32.35" y="146" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">12.4</text>
+<line x1="97.04" y1="130" x2="97.04" y2="133.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="97.04" y="146" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">12.8</text>
+<line x1="161.74" y1="130" x2="161.74" y2="133.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="161.74" y="146" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">13.2</text>
+<text x="93.00" y="166" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">mmd (px)  ↓</text>
+<text x="58.33" y="13.29" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#3d8b83">12.561</text>
+<text x="89.45" y="50.43" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#8a8f42">12.753</text>
+<text x="148.28" y="87.57" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#c8654a">13.117</text></g>
+<g transform="translate(688,22)"><rect x="19.86" y="0" width="24.99" height="130" fill="#6b7280" opacity="0.18"/>
+<line x1="9.79" y1="0" x2="9.79" y2="130" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="58.74" y1="0" x2="58.74" y2="130" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="107.68" y1="0" x2="107.68" y2="130" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="156.63" y1="0" x2="156.63" y2="130" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="32.35" y1="0" x2="32.35" y2="130" stroke="#666666" stroke-width="0.9" stroke-dasharray="2 2"/>
+<g clip-path="url(#clip2)">
+<polyline points="113.73,22.29 164.36,22.29" fill="none" stroke="#3d8b83" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="139.04" cy="22.29" r="3.8" fill="#3d8b83"/>
+<polyline points="67.69,59.43 118.61,59.43" fill="none" stroke="#8a8f42" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="93.15" cy="59.43" r="3.8" fill="#8a8f42"/>
+<polyline points="140.58,96.57 165.80,96.57" fill="none" stroke="#c8654a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="153.19" cy="96.57" r="3.8" fill="#c8654a"/>
+</g>
+<rect x="0" y="0" width="186" height="130" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="9.79" y1="130" x2="9.79" y2="133.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="9.79" y="146" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.5</text>
+<line x1="58.74" y1="130" x2="58.74" y2="133.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="58.74" y="146" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.55</text>
+<line x1="107.68" y1="130" x2="107.68" y2="133.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="107.68" y="146" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.6</text>
+<line x1="156.63" y1="130" x2="156.63" y2="133.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="156.63" y="146" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.65</text>
+<text x="93.00" y="166" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">nna  → floor</text>
+<text x="139.04" y="13.29" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#3d8b83">0.632</text>
+<text x="93.15" y="50.43" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#8a8f42">0.585</text>
+<text x="153.19" y="87.57" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="9.5" fill="#c8654a">0.646</text></g>
+<foreignObject x="0" y="212" width="920" height="115.0"><div xmlns="http://www.w3.org/1999/xhtml" style="font-family:'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif;font-size:12.5px;line-height:1.45;color:#1a1a1a;"><em>Figure 8.</em> Five CPU draws × 256 samples from one checkpoint per arm at top-k 40, temperature 1, raw model support; one shared reference and one shared floor. Bars are the draw-to-draw spread; the grey band is what <b>real drawings</b> score at the same two set sizes, which is the only thing that makes these numbers readable — coverage's ceiling is not 1, mmd is in this corpus's pixels, and nna's textbook 0.5 holds only when the sets are the same size. <b>The robust reversal: flat arm is best on fidelity and worst on coverage; both planners reverse that trade, while AR composition beats diffusion on mmd and nna. Exact planner coverage rank is unresolved.</b> That trade is the whole reason three numbers are reported instead of one, and it is invisible in any of them alone.</div></foreignObject>
+</svg>

@@ -1,0 +1,1214 @@
+{
+ "clock_source": "xosc",
+ "machine": "rp2040-cortex-m0plus-sram",
+ "clk_hz": 12000000,
+ "clk_hz_recovered": 11917964,
+ "reps": 5,
+ "overhead_cycles": 13,
+ "statistic": "minimum over reps, instrument overhead subtracted",
+ "resident": "sram",
+ "instructions_joined": true,
+ "instructions_note": null,
+ "rows": [
+  {
+   "corpus": "quickdraw",
+   "index": 0,
+   "bytes": 175,
+   "steps": 59,
+   "cycles": 8059,
+   "instructions": 4110,
+   "points": 58,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 1,
+   "bytes": 232,
+   "steps": 78,
+   "cycles": 10712,
+   "instructions": 5464,
+   "points": 77,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 2,
+   "bytes": 202,
+   "steps": 68,
+   "cycles": 9250,
+   "instructions": 4716,
+   "points": 67,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 3,
+   "bytes": 151,
+   "steps": 51,
+   "cycles": 7061,
+   "instructions": 3604,
+   "points": 50,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 4,
+   "bytes": 139,
+   "steps": 47,
+   "cycles": 6523,
+   "instructions": 3330,
+   "points": 46,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 5,
+   "bytes": 154,
+   "steps": 52,
+   "cycles": 7241,
+   "instructions": 3697,
+   "points": 51,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 6,
+   "bytes": 202,
+   "steps": 68,
+   "cycles": 9224,
+   "instructions": 4702,
+   "points": 67,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 7,
+   "bytes": 109,
+   "steps": 37,
+   "cycles": 5230,
+   "instructions": 2673,
+   "points": 36,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 8,
+   "bytes": 103,
+   "steps": 35,
+   "cycles": 4987,
+   "instructions": 2550,
+   "points": 34,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 9,
+   "bytes": 88,
+   "steps": 30,
+   "cycles": 4334,
+   "instructions": 2219,
+   "points": 29,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 10,
+   "bytes": 139,
+   "steps": 47,
+   "cycles": 6666,
+   "instructions": 3407,
+   "points": 46,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 11,
+   "bytes": 94,
+   "steps": 32,
+   "cycles": 4577,
+   "instructions": 2341,
+   "points": 31,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 12,
+   "bytes": 238,
+   "steps": 80,
+   "cycles": 10851,
+   "instructions": 5531,
+   "points": 79,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 13,
+   "bytes": 112,
+   "steps": 38,
+   "cycles": 5358,
+   "instructions": 2738,
+   "points": 37,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 14,
+   "bytes": 130,
+   "steps": 44,
+   "cycles": 6139,
+   "instructions": 3135,
+   "points": 43,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 15,
+   "bytes": 163,
+   "steps": 55,
+   "cycles": 7599,
+   "instructions": 3878,
+   "points": 54,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 16,
+   "bytes": 217,
+   "steps": 73,
+   "cycles": 9942,
+   "instructions": 5069,
+   "points": 72,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 17,
+   "bytes": 145,
+   "steps": 49,
+   "cycles": 6909,
+   "instructions": 3530,
+   "points": 48,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 18,
+   "bytes": 127,
+   "steps": 43,
+   "cycles": 6011,
+   "instructions": 3070,
+   "points": 42,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 19,
+   "bytes": 283,
+   "steps": 95,
+   "cycles": 12667,
+   "instructions": 6450,
+   "points": 94,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 20,
+   "bytes": 229,
+   "steps": 77,
+   "cycles": 10480,
+   "instructions": 5343,
+   "points": 76,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 21,
+   "bytes": 175,
+   "steps": 59,
+   "cycles": 8098,
+   "instructions": 4131,
+   "points": 58,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 22,
+   "bytes": 172,
+   "steps": 58,
+   "cycles": 7970,
+   "instructions": 4066,
+   "points": 57,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 23,
+   "bytes": 163,
+   "steps": 55,
+   "cycles": 7573,
+   "instructions": 3864,
+   "points": 54,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 24,
+   "bytes": 112,
+   "steps": 38,
+   "cycles": 5358,
+   "instructions": 2738,
+   "points": 37,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 25,
+   "bytes": 142,
+   "steps": 48,
+   "cycles": 6729,
+   "instructions": 3438,
+   "points": 47,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 26,
+   "bytes": 154,
+   "steps": 52,
+   "cycles": 7228,
+   "instructions": 3691,
+   "points": 51,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 27,
+   "bytes": 136,
+   "steps": 46,
+   "cycles": 6460,
+   "instructions": 3300,
+   "points": 45,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 28,
+   "bytes": 157,
+   "steps": 53,
+   "cycles": 7343,
+   "instructions": 3748,
+   "points": 52,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 29,
+   "bytes": 130,
+   "steps": 44,
+   "cycles": 6152,
+   "instructions": 3142,
+   "points": 43,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 30,
+   "bytes": 133,
+   "steps": 45,
+   "cycles": 6319,
+   "instructions": 3228,
+   "points": 44,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 31,
+   "bytes": 157,
+   "steps": 53,
+   "cycles": 7330,
+   "instructions": 3741,
+   "points": 52,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 32,
+   "bytes": 133,
+   "steps": 45,
+   "cycles": 6280,
+   "instructions": 3207,
+   "points": 44,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 33,
+   "bytes": 130,
+   "steps": 44,
+   "cycles": 6139,
+   "instructions": 3136,
+   "points": 43,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 34,
+   "bytes": 217,
+   "steps": 73,
+   "cycles": 9929,
+   "instructions": 5062,
+   "points": 72,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 35,
+   "bytes": 163,
+   "steps": 55,
+   "cycles": 7651,
+   "instructions": 3906,
+   "points": 54,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 36,
+   "bytes": 199,
+   "steps": 67,
+   "cycles": 9174,
+   "instructions": 4679,
+   "points": 66,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 37,
+   "bytes": 130,
+   "steps": 44,
+   "cycles": 6191,
+   "instructions": 3163,
+   "points": 43,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 38,
+   "bytes": 109,
+   "steps": 37,
+   "cycles": 5230,
+   "instructions": 2673,
+   "points": 36,
+   "discs": 0
+  },
+  {
+   "corpus": "quickdraw",
+   "index": 39,
+   "bytes": 136,
+   "steps": 46,
+   "cycles": 6382,
+   "instructions": 3258,
+   "points": 45,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 0,
+   "bytes": 68,
+   "steps": 47,
+   "cycles": 6857,
+   "instructions": 3571,
+   "points": 51,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 1,
+   "bytes": 115,
+   "steps": 44,
+   "cycles": 6689,
+   "instructions": 3445,
+   "points": 55,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 2,
+   "bytes": 113,
+   "steps": 57,
+   "cycles": 8079,
+   "instructions": 4192,
+   "points": 57,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 3,
+   "bytes": 77,
+   "steps": 52,
+   "cycles": 6960,
+   "instructions": 3624,
+   "points": 38,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 4,
+   "bytes": 132,
+   "steps": 64,
+   "cycles": 8674,
+   "instructions": 4473,
+   "points": 52,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 5,
+   "bytes": 80,
+   "steps": 33,
+   "cycles": 5067,
+   "instructions": 2637,
+   "points": 41,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 6,
+   "bytes": 106,
+   "steps": 53,
+   "cycles": 7756,
+   "instructions": 4014,
+   "points": 62,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 7,
+   "bytes": 62,
+   "steps": 41,
+   "cycles": 5461,
+   "instructions": 2862,
+   "points": 28,
+   "discs": 3
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 8,
+   "bytes": 88,
+   "steps": 28,
+   "cycles": 4905,
+   "instructions": 2563,
+   "points": 53,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 9,
+   "bytes": 102,
+   "steps": 57,
+   "cycles": 8603,
+   "instructions": 4477,
+   "points": 76,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 10,
+   "bytes": 102,
+   "steps": 36,
+   "cycles": 4983,
+   "instructions": 2583,
+   "points": 27,
+   "discs": 4
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 11,
+   "bytes": 50,
+   "steps": 29,
+   "cycles": 4511,
+   "instructions": 2365,
+   "points": 35,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 12,
+   "bytes": 75,
+   "steps": 25,
+   "cycles": 4102,
+   "instructions": 2140,
+   "points": 36,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 13,
+   "bytes": 56,
+   "steps": 17,
+   "cycles": 3517,
+   "instructions": 1850,
+   "points": 44,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 14,
+   "bytes": 105,
+   "steps": 53,
+   "cycles": 7718,
+   "instructions": 4005,
+   "points": 61,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 15,
+   "bytes": 59,
+   "steps": 17,
+   "cycles": 3911,
+   "instructions": 2076,
+   "points": 57,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 16,
+   "bytes": 81,
+   "steps": 40,
+   "cycles": 5809,
+   "instructions": 3043,
+   "points": 43,
+   "discs": 3
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 17,
+   "bytes": 111,
+   "steps": 37,
+   "cycles": 5617,
+   "instructions": 2907,
+   "points": 47,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 18,
+   "bytes": 90,
+   "steps": 47,
+   "cycles": 7297,
+   "instructions": 3814,
+   "points": 67,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 19,
+   "bytes": 115,
+   "steps": 52,
+   "cycles": 7155,
+   "instructions": 3679,
+   "points": 43,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 20,
+   "bytes": 81,
+   "steps": 62,
+   "cycles": 9259,
+   "instructions": 4824,
+   "points": 79,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 21,
+   "bytes": 141,
+   "steps": 54,
+   "cycles": 7785,
+   "instructions": 4035,
+   "points": 57,
+   "discs": 4
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 22,
+   "bytes": 95,
+   "steps": 58,
+   "cycles": 7707,
+   "instructions": 4000,
+   "points": 43,
+   "discs": 3
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 23,
+   "bytes": 131,
+   "steps": 69,
+   "cycles": 9613,
+   "instructions": 4998,
+   "points": 67,
+   "discs": 4
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 24,
+   "bytes": 203,
+   "steps": 91,
+   "cycles": 13148,
+   "instructions": 6788,
+   "points": 109,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 25,
+   "bytes": 48,
+   "steps": 35,
+   "cycles": 5133,
+   "instructions": 2713,
+   "points": 37,
+   "discs": 3
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 26,
+   "bytes": 55,
+   "steps": 29,
+   "cycles": 5023,
+   "instructions": 2636,
+   "points": 52,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 27,
+   "bytes": 127,
+   "steps": 46,
+   "cycles": 7655,
+   "instructions": 3991,
+   "points": 83,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 28,
+   "bytes": 150,
+   "steps": 74,
+   "cycles": 10502,
+   "instructions": 5418,
+   "points": 80,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 29,
+   "bytes": 132,
+   "steps": 70,
+   "cycles": 9380,
+   "instructions": 4844,
+   "points": 57,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 30,
+   "bytes": 165,
+   "steps": 78,
+   "cycles": 11473,
+   "instructions": 5940,
+   "points": 97,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 31,
+   "bytes": 172,
+   "steps": 79,
+   "cycles": 12054,
+   "instructions": 6254,
+   "points": 113,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 32,
+   "bytes": 130,
+   "steps": 60,
+   "cycles": 9150,
+   "instructions": 4751,
+   "points": 82,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 33,
+   "bytes": 31,
+   "steps": 11,
+   "cycles": 2093,
+   "instructions": 1130,
+   "points": 17,
+   "discs": 4
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 34,
+   "bytes": 172,
+   "steps": 74,
+   "cycles": 10916,
+   "instructions": 5647,
+   "points": 96,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 35,
+   "bytes": 44,
+   "steps": 22,
+   "cycles": 3257,
+   "instructions": 1688,
+   "points": 16,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 36,
+   "bytes": 68,
+   "steps": 41,
+   "cycles": 6037,
+   "instructions": 3154,
+   "points": 46,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 37,
+   "bytes": 103,
+   "steps": 45,
+   "cycles": 7175,
+   "instructions": 3733,
+   "points": 68,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 38,
+   "bytes": 90,
+   "steps": 42,
+   "cycles": 6338,
+   "instructions": 3288,
+   "points": 50,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L1",
+   "index": 39,
+   "bytes": 106,
+   "steps": 37,
+   "cycles": 5170,
+   "instructions": 2670,
+   "points": 30,
+   "discs": 3
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 0,
+   "bytes": 50,
+   "steps": 16,
+   "cycles": 2995,
+   "instructions": 1557,
+   "points": 30,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 1,
+   "bytes": 28,
+   "steps": 9,
+   "cycles": 2027,
+   "instructions": 1073,
+   "points": 21,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 2,
+   "bytes": 66,
+   "steps": 23,
+   "cycles": 3483,
+   "instructions": 1798,
+   "points": 20,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 3,
+   "bytes": 38,
+   "steps": 14,
+   "cycles": 2189,
+   "instructions": 1148,
+   "points": 10,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 4,
+   "bytes": 26,
+   "steps": 7,
+   "cycles": 2211,
+   "instructions": 1185,
+   "points": 34,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 5,
+   "bytes": 63,
+   "steps": 22,
+   "cycles": 3337,
+   "instructions": 1727,
+   "points": 20,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 6,
+   "bytes": 43,
+   "steps": 14,
+   "cycles": 2667,
+   "instructions": 1398,
+   "points": 26,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 7,
+   "bytes": 79,
+   "steps": 27,
+   "cycles": 4015,
+   "instructions": 2058,
+   "points": 26,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 8,
+   "bytes": 26,
+   "steps": 7,
+   "cycles": 2211,
+   "instructions": 1186,
+   "points": 34,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 9,
+   "bytes": 41,
+   "steps": 15,
+   "cycles": 2335,
+   "instructions": 1220,
+   "points": 10,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 10,
+   "bytes": 38,
+   "steps": 12,
+   "cycles": 2509,
+   "instructions": 1311,
+   "points": 26,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 11,
+   "bytes": 47,
+   "steps": 15,
+   "cycles": 2893,
+   "instructions": 1506,
+   "points": 29,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 12,
+   "bytes": 62,
+   "steps": 20,
+   "cycles": 3546,
+   "instructions": 1838,
+   "points": 34,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 13,
+   "bytes": 67,
+   "steps": 23,
+   "cycles": 3503,
+   "instructions": 1798,
+   "points": 22,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 14,
+   "bytes": 73,
+   "steps": 25,
+   "cycles": 3824,
+   "instructions": 1963,
+   "points": 24,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 15,
+   "bytes": 35,
+   "steps": 13,
+   "cycles": 2066,
+   "instructions": 1083,
+   "points": 8,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 16,
+   "bytes": 50,
+   "steps": 18,
+   "cycles": 2740,
+   "instructions": 1429,
+   "points": 14,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 17,
+   "bytes": 51,
+   "steps": 18,
+   "cycles": 2778,
+   "instructions": 1437,
+   "points": 15,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 18,
+   "bytes": 21,
+   "steps": 7,
+   "cycles": 1699,
+   "instructions": 914,
+   "points": 17,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 19,
+   "bytes": 65,
+   "steps": 21,
+   "cycles": 3726,
+   "instructions": 1931,
+   "points": 35,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 20,
+   "bytes": 33,
+   "steps": 12,
+   "cycles": 1971,
+   "instructions": 1026,
+   "points": 9,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 21,
+   "bytes": 26,
+   "steps": 7,
+   "cycles": 2211,
+   "instructions": 1186,
+   "points": 34,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 22,
+   "bytes": 25,
+   "steps": 8,
+   "cycles": 1899,
+   "instructions": 1008,
+   "points": 20,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 23,
+   "bytes": 23,
+   "steps": 9,
+   "cycles": 1515,
+   "instructions": 802,
+   "points": 4,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 24,
+   "bytes": 56,
+   "steps": 20,
+   "cycles": 2996,
+   "instructions": 1559,
+   "points": 16,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 25,
+   "bytes": 45,
+   "steps": 13,
+   "cycles": 3051,
+   "instructions": 1604,
+   "points": 42,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 26,
+   "bytes": 36,
+   "steps": 12,
+   "cycles": 2373,
+   "instructions": 1260,
+   "points": 23,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 27,
+   "bytes": 56,
+   "steps": 18,
+   "cycles": 3290,
+   "instructions": 1709,
+   "points": 32,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 28,
+   "bytes": 25,
+   "steps": 10,
+   "cycles": 1579,
+   "instructions": 846,
+   "points": 4,
+   "discs": 2
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 29,
+   "bytes": 41,
+   "steps": 12,
+   "cycles": 2885,
+   "instructions": 1531,
+   "points": 40,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 30,
+   "bytes": 88,
+   "steps": 30,
+   "cycles": 4451,
+   "instructions": 2281,
+   "points": 29,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 31,
+   "bytes": 30,
+   "steps": 10,
+   "cycles": 2091,
+   "instructions": 1116,
+   "points": 21,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 32,
+   "bytes": 18,
+   "steps": 8,
+   "cycles": 1251,
+   "instructions": 686,
+   "points": 0,
+   "discs": 3
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 33,
+   "bytes": 28,
+   "steps": 8,
+   "cycles": 2275,
+   "instructions": 1229,
+   "points": 34,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 34,
+   "bytes": 68,
+   "steps": 24,
+   "cycles": 3508,
+   "instructions": 1820,
+   "points": 20,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 35,
+   "bytes": 45,
+   "steps": 16,
+   "cycles": 2483,
+   "instructions": 1286,
+   "points": 13,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 36,
+   "bytes": 18,
+   "steps": 8,
+   "cycles": 1251,
+   "instructions": 686,
+   "points": 0,
+   "discs": 3
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 37,
+   "bytes": 50,
+   "steps": 16,
+   "cycles": 2995,
+   "instructions": 1557,
+   "points": 30,
+   "discs": 0
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 38,
+   "bytes": 26,
+   "steps": 7,
+   "cycles": 2211,
+   "instructions": 1185,
+   "points": 34,
+   "discs": 1
+  },
+  {
+   "corpus": "tier A L0",
+   "index": 39,
+   "bytes": 34,
+   "steps": 11,
+   "cycles": 2309,
+   "instructions": 1217,
+   "points": 23,
+   "discs": 1
+  }
+ ]
+}

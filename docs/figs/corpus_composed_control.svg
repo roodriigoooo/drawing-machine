@@ -1,0 +1,243 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1030" height="460" viewBox="0 0 1030 460" font-family="ui-sans-serif, system-ui, sans-serif">
+<rect width="1030" height="460" fill="#ffffff"/>
+<text x="10" y="22" font-size="15" font-weight="600" fill="#111">composed val — translation only (control), n ∈ {2}, flat trace</text>
+<text x="10" y="42" font-size="11.5" fill="#666">NO MODEL INVOLVED — this is the training corpus. 12 scenes assembled by dm/data/composed.py from real QuickDraw sketches: one sketch (black) placed once, the same</text>
+<text x="10" y="57" font-size="11.5" fill="#666">sketch again as an exact mirror or quarter-turn of itself (orange), and unrelated sketches in the other cells (grey). These 12: 29.7% of bytes foldable to REPEATX by</text>
+<text x="10" y="72" font-size="11.5" fill="#666">construction, ratio 1.422; the 1,000-scene val split the runs were scored on: 40.9%</text>
+<rect x="10" y="91" width="18" height="3" fill="#1a1a1a"/>
+<text x="34" y="97" font-size="11" fill="#666">the motif, drawn once</text>
+<rect x="168" y="91" width="18" height="3" fill="#c8654a"/>
+<text x="192" y="97" font-size="11" fill="#666">its D4 images — what REPEATX folds</text>
+<rect x="405" y="91" width="18" height="3" fill="#b8bcc4"/>
+<text x="429" y="97" font-size="11" fill="#666">distractors: content that is not a copy</text>
+<g transform="translate(10,110)"><svg width="160" height="160" viewBox="0 0 256 256"><rect width="256" height="256" fill="white"/><g fill="none" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="36.00,21.00 44.00,3.00 48.00,20.00 73.00,21.00 85.00,2.00 92.00,41.00 78.00,53.00 39.00,48.00 38.00,21.00" stroke-width="1"/>
+<polyline points="53.00,24.00 52.00,25.00" stroke-width="1"/>
+<polyline points="71.00,27.00 70.00,28.00" stroke-width="1"/>
+<polyline points="53.00,41.00 67.00,41.00" stroke-width="1"/>
+<polyline points="86.00,36.00 121.00,30.00" stroke-width="1"/>
+<polyline points="84.00,41.00 117.00,53.00" stroke-width="1"/>
+<polyline points="36.00,29.00 10.00,29.00" stroke-width="1"/>
+<polyline points="33.00,35.00 12.00,46.00" stroke-width="1"/>
+</g><g fill="none" stroke="#c8654a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="156.00,21.00 164.00,3.00 168.00,20.00 193.00,21.00 205.00,2.00 212.00,41.00 198.00,53.00 159.00,48.00 158.00,21.00" stroke-width="1"/>
+<polyline points="173.00,24.00 172.00,25.00" stroke-width="1"/>
+<polyline points="191.00,27.00 190.00,28.00" stroke-width="1"/>
+<polyline points="173.00,41.00 187.00,41.00" stroke-width="1"/>
+<polyline points="206.00,36.00 241.00,30.00" stroke-width="1"/>
+<polyline points="204.00,41.00 237.00,53.00" stroke-width="1"/>
+<polyline points="156.00,29.00 130.00,29.00" stroke-width="1"/>
+<polyline points="153.00,35.00 132.00,46.00" stroke-width="1"/>
+</g><g fill="none" stroke="#b8bcc4" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="17.00,207.00 10.00,217.00 21.00,222.00 25.00,207.00" stroke-width="1"/>
+<polyline points="103.00,213.00 61.00,222.00 79.00,213.00" stroke-width="1"/>
+<polyline points="42.00,216.00 41.00,198.00 1.00,204.00 18.00,179.00 49.00,176.00 112.00,197.00 107.00,211.00 88.00,213.00 49.00,202.00 43.00,189.00" stroke-width="1"/>
+<polyline points="81.00,183.00 112.00,190.00" stroke-width="1"/>
+<polyline points="40.00,175.00 49.00,183.00" stroke-width="1"/>
+</g></svg><rect width="160" height="160" fill="none" stroke="#e6e6e6"/></g>
+<g transform="translate(180,110)"><svg width="160" height="160" viewBox="0 0 256 256"><rect width="256" height="256" fill="white"/><g fill="none" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="26.00,254.00 37.00,195.00 24.00,173.00 48.00,147.00 79.00,144.00 80.00,155.00 94.00,154.00 93.00,176.00 61.00,206.00 72.00,239.00 96.00,255.00" stroke-width="1"/>
+</g><g fill="none" stroke="#c8654a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="26.00,134.00 37.00,75.00 24.00,53.00 48.00,27.00 79.00,24.00 80.00,35.00 94.00,34.00 93.00,56.00 61.00,86.00 72.00,119.00 96.00,135.00" stroke-width="1"/>
+</g><g fill="none" stroke="#b8bcc4" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="167.00,174.00 240.00,167.00 249.00,197.00 220.00,251.00 202.00,253.00 164.00,224.00 166.00,182.00" stroke-width="1"/>
+<polyline points="232.00,163.00 249.00,187.00 244.00,204.00 231.00,205.00 225.00,173.00" stroke-width="1"/>
+<polyline points="186.00,174.00 138.00,198.00 170.00,202.00 190.00,185.00" stroke-width="1"/>
+<polyline points="192.00,216.00 206.00,223.00" stroke-width="1"/>
+<polyline points="195.00,219.00 204.00,222.00" stroke-width="1"/>
+<polyline points="203.00,188.00 206.00,189.00" stroke-width="1"/>
+</g></svg><rect width="160" height="160" fill="none" stroke="#e6e6e6"/></g>
+<g transform="translate(350,110)"><svg width="160" height="160" viewBox="0 0 256 256"><rect width="256" height="256" fill="white"/><g fill="none" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="101.00,1.00 118.00,14.00 103.00,31.00 116.00,42.00 101.00,50.00 61.00,52.00 39.00,33.00 41.00,15.00 72.00,1.00 94.00,15.00" stroke-width="1"/>
+<polyline points="67.00,52.00 71.00,100.00" stroke-width="1"/>
+<polyline points="87.00,49.00 85.00,112.00" stroke-width="1"/>
+<polyline points="117.00,101.00 37.00,101.00" stroke-width="1"/>
+</g><g fill="none" stroke="#c8654a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="221.00,121.00 238.00,134.00 223.00,151.00 236.00,162.00 221.00,170.00 181.00,172.00 159.00,153.00 161.00,135.00 192.00,121.00 214.00,135.00" stroke-width="1"/>
+<polyline points="187.00,172.00 191.00,220.00" stroke-width="1"/>
+<polyline points="207.00,169.00 205.00,232.00" stroke-width="1"/>
+<polyline points="237.00,221.00 157.00,221.00" stroke-width="1"/>
+</g></svg><rect width="160" height="160" fill="none" stroke="#e6e6e6"/></g>
+<g transform="translate(520,110)"><svg width="160" height="160" viewBox="0 0 256 256"><rect width="256" height="256" fill="white"/><g fill="none" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="213.00,173.00 187.00,183.00 175.00,204.00 185.00,236.00 209.00,244.00 229.00,239.00 244.00,216.00 228.00,172.00" stroke-width="1"/>
+<polyline points="225.00,186.00 226.00,189.00" stroke-width="1"/>
+<polyline points="199.00,201.00 191.00,210.00 194.00,201.00" stroke-width="1"/>
+<polyline points="209.00,211.00 184.00,219.00" stroke-width="1"/>
+<polyline points="210.00,225.00 195.00,228.00" stroke-width="1"/>
+<polyline points="226.00,206.00 242.00,197.00" stroke-width="1"/>
+<polyline points="215.00,223.00 242.00,211.00" stroke-width="1"/>
+<polyline points="224.00,213.00 223.00,213.00" stroke-width="1"/>
+<polyline points="230.00,170.00 255.00,133.00 237.00,180.00" stroke-width="1"/>
+<polyline points="187.00,186.00 156.00,160.00 179.00,191.00" stroke-width="1"/>
+</g><g fill="none" stroke="#c8654a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="213.00,53.00 187.00,63.00 175.00,84.00 185.00,116.00 209.00,124.00 229.00,119.00 244.00,96.00 228.00,52.00" stroke-width="1"/>
+<polyline points="225.00,66.00 226.00,69.00" stroke-width="1"/>
+<polyline points="199.00,81.00 191.00,90.00 194.00,81.00" stroke-width="1"/>
+<polyline points="209.00,91.00 184.00,99.00" stroke-width="1"/>
+<polyline points="210.00,105.00 195.00,108.00" stroke-width="1"/>
+<polyline points="226.00,86.00 242.00,77.00" stroke-width="1"/>
+<polyline points="215.00,103.00 242.00,91.00" stroke-width="1"/>
+<polyline points="224.00,93.00 223.00,93.00" stroke-width="1"/>
+<polyline points="230.00,50.00 255.00,13.00 237.00,60.00" stroke-width="1"/>
+<polyline points="187.00,66.00 156.00,40.00 179.00,71.00" stroke-width="1"/>
+</g><g fill="none" stroke="#b8bcc4" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="7.00,69.00 116.00,64.00" stroke-width="1"/>
+<polyline points="117.00,64.00 116.00,96.00" stroke-width="1"/>
+<polyline points="9.00,95.00 115.00,95.00" stroke-width="1"/>
+<polyline points="22.00,97.00 22.00,98.00" stroke-width="1"/>
+<polyline points="96.00,94.00 97.00,96.00" stroke-width="1"/>
+<polyline points="8.00,80.00 22.00,80.00 22.00,64.00" stroke-width="1"/>
+<polyline points="31.00,64.00 32.00,77.00" stroke-width="1"/>
+<polyline points="53.00,180.00 55.00,145.00 83.00,141.00 92.00,183.00 118.00,183.00 120.00,207.00 100.00,195.00 92.00,208.00 52.00,194.00 42.00,207.00 11.00,202.00 11.00,182.00 22.00,177.00" stroke-width="1"/>
+</g></svg><rect width="160" height="160" fill="none" stroke="#e6e6e6"/></g>
+<g transform="translate(690,110)"><svg width="160" height="160" viewBox="0 0 256 256"><rect width="256" height="256" fill="white"/><g fill="none" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="28.00,47.00 47.00,26.00 78.00,23.00 85.00,41.00 115.00,47.00 112.00,70.00 91.00,72.00 86.00,58.00 66.00,68.00 60.00,56.00 11.00,63.00 7.00,49.00 26.00,49.00" stroke-width="1"/>
+</g><g fill="none" stroke="#c8654a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="148.00,47.00 167.00,26.00 198.00,23.00 205.00,41.00 235.00,47.00 232.00,70.00 211.00,72.00 206.00,58.00 186.00,68.00 180.00,56.00 131.00,63.00 127.00,49.00 146.00,49.00" stroke-width="1"/>
+</g><g fill="none" stroke="#b8bcc4" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="151.00,166.00 156.00,153.00 169.00,178.00" stroke-width="1"/>
+<polyline points="206.00,175.00 231.00,159.00 231.00,177.00" stroke-width="1"/>
+<polyline points="170.00,178.00 204.00,175.00" stroke-width="1"/>
+<polyline points="148.00,183.00 152.00,221.00 198.00,234.00 232.00,212.00 232.00,180.00" stroke-width="1"/>
+<polyline points="188.00,214.00 191.00,214.00" stroke-width="1"/>
+<polyline points="209.00,203.00 208.00,204.00" stroke-width="1"/>
+<polyline points="171.00,202.00 169.00,203.00" stroke-width="1"/>
+<polyline points="218.00,215.00 249.00,206.00" stroke-width="1"/>
+<polyline points="221.00,218.00 242.00,219.00" stroke-width="1"/>
+<polyline points="213.00,224.00 225.00,234.00" stroke-width="1"/>
+<polyline points="148.00,209.00 138.00,205.00" stroke-width="1"/>
+</g></svg><rect width="160" height="160" fill="none" stroke="#e6e6e6"/></g>
+<g transform="translate(860,110)"><svg width="160" height="160" viewBox="0 0 256 256"><rect width="256" height="256" fill="white"/><g fill="none" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="52.00,173.00 47.00,225.00 2.00,243.00" stroke-width="1"/>
+<polyline points="65.00,190.00 65.00,237.00 91.00,244.00" stroke-width="1"/>
+<polyline points="64.00,199.00 63.00,165.00" stroke-width="1"/>
+<polyline points="51.00,171.00 19.00,169.00 16.00,152.00 40.00,133.00 51.00,147.00 75.00,136.00 73.00,163.00 16.00,172.00" stroke-width="1"/>
+</g><g fill="none" stroke="#c8654a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="52.00,53.00 47.00,105.00 2.00,123.00" stroke-width="1"/>
+<polyline points="65.00,70.00 65.00,117.00 91.00,124.00" stroke-width="1"/>
+<polyline points="64.00,79.00 63.00,45.00" stroke-width="1"/>
+<polyline points="51.00,51.00 19.00,49.00 16.00,32.00 40.00,13.00 51.00,27.00 75.00,16.00 73.00,43.00 16.00,52.00" stroke-width="1"/>
+</g><g fill="none" stroke="#b8bcc4" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="221.00,108.00 204.00,70.00 242.00,46.00 241.00,36.00 211.00,25.00 205.00,5.00 180.00,18.00 188.00,6.00 160.00,4.00 148.00,29.00 169.00,26.00 141.00,21.00 132.00,40.00 158.00,50.00 167.00,104.00 212.00,113.00" stroke-width="1"/>
+<polyline points="208.00,33.00 201.00,42.00 214.00,39.00 206.00,32.00" stroke-width="1"/>
+<polyline points="186.00,28.00 180.00,33.00" stroke-width="1"/>
+</g></svg><rect width="160" height="160" fill="none" stroke="#e6e6e6"/></g>
+<g transform="translate(10,280)"><svg width="160" height="160" viewBox="0 0 256 256"><rect width="256" height="256" fill="white"/><g fill="none" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="161.00,80.00 174.00,77.00 161.00,82.00" stroke-width="1"/>
+<polyline points="217.00,83.00 231.00,87.00 212.00,84.00" stroke-width="1"/>
+<polyline points="162.00,73.00 203.00,65.00 232.00,83.00" stroke-width="1"/>
+<polyline points="232.00,83.00 244.00,71.00 240.00,28.00 135.00,26.00 143.00,81.00 181.00,69.00" stroke-width="1"/>
+<polyline points="165.00,37.00 172.00,58.00" stroke-width="1"/>
+<polyline points="163.00,36.00 184.00,37.00 182.00,54.00" stroke-width="1"/>
+<polyline points="206.00,52.00 201.00,60.00 220.00,61.00" stroke-width="1"/>
+</g><g fill="none" stroke="#c8654a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="41.00,80.00 54.00,77.00 41.00,82.00" stroke-width="1"/>
+<polyline points="97.00,83.00 111.00,87.00 92.00,84.00" stroke-width="1"/>
+<polyline points="42.00,73.00 83.00,65.00 112.00,83.00" stroke-width="1"/>
+<polyline points="112.00,83.00 124.00,71.00 120.00,28.00 15.00,26.00 23.00,81.00 61.00,69.00" stroke-width="1"/>
+<polyline points="45.00,37.00 52.00,58.00" stroke-width="1"/>
+<polyline points="43.00,36.00 64.00,37.00 62.00,54.00" stroke-width="1"/>
+<polyline points="86.00,52.00 81.00,60.00 100.00,61.00" stroke-width="1"/>
+</g><g fill="none" stroke="#b8bcc4" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="97.00,164.00 125.00,189.00 108.00,182.00 113.00,209.00 97.00,207.00 93.00,186.00 81.00,206.00 84.00,183.00 59.00,219.00 50.00,185.00 39.00,215.00 38.00,181.00 24.00,217.00 27.00,180.00 18.00,210.00 14.00,184.00 30.00,164.00 18.00,162.00 16.00,144.00 29.00,156.00 88.00,162.00" stroke-width="1"/>
+<polyline points="161.00,206.00 189.00,192.00 221.00,208.00" stroke-width="1"/>
+<polyline points="216.00,206.00 248.00,210.00" stroke-width="1"/>
+<polyline points="248.00,210.00 246.00,222.00 224.00,228.00 211.00,216.00 200.00,229.00" stroke-width="1"/>
+<polyline points="138.00,206.00 139.00,226.00 163.00,226.00 177.00,210.00 183.00,229.00 202.00,228.00" stroke-width="1"/>
+<polyline points="178.00,216.00 168.00,233.00 183.00,229.00" stroke-width="1"/>
+</g></svg><rect width="160" height="160" fill="none" stroke="#e6e6e6"/></g>
+<g transform="translate(180,280)"><svg width="160" height="160" viewBox="0 0 256 256"><rect width="256" height="256" fill="white"/><g fill="none" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="2.00,94.00 14.00,67.00 108.00,68.00 102.00,110.00 77.00,95.00 70.00,107.00 19.00,94.00 9.00,110.00 4.00,97.00" stroke-width="1"/>
+<polyline points="20.00,96.00 15.00,110.00 26.00,113.00 16.00,101.00" stroke-width="1"/>
+<polyline points="82.00,100.00 81.00,116.00 91.00,107.00 78.00,100.00" stroke-width="1"/>
+<polyline points="26.00,69.00 21.00,90.00 5.00,91.00" stroke-width="1"/>
+<polyline points="46.00,76.00 45.00,75.00" stroke-width="1"/>
+</g><g fill="none" stroke="#c8654a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="122.00,214.00 134.00,187.00 228.00,188.00 222.00,230.00 197.00,215.00 190.00,227.00 139.00,214.00 129.00,230.00 124.00,217.00" stroke-width="1"/>
+<polyline points="140.00,216.00 135.00,230.00 146.00,233.00 136.00,221.00" stroke-width="1"/>
+<polyline points="202.00,220.00 201.00,236.00 211.00,227.00 198.00,220.00" stroke-width="1"/>
+<polyline points="146.00,189.00 141.00,210.00 125.00,211.00" stroke-width="1"/>
+<polyline points="166.00,196.00 165.00,195.00" stroke-width="1"/>
+</g><g fill="none" stroke="#b8bcc4" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="169.00,50.00 182.00,68.00 181.00,36.00" stroke-width="1"/>
+<polyline points="170.00,51.00 134.00,60.00 156.00,26.00 186.00,23.00 183.00,47.00" stroke-width="1"/>
+<polyline points="136.00,48.00 136.00,50.00" stroke-width="1"/>
+<polyline points="138.00,62.00 158.00,55.00" stroke-width="1"/>
+<polyline points="147.00,57.00 152.00,70.00 152.00,58.00" stroke-width="1"/>
+<polyline points="190.00,27.00 243.00,42.00" stroke-width="1"/>
+</g></svg><rect width="160" height="160" fill="none" stroke="#e6e6e6"/></g>
+<g transform="translate(350,280)"><svg width="160" height="160" viewBox="0 0 256 256"><rect width="256" height="256" fill="white"/><g fill="none" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="78.00,11.00 45.00,14.00 38.00,33.00 11.00,38.00 10.00,61.00 117.00,55.00 120.00,29.00 97.00,33.00 83.00,13.00" stroke-width="1"/>
+<polyline points="51.00,19.00 44.00,34.00 61.00,36.00 60.00,17.00 51.00,19.00" stroke-width="1"/>
+<polyline points="73.00,18.00 70.00,35.00 88.00,35.00 80.00,19.00 71.00,23.00" stroke-width="1"/>
+<polyline points="42.00,56.00 30.00,67.00 39.00,76.00 49.00,63.00 40.00,57.00" stroke-width="1"/>
+<polyline points="109.00,55.00 93.00,63.00 97.00,74.00 112.00,65.00 102.00,54.00" stroke-width="1"/>
+</g><g fill="none" stroke="#c8654a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="78.00,131.00 45.00,134.00 38.00,153.00 11.00,158.00 10.00,181.00 117.00,175.00 120.00,149.00 97.00,153.00 83.00,133.00" stroke-width="1"/>
+<polyline points="51.00,139.00 44.00,154.00 61.00,156.00 60.00,137.00 51.00,139.00" stroke-width="1"/>
+<polyline points="73.00,138.00 70.00,155.00 88.00,155.00 80.00,139.00 71.00,143.00" stroke-width="1"/>
+<polyline points="42.00,176.00 30.00,187.00 39.00,196.00 49.00,183.00 40.00,177.00" stroke-width="1"/>
+<polyline points="109.00,175.00 93.00,183.00 97.00,194.00 112.00,185.00 102.00,174.00" stroke-width="1"/>
+</g><g fill="none" stroke="#b8bcc4" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="189.00,100.00 192.00,40.00" stroke-width="1"/>
+<polyline points="199.00,112.00 203.00,42.00" stroke-width="1"/>
+<polyline points="204.00,41.00 219.00,47.00 221.00,23.00 231.00,26.00 212.00,1.00 200.00,23.00 191.00,4.00 171.00,9.00 169.00,37.00 177.00,29.00 175.00,43.00 188.00,39.00" stroke-width="1"/>
+<polyline points="191.00,55.00 163.00,52.00" stroke-width="1"/>
+<polyline points="191.00,60.00 157.00,53.00" stroke-width="1"/>
+<polyline points="165.00,51.00 154.00,41.00 158.00,56.00" stroke-width="1"/>
+<polyline points="135.00,187.00 141.00,230.00 173.00,251.00 217.00,240.00 232.00,207.00 207.00,172.00 206.00,140.00 184.00,167.00 155.00,176.00 137.00,140.00 136.00,182.00" stroke-width="1"/>
+<polyline points="173.00,206.00 186.00,208.00 174.00,203.00" stroke-width="1"/>
+<polyline points="189.00,182.00 194.00,184.00" stroke-width="1"/>
+<polyline points="158.00,187.00 168.00,185.00 158.00,187.00" stroke-width="1"/>
+<polyline points="181.00,217.00 174.00,234.00 159.00,230.00" stroke-width="1"/>
+<polyline points="186.00,219.00 201.00,229.00 211.00,220.00" stroke-width="1"/>
+<polyline points="197.00,201.00 217.00,201.00" stroke-width="1"/>
+<polyline points="200.00,209.00 215.00,208.00" stroke-width="1"/>
+<polyline points="157.00,200.00 143.00,202.00" stroke-width="1"/>
+<polyline points="165.00,211.00 148.00,215.00" stroke-width="1"/>
+</g></svg><rect width="160" height="160" fill="none" stroke="#e6e6e6"/></g>
+<g transform="translate(520,280)"><svg width="160" height="160" viewBox="0 0 256 256"><rect width="256" height="256" fill="white"/><g fill="none" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="179.00,200.00 173.00,248.00" stroke-width="1"/>
+<polyline points="190.00,196.00 179.00,251.00" stroke-width="1"/>
+<polyline points="178.00,203.00 134.00,185.00 150.00,162.00 174.00,157.00 184.00,169.00 207.00,148.00 216.00,167.00 241.00,164.00 233.00,187.00 203.00,187.00 219.00,191.00 217.00,204.00 184.00,208.00" stroke-width="1"/>
+</g><g fill="none" stroke="#c8654a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="59.00,200.00 53.00,248.00" stroke-width="1"/>
+<polyline points="70.00,196.00 59.00,251.00" stroke-width="1"/>
+<polyline points="58.00,203.00 14.00,185.00 30.00,162.00 54.00,157.00 64.00,169.00 87.00,148.00 96.00,167.00 121.00,164.00 113.00,187.00 83.00,187.00 99.00,191.00 97.00,204.00 64.00,208.00" stroke-width="1"/>
+</g><g fill="none" stroke="#b8bcc4" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="158.00,22.00 137.00,35.00 144.00,45.00 179.00,35.00 158.00,20.00" stroke-width="1"/>
+<polyline points="140.00,27.00 145.00,50.00 139.00,30.00" stroke-width="1"/>
+<polyline points="168.00,23.00 172.00,47.00 170.00,24.00" stroke-width="1"/>
+<polyline points="174.00,24.00 220.00,26.00 217.00,36.00 186.00,40.00" stroke-width="1"/>
+<polyline points="192.00,40.00 195.00,48.00 196.00,38.00" stroke-width="1"/>
+<polyline points="204.00,38.00 211.00,36.00" stroke-width="1"/>
+<polyline points="211.00,38.00 217.00,36.00" stroke-width="1"/>
+<polyline points="218.00,32.00 246.00,16.00" stroke-width="1"/>
+</g></svg><rect width="160" height="160" fill="none" stroke="#e6e6e6"/></g>
+<g transform="translate(690,280)"><svg width="160" height="160" viewBox="0 0 256 256"><rect width="256" height="256" fill="white"/><g fill="none" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="5.00,131.00 110.00,136.00 111.00,178.00 31.00,178.00 1.00,169.00 2.00,131.00" stroke-width="1"/>
+<polyline points="2.00,143.00 14.00,147.00 0.00,159.00" stroke-width="1"/>
+<polyline points="36.00,174.00 54.00,185.00 56.00,172.00" stroke-width="1"/>
+<polyline points="95.00,176.00 82.00,182.00 84.00,195.00 104.00,192.00 91.00,175.00" stroke-width="1"/>
+<polyline points="33.00,144.00 33.00,154.00 55.00,158.00 35.00,139.00" stroke-width="1"/>
+<polyline points="66.00,153.00 81.00,153.00 64.00,147.00" stroke-width="1"/>
+<polyline points="88.00,156.00 100.00,164.00 102.00,154.00 87.00,151.00" stroke-width="1"/>
+</g><g fill="none" stroke="#c8654a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="125.00,131.00 230.00,136.00 231.00,178.00 151.00,178.00 121.00,169.00 122.00,131.00" stroke-width="1"/>
+<polyline points="122.00,143.00 134.00,147.00 120.00,159.00" stroke-width="1"/>
+<polyline points="156.00,174.00 174.00,185.00 176.00,172.00" stroke-width="1"/>
+<polyline points="215.00,176.00 202.00,182.00 204.00,195.00 224.00,192.00 211.00,175.00" stroke-width="1"/>
+<polyline points="153.00,144.00 153.00,154.00 175.00,158.00 155.00,139.00" stroke-width="1"/>
+<polyline points="186.00,153.00 201.00,153.00 184.00,147.00" stroke-width="1"/>
+<polyline points="208.00,156.00 220.00,164.00 222.00,154.00 207.00,151.00" stroke-width="1"/>
+</g></svg><rect width="160" height="160" fill="none" stroke="#e6e6e6"/></g>
+<g transform="translate(860,280)"><svg width="160" height="160" viewBox="0 0 256 256"><rect width="256" height="256" fill="white"/><g fill="none" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="171.00,67.00 175.00,39.00" stroke-width="1"/>
+<polyline points="207.00,42.00 214.00,72.00" stroke-width="1"/>
+<polyline points="164.00,49.00 159.00,32.00 208.00,20.00 193.00,15.00 238.00,14.00 213.00,26.00 249.00,21.00 238.00,36.00 218.00,33.00 239.00,41.00 220.00,52.00 200.00,51.00 247.00,42.00 211.00,8.00 159.00,9.00 141.00,30.00 182.00,16.00 161.00,14.00 156.00,27.00" stroke-width="1"/>
+</g><g fill="none" stroke="#c8654a" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="171.00,187.00 175.00,159.00" stroke-width="1"/>
+<polyline points="207.00,162.00 214.00,192.00" stroke-width="1"/>
+<polyline points="164.00,169.00 159.00,152.00 208.00,140.00 193.00,135.00 238.00,134.00 213.00,146.00 249.00,141.00 238.00,156.00 218.00,153.00 239.00,161.00 220.00,172.00 200.00,171.00 247.00,162.00 211.00,128.00 159.00,129.00 141.00,150.00 182.00,136.00 161.00,134.00 156.00,147.00" stroke-width="1"/>
+</g></svg><rect width="160" height="160" fill="none" stroke="#e6e6e6"/></g>
+</svg>
