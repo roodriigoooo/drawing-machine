@@ -29,7 +29,7 @@ the footprint of the complete demo firmware.
 
 This split makes generated programs usable on constrained hardware. It does
 not demonstrate autonomous generation without a host, nor establish an energy
-advantage over alternative architectures. [Hardware evidence](claim4-bringup.md)
+advantage over alternative architectures. [Hardware evidence](hypothesis_and_results.md#4-claim-4-microcontroller-execution-on-silicon)
 describes what was measured.
 
 ## Replay without hardware
@@ -64,8 +64,8 @@ python scripts/demo.py figures --help
 `--native` uses the native C execution path instead of the RP2040 and is
 explicitly labelled as rehearsal. It cannot earn the silicon badge.
 Hardware commands load a RAM image onto a connected board; they are not part of
-the installation or quick start. See the [bring-up record](claim4-bringup.md)
-for wiring, startup checks and electrical precautions.
+the installation or quick start. See `scripts/pico.py` and the [hardware results](hypothesis_and_results.md#4-claim-4-microcontroller-execution-on-silicon)
+for wiring and startup details.
 
 ## What the pictures show
 
@@ -87,5 +87,5 @@ geometry. A mismatch or incomplete capture fails rather than falling back.
 
 The equality badge requires **both** RP2040 provenance and a successful
 reference comparison. `tests/test_demo.py` checks this boundary. The demo
-supports the execution claim; model quality needs the separate
-[conditioning evaluation](conditioning.md).
+supports the execution claim; model quality is documented in
+[Hypotheses and Results](hypothesis_and_results.md#5-class-conditioning-and-controllability).

@@ -24,7 +24,7 @@ without keeping a whole drawing in memory.
 
 The interpreter takes **1,862 bytes of flash and 492 bytes of peak stack**, with
 no static RAM. That's the VM alone, not bytecode storage or the transport
-harness. The [hardware sweep](docs/claim4-bringup.md) matched **12,670 out of
+harness. The [hardware sweep](docs/hypothesis_and_results.md#4-claim-4-microcontroller-execution-on-silicon) matched **12,670 out of
 12,670 traces** exactly. This is model-generated code running on a
 microcontroller, not neural inference on the Pico.
 
@@ -38,18 +38,18 @@ programs, but cost about 12 bits per drawing on QuickDraw.
 
 A hierarchical planner improved termination while losing on likelihood. Both
 were useful reminders that better prediction and better generation aren't the same thing.
-The [representation](docs/results.md) and [factorisation](docs/claim3.md)
-write-ups keep the numbers and experimental conditions.
+The [hypotheses and results](docs/hypothesis_and_results.md) write-up
+keeps the detailed numbers and experimental conditions.
 
 That gap became more interesting with repeated shapes. Models learn to prefer
 a continuation compatible with their prefix, yet rarely finish an exactly
 compatible shape when generating freely: roughly 1% on the tested shape cases.
-The [context experiments](docs/context.md) try to separate that from memorising
+The [context experiments](docs/hypothesis_and_results.md#causal-context-and-compatibility) try to separate that from memorising
 positions or recognising familiar motifs.
 
 [![Context changes model preferences much more than it improves exact compatible generation](docs/figs/fig15_context_generation.svg)](docs/figs/fig15_context_generation.svg)
 
-I also tried [gated latent feedback](docs/feedback-stability.md); that
+I also tried [gated latent feedback](docs/hypothesis_and_results.md#gated-latent-feedback); that
 implementation failed its stability gates before reaching the relation tests.
 The [full figure collection](docs/figs) includes the budget sweeps, device costs
 and other comparisons along the way.
@@ -108,8 +108,9 @@ data or toolchains and report skips when those aren't available.
 ![Drawing bytecode](docs/media/program.png)
 
 The Python implementation is in `dm/`, the C VM in `port/`, and experiment
-scripts in `scripts/`. The longer studies in `docs/` include failed approaches
-and corrections. Datasets, checkpoints and generated run logs stay outside Git.
+scripts in `scripts/`. Documentation in `docs/` covers [methodology](docs/methodology.md),
+[hypotheses and results](docs/hypothesis_and_results.md), [evidence boundaries](docs/evidence.md),
+and the [hardware demo](docs/demo.md). Datasets, checkpoints and generated run logs stay outside Git.
 
 Much of this builds on sketch-rnn, graphics program induction, and the work of
 the Quick, Draw! contributors and Tabler Icons authors.
