@@ -15,9 +15,11 @@ htmlcov/
 
 # Downloaded corpora, model states and generated run output
 /data/
-/runs/
+/runs/*
+!/runs/quickdraw_cond24000eps4_byte_square_s0.json
 /references/
 *.pt
+!/runs/quickdraw_cond24000eps4_byte_square_s0.pt
 *.pth
 *.ckpt
 *.safetensors
@@ -53,7 +55,6 @@ CLAUDE.md
 
 # Evidence is opt-in. Keep protocols and fixtures, not blanket JSON exclusions.
 /artifacts/*
-!/artifacts/README.md
 !/artifacts/silicon/
 /artifacts/silicon/*
 !/artifacts/silicon/pico_cycles.json
@@ -66,3 +67,5 @@ CLAUDE.md
 !/artifacts/relation/
 /artifacts/relation/*
 !/artifacts/relation/r4-r0-cpu-20260906.json
+!/artifacts/relation/demonstrated-affine-20260924.json
+!/artifacts/window/

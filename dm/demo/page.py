@@ -177,7 +177,7 @@ footer{padding:26px 0 0;color:var(--muted);font-size:12.5px;text-align:center}
 </head>
 <body>
 <header>
-  <h1>drawing-machine — <span id="hTitle">a word, a program, a microcontroller</span></h1>
+  <h1>drawing-machine - <span id="hTitle">a word, a program, a microcontroller</span></h1>
   <p class="sub" id="hSub"></p>
   <div class="chips" id="hChips"></div>
 </header>
@@ -191,7 +191,7 @@ footer{padding:26px 0 0;color:var(--muted);font-size:12.5px;text-align:center}
   </section>
 
   <section class="panel">
-    <h2>The drawing — geometry from the device trace</h2>
+    <h2>The drawing - geometry from the device trace</h2>
     <div id="canvasWrap">
       <svg id="canvas" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet"
            aria-label="the drawing the device produced">
@@ -208,14 +208,14 @@ footer{padding:26px 0 0;color:var(--muted);font-size:12.5px;text-align:center}
 
   <section class="panel">
     <h2>The program the model emitted</h2>
-    <pre id="hex">—</pre>
+    <pre id="hex"> - </pre>
     <ol id="disasm"></ol>
     <div class="note" id="progNote"></div>
   </section>
 
   <section class="panel">
-    <h2>The wire — what came back from the board</h2>
-    <pre id="uart">—</pre>
+    <h2>The wire - what came back from the board</h2>
+    <pre id="uart"> - </pre>
     <div class="stage"><span id="devStats"></span></div>
     <div class="note" id="devNote"></div>
   </section>
@@ -370,7 +370,7 @@ function listProgram(rec){
 }
 
 function paintHex(upto){
-  if(!programHex){ $("hex").textContent = "—"; return; }
+  if(!programHex){ $("hex").textContent = " - "; return; }
   const cut = upto < 0 ? 0 : upto;
   const head = programHex.slice(0, cut*2), tail = programHex.slice(cut*2);
   $("hex").innerHTML = "<b>" + esc(head.replace(/(..)/g,"$1 ")) + "</b>" + esc(tail.replace(/(..)/g,"$1 "));
@@ -416,9 +416,9 @@ function enqueue(e){
 
 /* ---------- events ------------------------------------------------------ */
 function applyEvent(e){
-  if(e.t === "loading"){ $("stage").textContent = "writing " + e.bytes + " bytes of bytecode to the board — wait for the remount, do not unplug"; }
-  else if(e.t === "loaded"){ $("stage").textContent = "image loaded in " + e.seconds + " s — waiting for the frame"; }
-  else if(e.t === "begin"){ $("stage").textContent = "frame open — frac_bits " + e.frac_bits + ", curve_steps " + e.curve_steps; }
+  if(e.t === "loading"){ $("stage").textContent = "writing " + e.bytes + " bytes of bytecode to the board - wait for the remount, do not unplug"; }
+  else if(e.t === "loaded"){ $("stage").textContent = "image loaded in " + e.seconds + " s - waiting for the frame"; }
+  else if(e.t === "begin"){ $("stage").textContent = "frame open - frac_bits " + e.frac_bits + ", curve_steps " + e.curve_steps; }
   else if(e.t === "point"){ addPoint(e.x, e.y); }
   else if(e.t === "stroke"){ endStroke(e.points, e.width); }
   else if(e.t === "region"){ addRegion(e.points); }
@@ -439,7 +439,7 @@ function appendUart(text){
 function finish(e){
   hot(-1);
   $("stage").textContent = "frame complete"
-    + (e.seconds ? " — " + e.seconds + " s from UF2 write to last byte on the wire" : "");
+    + (e.seconds ? " - " + e.seconds + " s from UF2 write to last byte on the wire" : "");
   $("devStats").textContent =
     "steps " + e.steps + " · halted " + (e.halted ? "yes" : "no") +
     " · strokes " + e.strokes + " · faults " + (e.faults ? e.faults.length : 0);
@@ -455,7 +455,7 @@ function fail(message){
   open_ = null; openPts = []; pointIndex = 0; strokeBase = 0;
   $("badge").className = "badge bad";
   $("badge").textContent = "refused";
-  $("stage").textContent = "refused — nothing drawn";
+  $("stage").textContent = "refused - nothing drawn";
   $("canvasNote").innerHTML =
     "<strong>Nothing is drawn here on purpose.</strong> The frame did not pass " +
     "its check, so this page has no verified geometry to show. It does not fall " +
@@ -478,7 +478,7 @@ function showRecord(rec, animate){
   b.className = "badge " + (silicon ? "ok" : "bad");
   b.textContent = silicon
     ? "RP2040 trace: exact match"
-    : (rec.source === "rp2040" ? "RP2040 trace: DIVERGED — refused" : "host rehearsal — not silicon");
+    : (rec.source === "rp2040" ? "RP2040 trace: DIVERGED - refused" : "host rehearsal - not silicon");
   const replayed = DATA.mode === "gallery"
     ? "<strong>A replay of a captured trace, not a live run.</strong> The points are the ones that were sent; the pace is chosen so a human can watch them. "
     : "";
@@ -497,7 +497,7 @@ function staticDraw(rec){
   g.regions.forEach(r => addRegion(r.points));
   g.strokes.forEach(s => endStroke(s.points, s.width));
   (g.discs||[]).forEach(addDisc);
-  $("uart").textContent = rec.device.trace_text || "—";
+  $("uart").textContent = rec.device.trace_text || " - ";
   finish(rec.device);
 }
 
@@ -567,28 +567,26 @@ function novelty(rec){
   $("novBody").innerHTML =
     '<div class="nnGrid">' + cells.join("") + '</div>' +
     '<div style="margin-top:14px">' +
-      '<strong>Verbatim copy of a training program: ' + (n.verbatim ? "YES" : "no") + '</strong> — ' +
+      '<strong>Verbatim copy of a training program: ' + (n.verbatim ? "YES" : "no") + '</strong> - ' +
       'checked against all ' + n.train_n.toLocaleString() + ' programs the model was trained on.' +
       (n.longest_shared_run === undefined ? "" :
         ' The longest run of bytes it shares with any training program of this category is <strong>' +
-        n.longest_shared_run + ' of ' + rec.sampled.bytes + '</strong> — so it is not a new drawing ' +
+        n.longest_shared_run + ' of ' + rec.sampled.bytes + '</strong> - so it is not a new drawing ' +
         'assembled out of memorised fragments either.') +
     '</div>' +
     '<div style="margin-top:10px">Nearest training drawing of this category: <strong>' +
       n.distance.toFixed(2) + ' px</strong> (Chamfer, over ' + n.bank_n.toLocaleString() + ' drawings). ' +
       'Held-out human drawings of the same category sit a median <strong>' + n.floor_median.toFixed(2) +
-      ' px</strong> from the same set — that is the scale this number is read on. ' +
+      ' px</strong> from the same set - that is the scale this number is read on. ' +
       'This sample is at the <strong>' + pct.toFixed(0) + 'th percentile</strong> of that held-out distribution.' +
     '</div>' +
     '<div class="floorBar"><div class="fill" style="width:' + width + '%"></div>' +
       '<div class="mark" style="left:' + width + '%"></div>' +
       '<div class="mark" style="left:50%;background:var(--muted);opacity:.6"></div></div>' +
-    '<div class="stage spread"><span>0th — closer to training data than any held-out human drawing</span>' +
-      '<span>median</span><span>100th — farther than all of them</span></div>' +
+    '<div class="stage spread"><span>0th - closer to training data than any held-out human drawing</span>' +
+      '<span>median</span><span>100th - farther than all of them</span></div>' +
     '<div class="note">The marker is this sample; the faint tick is the held-out median. ' +
-    'It says the drawing is not a copy. It does not say it is a <em>good</em> drawing — ' +
-    'that is a set-level question, measured separately in <span style="font-family:var(--mono)">docs/conditioning.md</span> §6, ' +
-    'which found this sampler sits in each class\'s typical middle.</div>';
+    'The comparison covers the sampled training bank. A nearby drawing can share a silhouette or a few strokes.</div>';
 }
 
 /* ---------- methodology -------------------------------------------------- */
@@ -610,7 +608,7 @@ function methodology(){
     rows + "</tbody></table>" +
     "<div class='note'>Aggregate timing over 40 programs per corpus, minimum of five repetitions, " +
     "13 cycles of instrument overhead subtracted, executing from zero-wait-state SRAM. " +
-    "<strong>It is not this drawing's measured latency</strong> — a normal one-HALT run emits no " +
+    "<strong>It is not this drawing's measured latency</strong> - a normal one-HALT run emits no " +
     "per-program cycle count, so no number here is attached to the picture above.</div>";
   $("foot").innerHTML =
     "Model: 825,344 parameters, byte codec, trained on five QuickDraw categories. " +
@@ -622,7 +620,7 @@ function methodology(){
 /* ---------- live mode ---------------------------------------------------- */
 function liveUI(){
   $("askBody").innerHTML =
-    '<input type="text" id="word" placeholder="a word — try cat, bus, flower, sailboat, bicycle" autocomplete="off">' +
+    '<input type="text" id="word" placeholder="a word - try cat, bus, flower, sailboat, bicycle" autocomplete="off">' +
     '<div class="row"><button class="primary" id="go">Draw it</button>' +
     '<button id="again">New sample</button>' +
     '<button id="pace">pace: watchable</button></div>' +
