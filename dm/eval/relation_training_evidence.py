@@ -406,6 +406,13 @@ def _reconcile_continuation(bundle: Mapping) -> None:
             raise RelationTrainingEvidenceRefused("R4 history denominator ordering is invalid")
         if type(record["lr"]) is not float or record["lr"] != lr_at(record["step"] - 1, schedule):
             raise RelationTrainingEvidenceRefused("R4 history learning rate is not the declared schedule value")
+    # Replay observe()'s chronological additions exactly. Python's sum(float)
+    # can use compensated summation, which differs from the live += counters.
+    # This is an accounting identity, not an approximate numerical comparison.
+    loss_totals = dict.fromkeys(("byte_sum", "gate_sum", "joint_sum"), 0.0)
+    for record in history:
+        for name in loss_totals:
+            loss_totals[name] += record[name]
     identities = {
         "programs": sum(len(record["batch_ids"]) for record in history),
         "semantic_bytes": sum(record["content_bytes"] for record in history),
@@ -414,8 +421,7 @@ def _reconcile_continuation(bundle: Mapping) -> None:
         "gate_denominator": sum(record["reachable_boundaries"] for record in history),
         "reachable_queries": sum(record["reachable_boundaries"] for record in history),
         "positive_denominator": sum(record["positive_boundaries"] for record in history),
-        **{name: sum(record[name] for record in history)
-           for name in ("byte_sum", "gate_sum", "joint_sum")},
+        **loss_totals,
     }
     if any(accounting[name] != value for name, value in identities.items()):
         raise RelationTrainingEvidenceRefused("R4 accounting disagrees with raw history")
