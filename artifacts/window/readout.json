@@ -1,0 +1,40 @@
+{
+  "checkpoint": "quickdraw_cond24000eps4_byte_square_s0",
+  "checkpoint_sha256": "d3d7e93834ca7f40fc9273f2e5e4d5d6c14f118bc9438e9a4e889be9ecd268da",
+  "validation_digest": "1e9d4f3a70e8a66a",
+  "drawings": 1000,
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "torch_version": "2.13.0",
+  "full_bits_per_drawing": 416.3393504486084,
+  "archived_bits_per_drawing": 416.33936289999997,
+  "full_mask_max_abs_error_bits_per_drawing": 0,
+  "windows": [
+    {
+      "window_positions": 128,
+      "affected_drawings": 334,
+      "affected_target_bytes": 8639,
+      "mean_extra_bits_per_drawing": 0.257995361328125,
+      "mean_extra_bits_per_affected_drawing": 0.7724412015812125,
+      "median_extra_bits_per_affected_drawing": 0.097381591796875,
+      "extra_bits_per_affected_target_byte": 0.029864030712828452,
+      "affected_min_max_extra_bits": [
+        -7.15570068359375,
+        12.5802001953125
+      ]
+    },
+    {
+      "window_positions": 192,
+      "affected_drawings": 20,
+      "affected_target_bytes": 353,
+      "mean_extra_bits_per_drawing": 0.01502288818359375,
+      "mean_extra_bits_per_affected_drawing": 0.7511444091796875,
+      "median_extra_bits_per_affected_drawing": -0.01123046875,
+      "extra_bits_per_affected_target_byte": 0.04255775689403329,
+      "affected_min_max_extra_bits": [
+        -1.7164306640625,
+        13.1427001953125
+      ]
+    }
+  ]
+}
