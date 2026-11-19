@@ -187,8 +187,8 @@
 <text x="111.00" y="222" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">fused prefill passes</text>
 <text transform="translate(-42,93.00) rotate(-90)" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">bits / drawing above pass 0</text>
 <text x="111.00" y="-10" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">what the recurrence costs</text>
-<text x="12.42" y="16.53" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#c8654a">F5c — gain calibrated</text>
-<text x="12.42" y="29.97" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#6b7280">F5b — gain at init</text></g>
+<text x="12.42" y="16.53" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#c8654a">F5c - gain calibrated</text>
+<text x="12.42" y="29.97" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#6b7280">F5b - gain at init</text></g>
 <g transform="translate(706,30)"><line x1="16.25" y1="0" x2="16.25" y2="186" stroke="#d4d4d4" stroke-width="0.5"/>
 <line x1="70.43" y1="0" x2="70.43" y2="186" stroke="#d4d4d4" stroke-width="0.5"/>
 <line x1="124.61" y1="0" x2="124.61" y2="186" stroke="#d4d4d4" stroke-width="0.5"/>

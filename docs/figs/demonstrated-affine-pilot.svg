@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="377.5" viewBox="0 0 900 377.5">
+<defs><clipPath id="clip0"><rect x="0" y="0" width="270" height="190"/></clipPath><clipPath id="clip1"><rect x="0" y="0" width="190" height="190"/></clipPath><clipPath id="clip2"><rect x="0" y="0" width="150" height="190"/></clipPath></defs>
+<rect width="900" height="377.5" fill="#ffffff"/>
+<g transform="translate(70,40)"><line x1="0.00" y1="0" x2="0.00" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="67.50" y1="0" x2="67.50" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="135.00" y1="0" x2="135.00" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="202.50" y1="0" x2="202.50" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="270.00" y1="0" x2="270.00" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="190.00" x2="270" y2="190.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="152.00" x2="270" y2="152.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="114.00" x2="270" y2="114.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="76.00" x2="270" y2="76.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="38.00" x2="270" y2="38.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="0.00" x2="270" y2="0.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="27.49" x2="270" y2="27.49" stroke="#666666" stroke-width="0.9" stroke-dasharray="3 2"/>
+<g clip-path="url(#clip0)">
+<polyline points="0.00,18.80 16.88,181.02 67.50,189.94 270.00,190.00" fill="none" stroke="#3b4f9e" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="0.00" cy="18.80" r="3.5" fill="#3b4f9e"/>
+<circle cx="16.88" cy="181.02" r="3.5" fill="#3b4f9e"/>
+<circle cx="67.50" cy="189.94" r="3.5" fill="#3b4f9e"/>
+<circle cx="270.00" cy="190.00" r="3.5" fill="#3b4f9e"/>
+<polyline points="0.00,27.69 16.88,178.15 67.50,189.90 270.00,190.00" fill="none" stroke="#3b4f9e" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 3"/>
+<circle cx="0.00" cy="27.69" r="3.5" fill="#3b4f9e"/>
+<circle cx="16.88" cy="178.15" r="3.5" fill="#3b4f9e"/>
+<circle cx="67.50" cy="189.90" r="3.5" fill="#3b4f9e"/>
+<circle cx="270.00" cy="190.00" r="3.5" fill="#3b4f9e"/>
+<polyline points="0.00,26.25 33.75,27.04 135.00,31.42 270.00,33.43" fill="none" stroke="#c8654a" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="0.00" cy="26.25" r="3.5" fill="#c8654a"/>
+<circle cx="33.75" cy="27.04" r="3.5" fill="#c8654a"/>
+<circle cx="135.00" cy="31.42" r="3.5" fill="#c8654a"/>
+<circle cx="270.00" cy="33.43" r="3.5" fill="#c8654a"/>
+<polyline points="0.00,23.51 33.75,11.28 135.00,30.69 270.00,37.58" fill="none" stroke="#c8654a" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 3"/>
+<circle cx="0.00" cy="23.51" r="3.5" fill="#c8654a"/>
+<circle cx="33.75" cy="11.28" r="3.5" fill="#c8654a"/>
+<circle cx="135.00" cy="30.69" r="3.5" fill="#c8654a"/>
+<circle cx="270.00" cy="37.58" r="3.5" fill="#c8654a"/>
+</g>
+<rect x="0" y="0" width="270" height="190" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="0.00" y1="190" x2="0.00" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="0.00" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0</text>
+<line x1="67.50" y1="190" x2="67.50" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="67.50" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">256</text>
+<line x1="135.00" y1="190" x2="135.00" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="135.00" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">512</text>
+<line x1="202.50" y1="190" x2="202.50" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="202.50" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">768</text>
+<line x1="270.00" y1="190" x2="270.00" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="270.00" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">1024</text>
+<line x1="0" y1="190.00" x2="-3.5" y2="190.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="194.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0</text>
+<line x1="0" y1="152.00" x2="-3.5" y2="152.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="156.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">1</text>
+<line x1="0" y1="114.00" x2="-3.5" y2="114.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="118.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">2</text>
+<line x1="0" y1="76.00" x2="-3.5" y2="76.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="80.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">3</text>
+<line x1="0" y1="38.00" x2="-3.5" y2="38.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="42.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">4</text>
+<line x1="0" y1="0.00" x2="-3.5" y2="0.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="4.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">5</text>
+<text x="135.00" y="226" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">optimizer update</text>
+<text transform="translate(-42,95.00) rotate(-90)" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">correct-tuple NLL (nats)</text>
+<text x="135.00" y="-10" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">(a) training positives, 16 per readout</text>
+<text x="276.00" y="174.00" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#3b4f9e">I1 fit 131</text>
+<text x="276.00" y="188.00" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#3b4f9e">I1 fit 137</text>
+<text x="276.00" y="30.43" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#c8654a">I2 seed A</text>
+<text x="276.00" y="50.58" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#c8654a">I2 seed B</text>
+<text x="263.67" y="21.49" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#666666">uniform over 72 tuples</text></g>
+<g transform="translate(450,40)"><line x1="31.67" y1="0" x2="31.67" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="95.00" y1="0" x2="95.00" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="158.33" y1="0" x2="158.33" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="190.00" x2="190" y2="190.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="152.00" x2="190" y2="152.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="114.00" x2="190" y2="114.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="76.00" x2="190" y2="76.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="38.00" x2="190" y2="38.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="0.00" x2="190" y2="0.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="27.49" x2="190" y2="27.49" stroke="#666666" stroke-width="0.9" stroke-dasharray="3 2"/>
+<g clip-path="url(#clip1)">
+<circle cx="31.67" cy="28.42" r="3" fill="#6b7280"/>
+<circle cx="22.80" cy="19.60" r="4" fill="#c8654a"/>
+<circle cx="40.53" cy="28.78" r="4" fill="#c8654a"/>
+<circle cx="95.00" cy="9.86" r="3" fill="#6b7280"/>
+<circle cx="86.13" cy="12.50" r="4" fill="#c8654a"/>
+<circle cx="103.87" cy="11.11" r="4" fill="#c8654a"/>
+<circle cx="158.33" cy="27.48" r="3" fill="#6b7280"/>
+<circle cx="149.47" cy="18.58" r="4" fill="#c8654a"/>
+<circle cx="167.20" cy="22.07" r="4" fill="#c8654a"/>
+</g>
+<rect x="0" y="0" width="190" height="190" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="31.67" y1="190" x2="31.67" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="31.67" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">iid</text>
+<line x1="95.00" y1="190" x2="95.00" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="95.00" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">affine</text>
+<line x1="158.33" y1="190" x2="158.33" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="158.33" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">family</text>
+<line x1="0" y1="190.00" x2="-3.5" y2="190.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="194.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0</text>
+<line x1="0" y1="152.00" x2="-3.5" y2="152.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="156.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">1</text>
+<line x1="0" y1="114.00" x2="-3.5" y2="114.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="118.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">2</text>
+<line x1="0" y1="76.00" x2="-3.5" y2="76.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="80.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">3</text>
+<line x1="0" y1="38.00" x2="-3.5" y2="38.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="42.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">4</text>
+<line x1="0" y1="0.00" x2="-3.5" y2="0.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="4.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">5</text>
+<text x="95.00" y="226" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">final held-out panel (64 each)</text>
+<text x="95.00" y="-10" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">(b) final, pilot seeds A/B</text>
+<text x="95.00" y="129.20" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#666666">clay: model, seeds A | B</text>
+<text x="95.00" y="152.00" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#666666">slate: training-marginal prior</text></g>
+<g transform="translate(730,40)"><line x1="37.50" y1="0" x2="37.50" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="112.50" y1="0" x2="112.50" y2="190" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="190.00" x2="150" y2="190.00" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="160.77" x2="150" y2="160.77" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="131.54" x2="150" y2="131.54" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="102.31" x2="150" y2="102.31" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="73.08" x2="150" y2="73.08" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="43.85" x2="150" y2="43.85" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="14.62" x2="150" y2="14.62" stroke="#d4d4d4" stroke-width="0.5"/>
+<line x1="0" y1="160.77" x2="150" y2="160.77" stroke="#666666" stroke-width="0.9" stroke-dasharray="3 2"/>
+<g clip-path="url(#clip2)">
+<polyline points="28.50,14.62 103.50,155.63" fill="none" stroke="#c8654a" stroke-width="0" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="28.50" cy="14.62" r="4" fill="#c8654a"/>
+<circle cx="103.50" cy="155.63" r="4" fill="#c8654a"/>
+<polyline points="46.50,14.62 121.50,161.84" fill="none" stroke="#c8654a" stroke-width="0" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="46.50" cy="14.62" r="4" fill="#c8654a"/>
+<circle cx="121.50" cy="161.84" r="4" fill="#c8654a"/>
+</g>
+<rect x="0" y="0" width="150" height="190" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<line x1="37.50" y1="190" x2="37.50" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="37.50" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">generic</text>
+<line x1="112.50" y1="190" x2="112.50" y2="193.5" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="112.50" y="206" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">broken</text>
+<line x1="0" y1="190.00" x2="-3.5" y2="190.00" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="194.00" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.4</text>
+<line x1="0" y1="160.77" x2="-3.5" y2="160.77" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="164.77" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.5</text>
+<line x1="0" y1="131.54" x2="-3.5" y2="131.54" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="135.54" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.6</text>
+<line x1="0" y1="102.31" x2="-3.5" y2="102.31" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="106.31" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.7</text>
+<line x1="0" y1="73.08" x2="-3.5" y2="73.08" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="77.08" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.8</text>
+<line x1="0" y1="43.85" x2="-3.5" y2="43.85" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="47.85" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">0.9</text>
+<line x1="0" y1="14.62" x2="-3.5" y2="14.62" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="-7" y="18.62" text-anchor="end" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="11.5" fill="#1a1a1a">1.0</text>
+<text x="75.00" y="226" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">negative class (64 each)</text>
+<text transform="translate(-42,95.00) rotate(-90)" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">gate AUC vs iid positives</text>
+<text x="75.00" y="-10" text-anchor="middle" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="12.5" fill="#1a1a1a">(c) prompt gate, final</text>
+<text x="3.75" y="155.77" text-anchor="start" font-family="'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif" font-size="10.5" fill="#666666">chance</text></g>
+<foreignObject x="0" y="280" width="900" height="97.5"><div xmlns="http://www.w3.org/1999/xhtml" style="font-family:'Latin Modern Roman','Computer Modern Roman',Georgia,'Times New Roman',serif;font-size:12.5px;line-height:1.45;color:#1a1a1a;"><em>Figure 1.</em> Run-04 demonstrated-affine package, stored rows only. (a) Summed NLL of the correct d4/dx/dy values at the prompt boundary; lower means more transform information. Each I1 fit tuple is determined by its first motif, so fit cells can succeed by lookup; I2 pilot cells, where each motif appears with eight tuples, stay near the demonstration-blind prior. (b) The same measure on final held-out positives beside the training-marginal prior. (c) The prompt gate separates generic programs but not broken demonstrations. Two seeds, descriptive; no intervals or qualification.</div></foreignObject>
+</svg>

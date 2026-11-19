@@ -1,111 +1,42 @@
 # drawing-machine
 
-Small models that write drawing programs, and a tiny machine that runs them.
+Can a small transformer learn to draw by writing a program? I trained models with fewer than a million parameters to emit instructions for a pen: move here, draw a line, repeat a shape. A Raspberry Pi Pico executes the finished program and sends the points back. The model runs on the host. The strokes you see in the hardware demo come from the board.
 
-I'm interested in what a small model learns when its output is an executable
-language rather than an image. This project is where I've been testing that:
-mostly sub-million-parameter transformers, a drawing language with lines,
-curves, loops and integer transforms, and a VM small enough to run on a
-Raspberry Pi Pico.
+[Open the gallery offline](https://github.com/roodriigoooo/drawing-machine/releases/download/v0.2.0/gallery.html) · [Read the results](docs/hypothesis_and_results.md) · [Run the demo](docs/demo.md)
 
-![Drawing demo](docs/media/hero.gif)
+![A category is entered and the Pico's returned strokes form a drawing](docs/media/hero.gif)
 
-The model runs on the host. It writes bytecode; the Pico executes it and sends
-coordinates back over UART. What appears on screen comes from that returned
-trace, checked against a Python reference VM. The demo model has 825,344
-parameters and knows five categories: cat, bus, flower, sailboat and bicycle.
-It's not an open-ended text-to-image model.
+## What changes when a drawing is a program?
 
-That split is deliberate. A small transformer keeps training experiments
-manageable; a much smaller interpreter makes the resulting programs portable.
-The Pico needs no model weights or tensor runtime. Geometry is exact fixed
-point, nesting is bounded, execution has a fuel limit, and points stream out
-without keeping a whole drawing in memory.
+**The alphabet matters, and the answer depends on the drawings.** On synthetic programs, replacing bytes with bits changed the cost by −0.67 ± 0.77 bits per drawing. On human QuickDraw sketches, it cost an extra 11.58 ± 0.60. Both encodings describe exactly the same geometry. Both 95% intervals pair the same drawings across encodings. The synthetic interval also includes variation between two seeds. QuickDraw had one paired seed.
 
-The interpreter takes **1,862 bytes of flash and 492 bytes of peak stack**, with
-no static RAM. That's the VM alone, not bytecode storage or the transport
-harness. The [hardware sweep](docs/claim4-bringup.md) matched **12,670 out of
-12,670 traces** exactly. This is model-generated code running on a
-microcontroller, not neural inference on the Pico.
+![Difference in bits per drawing between bit and byte models](docs/figs/fig1_granularity.svg)
 
-![Generated drawings](docs/media/gallery.png)
+*Each comparison subtracts the byte model's score from the bit model's. Above zero, the byte model predicts the drawing more economically.*
 
-The research has been less straightforward than getting drawings onto the
-board. Changing the alphabet from bytes to bits barely mattered on synthetic
-programs, but cost about 12 bits per drawing on QuickDraw. A hierarchical
-planner improved termination while losing on likelihood. Both were useful
-reminders that better prediction and better generation aren't the same thing.
-The [representation](docs/results.md) and [factorisation](docs/claim3.md)
-write-ups keep the numbers and experimental conditions.
+**Recognising a pattern was easier than finishing it.** Models assigned more probability to continuations that agreed with earlier strokes. When sampling freely, they completed the exact compatible shape in roughly 1% of the tested composed-shape cases. I then gave a model an explicit COPY action and showed it a shape before and after an affine transform. In two seeds it scored 0/64 exact on each held-out panel. Supplying the correct action gave 64/64. Whether COPY helps once a model learns the transform remains open. [Experimental conditions and figures](docs/hypothesis_and_results.md)
 
-That gap became more interesting with repeated shapes. Models learn to prefer
-a continuation compatible with their prefix, yet rarely finish an exactly
-compatible shape when generating freely: roughly 1% on the tested shape cases.
-The [context experiments](docs/context.md) try to separate that from memorising
-positions or recognising familiar motifs. I also tried
-[gated latent feedback](docs/feedback-stability.md); that implementation failed
-its stability gates before reaching the relation tests.
+**The programs travel well.** The Pico interpreter takes 1,862 bytes of code and read-only data, zero static RAM, and 492 bytes of peak stack. Across 12,670 programs its traces matched the Python reference exactly. Those figures describe the interpreter. The complete demo also needs program storage, transport and host inference.
 
-![Prefix continuations](docs/media/prefix.png)
+![Selected drawings from the five trained categories](docs/media/gallery.png)
 
-Current work is on [`copy-relation`](https://github.com/roodriigoooo/drawing-machine/tree/copy-relation):
-giving the model an explicit source-span and affine-copy action alongside
-ordinary byte emission. If it can recognise a relation, can making that
-relation executable help it follow through? No learned result yet. `main`
-keeps the completed experiments and device demo.
+*Cat, bus, flower, sailboat and bicycle are the five trained categories. Each example above was reconstructed from a saved board trace.*
 
-## Running it
+## Draw something
 
-Python 3.11+. No board, dataset or checkpoint needed for the VM:
+To watch the 60 recorded drawings, download [gallery.html](https://github.com/roodriigoooo/drawing-machine/releases/download/v0.2.0/gallery.html) and open it in a browser. Twenty captures start with strokes from a held-out human sketch.
 
-```bash
+To generate a new drawing, use Python 3.11 or later, `make` and a C compiler. Start with the tagged release:
+
+```sh
+git clone --branch v0.2.0 --depth 1 https://github.com/roodriigoooo/drawing-machine.git
+cd drawing-machine
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -e .
+python -m pip install -e '.[demo]'
+python scripts/demo.py --native live
 ```
 
-```python
-from pathlib import Path
+Open the local URL printed in the terminal and try `cat`. The included 825,344-parameter checkpoint writes the program and the native C interpreter executes it. The first request for each word uses seed 0. Choose **New sample** to see another drawing. The [demo guide](docs/demo.md) covers the physical Pico, the seed-0 check and how to read the figures.
 
-from dm.isa.asm import assemble
-from dm.vm.interp import VM
-from dm.vm.render import to_svg
-
-program = assemble("""
-MOVE 64 64
-LINE 192 64
-LINE 192 192
-LINE 64 192
-LINE 64 64
-HALT
-""")
-trace = VM().run(program)
-assert trace.fault is None
-Path("drawing.svg").write_text(to_svg(trace))
-```
-
-For models, tests and the recorded demo:
-
-```bash
-python -m pip install -e '.[train,eval,dev]'
-python -m pytest -q -rs
-python scripts/demo.py gallery --silicon-only
-```
-
-Open `artifacts/demo/gallery.html` to replay the saved device captures. Live
-generation needs a checkpoint, which isn't bundled; the [demo notes](docs/demo.md)
-cover that path. These commands don't write to a board. Some tests need optional
-data or toolchains and report skips when those aren't available.
-
-![Drawing bytecode](docs/media/program.png)
-
-The Python implementation is in `dm/`, the C VM in `port/`, and experiment
-scripts in `scripts/`. The longer studies in `docs/` include failed approaches
-and corrections. Datasets, checkpoints and generated run logs stay outside Git.
-
-Much of this builds on sketch-rnn, graphics program induction, and the work of
-the Quick, Draw! contributors and Tabler Icons authors.
-[References](docs/references.md) give the connections.
-
-[MIT](LICENSE) for original code; dataset-derived material retains its
-[upstream terms](THIRD_PARTY_NOTICES.md).
+Original code is [MIT licensed](LICENSE). Quick, Draw! contributors supplied the human sketches. Dataset and icon credits are in the [third-party notices](THIRD_PARTY_NOTICES.md).

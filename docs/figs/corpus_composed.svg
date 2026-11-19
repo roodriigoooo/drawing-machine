@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1030" height="460" viewBox="0 0 1030 460" font-family="ui-sans-serif, system-ui, sans-serif">
 <rect width="1030" height="460" fill="#ffffff"/>
-<text x="10" y="22" font-size="15" font-weight="600" fill="#111">composed val — D4 orbits, n ∈ {2, 4}, flat trace</text>
-<text x="10" y="42" font-size="11.5" fill="#666">NO MODEL INVOLVED — this is the training corpus. 12 scenes assembled by dm/data/composed.py from real QuickDraw sketches: one sketch (black) placed once, the same</text>
+<text x="10" y="22" font-size="15" font-weight="600" fill="#111">composed val - D4 orbits, n ∈ {2, 4}, flat trace</text>
+<text x="10" y="42" font-size="11.5" fill="#666">NO MODEL INVOLVED - this is the training corpus. 12 scenes assembled by dm/data/composed.py from real QuickDraw sketches: one sketch (black) placed once, the same</text>
 <text x="10" y="57" font-size="11.5" fill="#666">sketch again as an exact mirror or quarter-turn of itself (orange), and unrelated sketches in the other cells (grey). These 12: 30.3% of bytes foldable to REPEATX by</text>
 <text x="10" y="72" font-size="11.5" fill="#666">construction, ratio 1.435; the 1,000-scene val split the runs were scored on: 40.9%</text>
 <rect x="10" y="91" width="18" height="3" fill="#1a1a1a"/>
 <text x="34" y="97" font-size="11" fill="#666">the motif, drawn once</text>
 <rect x="168" y="91" width="18" height="3" fill="#c8654a"/>
-<text x="192" y="97" font-size="11" fill="#666">its D4 images — what REPEATX folds</text>
+<text x="192" y="97" font-size="11" fill="#666">its D4 images - what REPEATX folds</text>
 <rect x="405" y="91" width="18" height="3" fill="#b8bcc4"/>
 <text x="429" y="97" font-size="11" fill="#666">distractors: content that is not a copy</text>
 <g transform="translate(10,110)"><svg width="160" height="160" viewBox="0 0 256 256"><rect width="256" height="256" fill="white"/><g fill="none" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">

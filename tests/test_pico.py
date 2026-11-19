@@ -463,7 +463,9 @@ def test_the_two_bare_builds_compile_the_interpreter_identically(image):
     stops being a ratio of two measurements of one thing and this fails, which
     is the point: the alternative is a number that is quietly about the compiler.
     """
-    subprocess.run(["make", "-s", "-C", str(PORT), "qemu"], check=True)
+    # The Pico fixture also forces a rebuild. Compare objects produced by
+    # today's compiler on both targets, even if an older QEMU ELF exists.
+    subprocess.run(["make", "-s", "-B", "-C", str(PORT), "qemu"], check=True)
     build = image.parent  # the fixture is what guarantees the pico objects exist
     disassembly = []
     for machine in ("qemu", "pico"):
